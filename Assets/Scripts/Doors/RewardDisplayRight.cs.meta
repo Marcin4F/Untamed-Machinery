@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 43f8e7852312b5448b603147688ddc94
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - curr1: {fileID: 2100000, guid: 4cec97dfbdd079e49926e65ce75fad59, type: 2}
+  - curr2: {fileID: 2100000, guid: 255bf3733ab052149904dcc362019e99, type: 2}
+  - curr3: {fileID: 2100000, guid: 78be1ee859bc6ca4e82256328c12a8fd, type: 2}
+  - healing: {fileID: 2100000, guid: 970fde1bbf06e4a4b873bbe9a4bbf43a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

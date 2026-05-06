@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: b86c5a3bf57d4ac43af92f52d011faa5
+  - enabled: 1
+    path: Assets/Scenes/Hub.unity
+    guid: 59669c3ae4931fb498c50d8c32c3a0b0
+  - enabled: 1
+    path: Assets/Scenes/Pokoje ulica/Ulica wariant 1.unity
+    guid: e67e43889e4b80949a53e8512035c82b
+  - enabled: 1
+    path: Assets/Scenes/Pokoje ulica/Ulica wariant 2.unity
+    guid: 5e681ccbeaf95c043ad6963d969df77d
+  - enabled: 1
+    path: Assets/Scenes/Pokoje ulica/Ulica wariant 3.unity
+    guid: 0acefa5c20a24b64d89d19bb47ad342b
+  - enabled: 1
+    path: Assets/Scenes/Pokoje ulica/Ulica wariant 4.unity
+    guid: eeb04506abd25644aa8c8c826ea2aea9
+  - enabled: 1
+    path: Assets/Scenes/Pokoje ulica/Ulica wariant 5.unity
+    guid: 97f93843de4536849b7a437095a4e726
+  - enabled: 1
+    path: Assets/Scenes/Alarm/Alarm 1.unity
+    guid: 556e88cf56c183c48b8a8273a95274e3
+  - enabled: 1
+    path: Assets/Scenes/Alarm/Alarm 2.unity
+    guid: 915cf2c7ae1f8dc42bf33d9fff036fbf
+  - enabled: 1
+    path: Assets/Scenes/Alarm/Alarm 3.unity
+    guid: 049a853f86abb204db20f9ff21a9245b
+  - enabled: 1
+    path: Assets/Scenes/Alarm/Alarm 4.unity
+    guid: dc937f0552f2b57449ec41444f419cbd
+  - enabled: 1
+    path: Assets/Scenes/Muzyczny/Muzyczny 1.unity
+    guid: fc2bdd0c171504c43b157155d6b0b124
+  - enabled: 1
+    path: Assets/Scenes/Muzyczny/Muzyczny 2.unity
+    guid: 3e724f0ddb0cecd4abb0e0a97ca92ca9
+  - enabled: 1
+    path: Assets/Scenes/Muzyczny/Muzyczny 3.unity
+    guid: c1f20fd38baa5734d8920f8eb08e8917
+  - enabled: 1
+    path: Assets/Scenes/Parking/Parking 1.unity
+    guid: 70b5ef6d5a1ca0f4992209232701aac7
+  - enabled: 1
+    path: Assets/Scenes/Parking/Parking 2.unity
+    guid: a488a72838b38c049874b5f78d0d2894
+  - enabled: 1
+    path: Assets/Scenes/Parking/Parking 3.unity
+    guid: 599dfbb259dc6004db460376fe52b774
+  - enabled: 1
+    path: Assets/Scenes/Parking/Parking 4.unity
+    guid: fa101ebcaededcb4c86d98bdc895788a
+  - enabled: 1
+    path: Assets/Scenes/Pokoje treningowe/Trening 1.unity
+    guid: 20e76dada81faaf44bf57e8db517aff6
+  - enabled: 1
+    path: Assets/Scenes/Pokoje treningowe/Trening 2.unity
+    guid: ef68243e95830274aadc071c41c74f5d
+  - enabled: 1
+    path: Assets/Scenes/Pokoje treningowe/Trening 3.unity
+    guid: f98e439ca6542d144a3de448957db3b3
+  - enabled: 1
+    path: Assets/Scenes/Pokoje treningowe/Trening 4.unity
+    guid: 0dcccfe9d64c58247b499d6dcec46f7d
+  - enabled: 1
+    path: Assets/Scenes/Serwerownia/Serwerownia 1.unity
+    guid: aea036af1c43e4a479ee5a93f0a8ffd8
+  - enabled: 1
+    path: Assets/Scenes/Serwerownia/Serwerownia 2.unity
+    guid: a1b9cba8a83e4914998f4d5aae7e9fde
+  - enabled: 1
+    path: Assets/Scenes/Serwerownia/Serwerownia 3.unity
+    guid: 0b2a7dbe726777246a04853e25fb1e03
+  - enabled: 1
+    path: Assets/Scenes/Serwerownia/Serwerownia 4.unity
+    guid: 8a22e9b807e88494c8d4f3a82a668d85
+  m_configObjects:
+    com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_UseUCBPForAssetBundles: 0

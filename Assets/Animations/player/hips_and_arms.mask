@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: hips_and_arms
+  m_Mask: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: Armature
+    m_Weight: 1
+  - m_Path: Armature/elbow_IK.L
+    m_Weight: 1
+  - m_Path: Armature/elbow_IK.R
+    m_Weight: 1
+  - m_Path: Armature/hand_IK.L
+    m_Weight: 1
+  - m_Path: Armature/hand_IK.R
+    m_Weight: 1
+  - m_Path: Armature/headTrack
+    m_Weight: 1
+  - m_Path: Armature/pelvis
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/neck
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/neck/head
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L/hand1.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L/hand1.L/hand2.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L/hand1.L/hand2.L/hand3.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L/hand1.L/hand2.L/hand3.L/hand4.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.L/arm.L/forearm.L/hand1.L/thumb.L
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R/hand1.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R/hand1.R/hand2.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R/hand1.R/hand2.R/hand3.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R/hand1.R/hand2.R/hand3.R/hand4.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/belly/chest/shoulder.R/arm.R/forearm.R/hand1.R/thumb.R
+    m_Weight: 1
+  - m_Path: Armature/pelvis/upperleg.L
+    m_Weight: 0
+  - m_Path: Armature/pelvis/upperleg.L/lowerleg.L
+    m_Weight: 0
+  - m_Path: Armature/pelvis/upperleg.L/lowerleg.L/foot.L
+    m_Weight: 0
+  - m_Path: Armature/pelvis/upperleg.R
+    m_Weight: 0
+  - m_Path: Armature/pelvis/upperleg.R/lowerleg.R
+    m_Weight: 0
+  - m_Path: Armature/pelvis/upperleg.R/lowerleg.R/foot.R
+    m_Weight: 0
+  - m_Path: character_mesh
+    m_Weight: 1
+  - m_Path: gun
+    m_Weight: 1
