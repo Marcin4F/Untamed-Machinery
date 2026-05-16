@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -71,6 +72,16 @@ public class PlayerAnimation : MonoBehaviour
 
     void CheckIfPointing()
     {
+        if (SceneManager.GetActiveScene().buildIndex == 1)
+        {
+            if (isPointing)
+            {
+                isPointing = false;
+                animator.SetBool("isPointing", false);
+            }
+            return;
+        }
+
         if (Input.GetMouseButtonDown(1) && !isPointing)
         {
             isPointing = true;
