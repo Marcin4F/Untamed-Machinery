@@ -14,6 +14,8 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] float runningSpeed = 3.0f;
     [SerializeField] float walkingSpeed = 1.0f;
     [SerializeField] float rotationSpeed = 720.0f;
+    [SerializeField] float gravityValue = -9.81f;
+
 
     [SerializeField] private LayerMask groundMask;
 
@@ -43,7 +45,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
-            playerVelocity.y = 0.0f;
+            playerVelocity.y = -2.0f;
 
         move = Vector3.forward * Input.GetAxis("Vertical");
         move += Vector3.right * Input.GetAxis("Horizontal");
@@ -111,20 +113,20 @@ public class PlayerAnimation : MonoBehaviour
                 transform.LookAt(position, Vector3.up);
             }
         }
-    } 
+    }
 
     void ProcessMovement()
     {
-        if (!isPointing && isMoving)
+        // obsluga ruchu poziomego
+        if (isMoving)
         {
-            // to znaczy ze biega
-            controller.Move(runningSpeed * Time.deltaTime * move);
+            float currentSpeed = isPointing ? walkingSpeed : runningSpeed;
+            controller.Move(move * currentSpeed * Time.deltaTime);
         }
-        else if (isPointing && isMoving)
-        {
-            // to znaczy ze chodzi wcelowany
-            controller.Move(Time.deltaTime * walkingSpeed * move);
-        }
+
+        // grawitacja (schodzenie ze wzniesieñ)
+        playerVelocity.y += gravityValue * Time.deltaTime;
+        controller.Move(playerVelocity * Time.deltaTime);
     }
 
     void ProcessShot()

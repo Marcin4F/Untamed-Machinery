@@ -87,7 +87,7 @@ public class Player : MonoBehaviour
             TakeDamage(5);
     }
 
-    private IEnumerator InvincibilityFrames()       // klatki nie�miertelno�ci (bez tego "ciagle" obrazenia natychmiastowo zabijaja)
+    private IEnumerator InvincibilityFrames()       // klatki niesmiertelnosci (bez tego "ciagle" obrazenia natychmiastowo zabijaja)
     {
         // DO DODANIA efekt wizualny np. mruganie postaci na czerwono
         yield return new WaitForSeconds(invincibilityTime/1000.0f);      // czas trwania w sekundach
