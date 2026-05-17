@@ -5,8 +5,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] private LayerMask hitLayerMask;              // layer colliderow
     public GameObject hitParticles;
 
-    private Vector3 lastPosition, currentPosition;
-    private float lifeTime = 0.0f;                              // czas �ycia pocisku
+    private Vector3 lastPosition;
+    private float lifeTime = 0.0f;                              // czas zycia pocisku
     [SerializeField] float bulletSpeed = 40.0f;
 
     private int shotDamage;
@@ -36,7 +36,7 @@ public class Bullet : MonoBehaviour
 
     void DetectRaycastHit()
     {
-        currentPosition = transform.position;
+        Vector3 currentPosition = transform.position;
         if (Physics.Linecast(lastPosition, currentPosition, out var rayCastHit, hitLayerMask))       // raycast od obecnej pozycji od ostatniej pozycj, jezeli cos trafil znaczy ze pocisk trafil w obiekt
         {
             // MARKERY

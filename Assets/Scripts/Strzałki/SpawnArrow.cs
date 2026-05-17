@@ -4,7 +4,6 @@ using System.Collections;
 public class SpawnArrow : MonoBehaviour
 {
     [SerializeField] GameObject arrows;
-    private GameObject arrowsInstance;
 
     Vector3 startPosition;
 
@@ -16,7 +15,7 @@ public class SpawnArrow : MonoBehaviour
     void NewArrow()
     {
         startPosition = transform.position;
-        arrowsInstance = Instantiate(arrows);
+        GameObject arrowsInstance = Instantiate(arrows);
         arrowsInstance.transform.position = startPosition;
         StartCoroutine(arrowsCooldown());
     }

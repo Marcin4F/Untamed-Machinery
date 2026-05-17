@@ -8,8 +8,6 @@ public class SpawnerManager : MonoBehaviour
     private List<EnemySpawner> allSpawners = new List<EnemySpawner>();
     private HashSet<EnemySpawner> completedSpawners = new HashSet<EnemySpawner>();
 
-
-
     void Awake()
     {
         if (Instance != null)

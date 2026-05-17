@@ -8,8 +8,6 @@ public class Shooting : MonoBehaviour
     protected GameObject bulletInstance; //protected zamiast private zeby mozna bylo dziedziczyc
     protected Light muzzleFlash; // to samo
 
-    Vector3 startPosition;
-    quaternion startRotation;
     public bool shotReady = true, isReloading = false;
 
     void Start()
@@ -26,8 +24,8 @@ public class Shooting : MonoBehaviour
 
     public virtual void FireAShot() // virtualna bo nadpisywana przez EnemyShooting
     {
-        startPosition = transform.position;
-        startRotation = transform.rotation;
+        Vector3 startPosition = transform.position;
+        quaternion startRotation = transform.rotation;
         muzzleFlash.enabled = true;
         bulletInstance = Instantiate(bullet);
         bulletInstance.transform.SetPositionAndRotation(startPosition, startRotation);

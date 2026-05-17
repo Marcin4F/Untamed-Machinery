@@ -3,8 +3,6 @@ using UnityEngine;
 public class Building : MonoBehaviour
 {
     [SerializeField] HubUI hubUI;
-    private Shop1 shop1;
-    private Shop2 shop2;
 
     private string buildingIndex;
     private bool inRange = false, open = false;
@@ -23,12 +21,12 @@ public class Building : MonoBehaviour
             {
                 case "Budynek1":
                     hubUI.OpenBuilding(1);
-                    shop1 = GetComponent<Shop1>();
+                    Shop1 shop1 = GetComponent<Shop1>();
                     shop1.Activate();
                     break;
                 case "Budynek2":
                     hubUI.OpenBuilding(2);
-                    shop2 = GetComponent<Shop2>();
+                    Shop2 shop2 = GetComponent<Shop2>();
                     shop2.Activate();
                     break;
                 case "Budynek3":

@@ -2,9 +2,10 @@ using UnityEngine;
 
 public class Blades : MonoBehaviour
 {
+    private Vector3 localPointA, targetLocalPoint, localPointB;
+    [SerializeField] private float rotationSpeed = 720f;
+    [SerializeField] private float moveSpeed = 8f;
     private Vector3 rotationAxis = Vector3.forward;
-    private float rotationSpeed = 720f, moveSpeed = 8f;
-    private Vector3 pom, localPointA, targetLocalPoint, localPointB;
 
     private void Start()
     {

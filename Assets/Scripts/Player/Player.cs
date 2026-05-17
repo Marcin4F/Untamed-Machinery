@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
 
     public bool alive = true;
     private bool invincibility = false;
+
+    private WaitForSeconds invincibilityWait;
+
     Shooting shooting;
 
     void Start()
@@ -46,6 +49,7 @@ public class Player : MonoBehaviour
         InGameUI.instance.SetDisplayHP();
         InGameUI.instance.SetAmmo();
         healthBar.SetMaxValue(maxHealth);
+        invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f); // czas trwania w sekundach
     }
 
     void Update()
@@ -81,6 +85,7 @@ public class Player : MonoBehaviour
             TakeDamage(5);
     }
 
+    // TODO: optymalizacja (cos innego zamiast onTriggerStay 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Damaging"))
@@ -90,7 +95,7 @@ public class Player : MonoBehaviour
     private IEnumerator InvincibilityFrames()       // klatki niesmiertelnosci (bez tego "ciagle" obrazenia natychmiastowo zabijaja)
     {
         // DO DODANIA efekt wizualny np. mruganie postaci na czerwono
-        yield return new WaitForSeconds(invincibilityTime/1000.0f);      // czas trwania w sekundach
+        yield return invincibilityWait;
         invincibility = false;
     }
 
