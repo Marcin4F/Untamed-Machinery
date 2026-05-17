@@ -7,6 +7,7 @@ public class PlayerAnimation : MonoBehaviour
     Animator animator;
     private Camera mainCamera;
 
+    private int sceneIndex;
     Vector3 playerVelocity;
     bool isPointing = false, isMoving = false, groundedPlayer = false;
     Vector3 move;
@@ -29,6 +30,7 @@ public class PlayerAnimation : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         shooting = GetComponentInChildren<Shooting>();
+        sceneIndex = SceneManager.GetActiveScene().buildIndex;
 
         mainCamera = Camera.main;
     }
@@ -72,7 +74,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void CheckIfPointing()
     {
-        if (SceneManager.GetActiveScene().buildIndex == 1)
+        if (sceneIndex == 1)
         {
             if (isPointing)
             {
@@ -136,8 +138,11 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         // grawitacja (schodzenie ze wzniesieñ)
-        playerVelocity.y += gravityValue * Time.deltaTime;
-        controller.Move(playerVelocity * Time.deltaTime);
+        if (sceneIndex == 1)
+        {
+            playerVelocity.y += gravityValue * Time.deltaTime;
+            controller.Move(playerVelocity * Time.deltaTime);
+        }
     }
 
     void ProcessShot()

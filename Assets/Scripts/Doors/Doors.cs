@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class Doors : MonoBehaviour
 {
-    private int index, newIndex, active;
+    private int active;
 
     // tymczasowe pokazanie otwarte/zamkniete
     RewardSystemLeft rewardSystemLeft;
@@ -13,15 +13,48 @@ public class Doors : MonoBehaviour
     {
         if (GameManagement.instance.cleared)
         {
-            index = SceneManager.GetActiveScene().buildIndex;
-            newIndex = index;
+            int index = SceneManager.GetActiveScene().buildIndex;
             Player.instance.SaveInfo();
 
-            // DO DODANIA: limit by dany pokoj nie pojawial sie tak czesto
+            int roomsCleared = PlayerPrefs.GetInt("RoomsCleared", 0);
+            roomsCleared++;
+            PlayerPrefs.SetInt("RoomsCleared", roomsCleared);
+
+            // poziom trudnoœci zwiêkszany co 5 pokoi
+            int difficultyTier = roomsCleared / 5;
+            int minIndex, maxIndex;
+
+            // TODO: po pewnej ilosci pokoi ma byc pokoj z bossem
+            // ---------------- UWAGA przy zmianie ilosci pokoi latwych trzeba zmienic wartosci w GameStarter ----------------
+            // ---------------- TODO: przeniesc zaczynanie gry do tego skryptu ----------------
+            switch (difficultyTier)
+            {
+                case 0: // pokoje numer 1-5 latwe
+                    minIndex = 2;
+                    maxIndex = 7; // losuje indeksy od 2 do 6
+                    break;
+                case 1: // pokoje numer 6-10 srednie
+                    minIndex = 7;
+                    maxIndex = 13; // losuje indeksy od 7 do 12
+                    break;
+                case 2: // pokoje numer 11-15 trudne
+                    minIndex = 13;
+                    maxIndex = 19; // losuje indeksy od 13 do 18
+                    break;
+                default: // pokoje numer 16+ bardzo trudne
+                    minIndex = 19;
+                    maxIndex = 26; // losuje indeksy od 19 do 25
+                    break;
+            }
+
+            int newIndex = index;
+
+            // TODO: limit by dany pokoj nie pojawial sie tak czesto
             while (index == newIndex)
             {
-                newIndex = Random.Range(2, 26);      // ustawic odpowiednie indeksy scen (pierwsza liczba to najmniejszy indeks sceny z pokojem, druga to najwiekszy + 1)
+                newIndex = Random.Range(minIndex, maxIndex);
             }
+
             if (active == 0)
                 PlayerPrefs.SetInt("RewardIndex", rewardSystemLeft.rewardIndex);
             else

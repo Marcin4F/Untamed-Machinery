@@ -54,15 +54,15 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(shooting.Reloading());
         }
-        //else if (Input.GetKeyDown(KeyCode.U))       // DO TESTOW
-        //{
-        //    GameManagement.instance.currency1 += 1000;
-        //    InGameUI.instance.SetCurr1();
-        //    GameManagement.instance.currency2 += 1000;
-        //    InGameUI.instance.SetCurr2();
-        //    GameManagement.instance.currency3 += 1000;
-        //    InGameUI.instance.SetCurr3();
-        //}
+        else if (Input.GetKeyDown(KeyCode.U))       // DO TESTOW
+        {
+            GameManagement.instance.currency1 += 1000;
+            InGameUI.instance.SetCurr1();
+            GameManagement.instance.currency2 += 1000;
+            InGameUI.instance.SetCurr2();
+            GameManagement.instance.currency3 += 1000;
+            InGameUI.instance.SetCurr3();
+        }
     }
 
     // DOSTAWANIE OBRAZEN OD PRZECIWNIKOW PRZENIESC NA ICH SKRYPTY
