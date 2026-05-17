@@ -31,19 +31,19 @@ public class Doors : MonoBehaviour
             {
                 case 0: // pokoje numer 1-5 latwe
                     minIndex = 2;
-                    maxIndex = 7; // losuje indeksy od 2 do 6
+                    maxIndex = 8; // losuje indeksy od 2 do 7
                     break;
                 case 1: // pokoje numer 6-10 srednie
-                    minIndex = 7;
-                    maxIndex = 13; // losuje indeksy od 7 do 12
+                    minIndex = 8;
+                    maxIndex = 14; // losuje indeksy od 8 do 13
                     break;
                 case 2: // pokoje numer 11-15 trudne
-                    minIndex = 13;
-                    maxIndex = 19; // losuje indeksy od 13 do 18
+                    minIndex = 14;
+                    maxIndex = 20; // losuje indeksy od 14 do 19
                     break;
                 default: // pokoje numer 16+ bardzo trudne
-                    minIndex = 19;
-                    maxIndex = 26; // losuje indeksy od 19 do 25
+                    minIndex = 20;
+                    maxIndex = 26; // losuje indeksy od 20 do 25
                     break;
             }
 

@@ -14,7 +14,7 @@ public class GameStarter : MonoBehaviour
             Player.instance.SaveInfo();
             PlayerPrefs.SetInt("RoomsCleared", 0);
             PlayerPrefs.SetInt("GameState", 1);
-            SceneManager.LoadScene(Random.Range(2, 7));
+            SceneManager.LoadScene(Random.Range(2, 8));
         }
     }
 
