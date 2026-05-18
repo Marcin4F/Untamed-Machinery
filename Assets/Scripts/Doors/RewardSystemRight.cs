@@ -22,7 +22,7 @@ public class RewardSystemRight : MonoBehaviour
     {
         if(GameManagement.instance.gameState == 2)
         {
-            currentReward = PlayerPrefs.GetInt("RewardIndex");
+            currentReward = GameManagement.instance.rewardIndex;
             Debug.Log("index: " + currentReward);
             switch (currentReward)
             {

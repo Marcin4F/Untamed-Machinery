@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using Unity.Cinemachine;
 
 public class Player : MonoBehaviour
 {
@@ -16,40 +18,65 @@ public class Player : MonoBehaviour
 
     Shooting shooting;
 
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+            // nie trzeba DontDestroyOnLoad bo robi to juz GameManagement na tym samym obiekcie
+        }
+        else if (instance != this)
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Start()
     {
-        instance = this;
         shooting = GetComponentInChildren<Shooting>();
-
-        if(GameManagement.instance.gameState == 0)      // jezeli gameState = 0, to nie wczytujemy czesci parametrow
-        {
-            currentHealth = maxHealth;
-            healthBar.SetHealth(currentHealth);
-
-            PlayerPrefs.SetInt("maxHealth", maxHealth);
-            PlayerPrefs.SetInt("weaponDamage", weaponDamage);
-            PlayerPrefs.SetInt("reloadSpeed", reloadSpeed);
-            PlayerPrefs.SetInt("attackCooldown", attackCooldown);
-            PlayerPrefs.SetInt("invincibilityTime", invincibilityTime);
-            PlayerPrefs.SetInt("lifeStealChance", lifeStealChance);
-            PlayerPrefs.SetInt("maxAmmo", maxAmmo);
-            PlayerPrefs.SetInt("minHealing", minHealing);
-            PlayerPrefs.SetInt("maxHealing", maxHealing);
-            PlayerPrefs.SetInt("minReward", minReward);
-            PlayerPrefs.SetInt("maxReward", maxReward);
-            PlayerPrefs.SetInt("lifeSteal", lifeSteal);
-        }
-        else                    // wczytanie parametrow z poprzedniego pokoju
-        {
-            GetInfo();
-            healthBar.SetHealth(currentHealth);
-        }
-
         currentAmmo = maxAmmo;
+        healthBar.SetMaxValue(maxHealth);
+        healthBar.SetHealth(currentHealth);
         InGameUI.instance.SetDisplayHP();
         InGameUI.instance.SetAmmo();
-        healthBar.SetMaxValue(maxHealth);
         invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f); // czas trwania w sekundach
+    }
+
+    // wlaczenie nasluchwania na zaladownianie nowej sceny
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    // wylaczenie nasluchiwania
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    // przy zmianie sceny
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        // znalezienie punktu spawnu
+        GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
+
+        if (spawnPoint != null)
+        {
+            // wylaczenie CharacterController bo blokuje fizyczne przenoszenie obiektu
+            CharacterController cc = GetComponent<CharacterController>();
+            if (cc != null) cc.enabled = false;
+
+            transform.position = spawnPoint.transform.position;
+            transform.rotation = spawnPoint.transform.rotation;
+
+            if (cc != null) cc.enabled = true;
+        }
+
+        CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
+        if (vcam != null)
+        {
+            vcam.Follow = transform;
+        }
     }
 
     void Update()

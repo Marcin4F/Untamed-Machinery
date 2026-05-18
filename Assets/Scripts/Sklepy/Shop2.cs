@@ -21,7 +21,6 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.attackCooldown > 100 && GameManagement.instance.EnoughMoney(800, 100, 50))
         {
             Player.instance.attackCooldown -= 25;
-            PlayerPrefs.SetInt("attackCooldown", Player.instance.attackCooldown);
             hubUI.SetTextBuildingTwo();
             // DO DODANIA: Przerobiæ zabezpieczenie ilosci kupowania (dodac jakas zmiane w UI gdy ulepszymy na maksa)
         }
@@ -37,7 +36,6 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.weaponDamage < 80 && GameManagement.instance.EnoughMoney(550, 150, 100))
         {
             Player.instance.weaponDamage += 5;
-            PlayerPrefs.SetInt("weaponDamage", Player.instance.weaponDamage);
             hubUI.SetTextBuildingTwo();
         }
         else
@@ -52,7 +50,6 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.reloadSpeed > 100 && GameManagement.instance.EnoughMoney(700, 50, 150))
         {
             Player.instance.reloadSpeed -= 25;
-            PlayerPrefs.SetInt("reloadSpeed", Player.instance.reloadSpeed);
             hubUI.SetTextBuildingTwo();
         }
         else
@@ -68,7 +65,6 @@ public class Shop2 : MonoBehaviour
         {
             Player.instance.maxAmmo += 5;
             Player.instance.currentAmmo = Player.instance.maxAmmo;
-            PlayerPrefs.SetInt("maxAmmo", Player.instance.maxAmmo);
             InGameUI.instance.SetAmmo();
             hubUI.SetTextBuildingTwo();
         }

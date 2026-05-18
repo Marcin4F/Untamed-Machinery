@@ -28,7 +28,6 @@ public class Shop1 : MonoBehaviour
                 Player.instance.currentHealth += 20;
                 healthBar.AddMaxValue(20);
                 InGameUI.instance.SetDisplayHP();
-                PlayerPrefs.SetInt("maxHealth", Player.instance.maxHealth);
                 hubUI.SetTextBuildingOne();
             }
         }
@@ -46,9 +45,6 @@ public class Shop1 : MonoBehaviour
             Player.instance.minHealing += 10;
             Player.instance.maxHealing += 10;
             Player.instance.lifeSteal += 2;
-            PlayerPrefs.SetInt("minHealing", Player.instance.minHealing);
-            PlayerPrefs.SetInt("maxHealing", Player.instance.maxHealing);
-            PlayerPrefs.SetInt("lifeSteal", Player.instance.lifeSteal);
             hubUI.SetTextBuildingOne();
         }
         else
@@ -63,7 +59,6 @@ public class Shop1 : MonoBehaviour
         if (Player.instance.lifeStealChance < 50 && GameManagement.instance.EnoughMoney(100, 350, 500))
         {
             Player.instance.lifeStealChance += 5;
-            PlayerPrefs.SetInt("lifeStealChance", Player.instance.lifeStealChance);
             hubUI.SetTextBuildingOne();
         }
         else
@@ -78,7 +73,6 @@ public class Shop1 : MonoBehaviour
         if (Player.instance.invincibilityTime < 750 && GameManagement.instance.EnoughMoney(175, 200, 750))
         {
             Player.instance.invincibilityTime += 25;
-            PlayerPrefs.SetInt("invincibilityTime", Player.instance.invincibilityTime);
             hubUI.SetTextBuildingOne();
         }
         else
@@ -94,8 +88,6 @@ public class Shop1 : MonoBehaviour
         {
             Player.instance.minReward += 25;
             Player.instance.maxReward += 25;
-            PlayerPrefs.SetInt("minReward", Player.instance.minReward);
-            PlayerPrefs.SetInt("maxReward", Player.instance.maxReward);
             hubUI.SetTextBuildingOne();
         }
         else

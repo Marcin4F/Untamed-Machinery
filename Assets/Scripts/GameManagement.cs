@@ -4,28 +4,27 @@ public class GameManagement : MonoBehaviour
 {
     public static GameManagement instance;
 
-    public int gameState = 0, currency1, currency2, currency3;
+    public int gameState = 0, currency1, currency2, currency3, roomsCleared = 0, rewardIndex;
     public bool cleared = false;
 
-    void Start()
+    void Awake()
     {
-        instance = this;
-        gameState = PlayerPrefs.GetInt("GameState");        // status gry - potrzebne do wczytywania zapisanych danych o graczu
-
-        if (gameState == 0)      // jezeli gameState = 0, to nie wczytujemy czesci parametrow
+        if (instance == null)
         {
-            PlayerPrefs.SetInt("GameState", 1);
+            // pierwsze uruchomienie gry, zapis instancji i ochrona przed zniszczeniem
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        else if (gameState == 1)
+        else if (instance != this)
         {
-            PlayerPrefs.SetInt("GameState", 2);
-        }    
+            Destroy(gameObject);
+        }
+    }
 
-        currency1 = PlayerPrefs.GetInt("Currency1");        // wczytanie ilosci posiadanej waluty z playerPrefsow
+    private void Start()
+    {
         InGameUI.instance.SetCurr1();
-        currency2 = PlayerPrefs.GetInt("Currency2");
         InGameUI.instance.SetCurr2();
-        currency3 = PlayerPrefs.GetInt("Currency3");
         InGameUI.instance.SetCurr3();
     }
 
@@ -42,10 +41,5 @@ public class GameManagement : MonoBehaviour
             return true;
         }
         return false;
-    }
-
-    void OnApplicationQuit()
-    {
-        PlayerPrefs.DeleteAll();
     }
 }

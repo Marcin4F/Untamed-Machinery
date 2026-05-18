@@ -16,7 +16,16 @@ public class InGameUI : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(transform.root.gameObject);
+        }
+        else if (instance != this)
+        {
+            Destroy(transform.root.gameObject);
+            return;
+        }
         deathPanel.SetActive(false);
         pausePanel.SetActive(false);
     }

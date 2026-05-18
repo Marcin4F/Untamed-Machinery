@@ -14,14 +14,10 @@ public class Doors : MonoBehaviour
         if (GameManagement.instance.cleared)
         {
             int index = SceneManager.GetActiveScene().buildIndex;
-            Player.instance.SaveInfo();
-
-            int roomsCleared = PlayerPrefs.GetInt("RoomsCleared", 0);
-            roomsCleared++;
-            PlayerPrefs.SetInt("RoomsCleared", roomsCleared);
+            GameManagement.instance.roomsCleared++;
 
             // poziom trudnoœci zwiêkszany co 5 pokoi
-            int difficultyTier = roomsCleared / 5;
+            int difficultyTier = GameManagement.instance.roomsCleared / 5;
             int minIndex, maxIndex;
 
             // TODO: po pewnej ilosci pokoi ma byc pokoj z bossem
@@ -56,9 +52,9 @@ public class Doors : MonoBehaviour
             }
 
             if (active == 0)
-                PlayerPrefs.SetInt("RewardIndex", rewardSystemLeft.rewardIndex);
+                GameManagement.instance.rewardIndex = rewardSystemLeft.rewardIndex;
             else
-                PlayerPrefs.SetInt("RewardIndex", rewardSystemRight.rewardIndex);
+                GameManagement.instance.rewardIndex = rewardSystemRight.rewardIndex;
             SceneManager.LoadScene(newIndex);
         }
     }

@@ -12,8 +12,8 @@ public class GameStarter : MonoBehaviour
         if (inRange && Input.GetKeyDown(KeyCode.Space))
         {
             Player.instance.SaveInfo();
-            PlayerPrefs.SetInt("RoomsCleared", 0);
-            PlayerPrefs.SetInt("GameState", 1);
+            GameManagement.instance.roomsCleared = 0;
+            GameManagement.instance.gameState = 1;
             SceneManager.LoadScene(Random.Range(2, 8));
         }
     }
