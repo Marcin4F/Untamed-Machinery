@@ -166,7 +166,7 @@ public class PlayerAnimation : MonoBehaviour
             shooting.shotReady = false;
             Player.instance.currentAmmo -= 1;
             InGameUI.instance.SetAmmo();
-            if (Player.instance.currentAmmo == 0)
+            if (Player.instance.currentAmmo <= 0)
                 StartCoroutine(shooting.Reloading());
             else
                 StartCoroutine(shooting.ShootingCooldown());

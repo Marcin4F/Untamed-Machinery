@@ -46,12 +46,20 @@ public class Shooting : MonoBehaviour
 
     public IEnumerator Reloading()
     {
+        // zabezpieczenie przed podwojnym przeladowaniem
+        if (isReloading) yield break;
+
         isReloading = true;
+        shotReady = false;
+
         Player.instance.currentAmmo = 0;
         InGameUI.instance.SetAmmo();
+
         yield return new WaitForSeconds(Player.instance.reloadSpeed / 100.0f);
         Player.instance.currentAmmo = Player.instance.maxAmmo;
+
         InGameUI.instance.SetAmmo();
+
         shotReady = true;
         isReloading = false;
     }
