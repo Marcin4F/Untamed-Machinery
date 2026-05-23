@@ -10,7 +10,7 @@ public class InGameUI : MonoBehaviour
     [Header("In-Game UI Elements")]
     [SerializeField] GameObject deathPanel;     // panel z ele. UI na menu pauzy
     [SerializeField] GameObject pausePanel;     // panel z ele. UI na smierci
-    [SerializeField] Button backToHub, continueButton, quitToHub, quitToMenu;      // przyciski na deathPanel i pausePanel; backToHub jest na smierci
+    [SerializeField] Button backToHub, continueButton, saveButton, quitToMenu;      // przyciski na deathPanel i pausePanel; backToHub jest na smierci
     public TMP_Text currency1, currency2, currency3, ammo;          // tekst z iloscia danej waluty i ilosc amunicji
     [SerializeField] TMP_Text displayHP;                            // tekst z HP wyswietlanym na sliderze
 
@@ -94,8 +94,20 @@ public class InGameUI : MonoBehaviour
         Time.timeScale = 0f;
         pausePanel.SetActive(true);
         continueButton.onClick.AddListener(ResumeGame);
-        quitToHub.onClick.AddListener(GoBack);
         quitToMenu.onClick.AddListener(Quit);
+
+        if (saveButton != null)
+        {
+            saveButton.onClick.RemoveAllListeners();
+            saveButton.onClick.AddListener(SaveGameToJSON);
+
+            int currentScene = SceneManager.GetActiveScene().buildIndex;
+            bool isHub = (currentScene == 1);
+            bool isCleared = GameManagement.instance.cleared;
+
+            // Przycisk "Save" jest klikalny tylko w Hubie lub gdy pokój jest wyczyszczony
+            saveButton.interactable = (isHub || isCleared);
+        }
     }
 
     private void ResumeGame()       // wznawianie gry
@@ -103,6 +115,38 @@ public class InGameUI : MonoBehaviour
         isPaused = false;
         Time.timeScale = 1.0f;
         pausePanel.SetActive(false);
+    }
+
+    private void SaveGameToJSON()
+    {
+        SaveData data = new SaveData();
+
+        // pobranie danych swiata
+        data.savedSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        data.currency1 = GameManagement.instance.currency1;
+        data.currency2 = GameManagement.instance.currency2;
+        data.currency3 = GameManagement.instance.currency3;
+        data.roomsCleared = GameManagement.instance.roomsCleared;
+
+        // pobieranie statystyk gracza
+        data.maxHealth = Player.instance.maxHealth;
+        data.currentHealth = Player.instance.currentHealth;
+        data.maxAmmo = Player.instance.maxAmmo;
+        data.currentAmmo = Player.instance.currentAmmo;
+        data.minHealing = Player.instance.minHealing;
+        data.maxHealing = Player.instance.maxHealing;
+        data.minReward = Player.instance.minReward;
+        data.maxReward = Player.instance.maxReward;
+        data.lifeSteal = Player.instance.lifeSteal;
+        data.invincibilityTime = Player.instance.invincibilityTime;
+        data.weaponDamage = Player.instance.weaponDamage;
+        data.lifeStealChance = Player.instance.lifeStealChance;
+        data.reloadSpeed = Player.instance.reloadSpeed;
+        data.attackCooldown = Player.instance.attackCooldown;
+
+        // zapis
+        SaveSystem.Save(data);
+        Debug.Log("Zapisano poprawnie z poziomu InGameUI!");
     }
 
     // ------- menu smierci -------
