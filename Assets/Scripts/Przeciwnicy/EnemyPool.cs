@@ -23,6 +23,7 @@ public class EnemyPool : MonoBehaviour
 
         else if (GetComponentInChildren<Enemy>() == null)
         {
+            Debug.Log("a");
             given = true;
             roomCleared?.Invoke();
             GameManagement.instance.cleared = true;

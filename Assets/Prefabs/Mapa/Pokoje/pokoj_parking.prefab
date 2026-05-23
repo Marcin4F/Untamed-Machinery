@@ -2783,6 +2783,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2636485907708385795}
+  - component: {fileID: 6889708805090874319}
   m_Layer: 0
   m_Name: Mustangi
   m_TagString: Untagged
@@ -2811,6 +2812,26 @@ Transform:
   - {fileID: 9197884353657129930}
   m_Father: {fileID: 9029024413752379595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6889708805090874319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 444933317085001721}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &447650174318734781
 GameObject:
   m_ObjectHideFlags: 0
@@ -5179,7 +5200,7 @@ Transform:
   m_GameObject: {fileID: 794609973700406703}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.19, y: 1.2, z: -0.589}
+  m_LocalPosition: {x: -2.19, y: 1.2, z: -0.586}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -9884,6 +9905,7 @@ Transform:
   - {fileID: 5137453938835580518}
   - {fileID: 6497748111297704363}
   - {fileID: 6133191604257286093}
+  - {fileID: 3057792189905874593}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1688687300334349245
@@ -11313,6 +11335,7 @@ GameObject:
   - component: {fileID: 7113151839265718944}
   - component: {fileID: 2544613205208849028}
   - component: {fileID: 4365177748789022216}
+  - component: {fileID: 9095343828231790566}
   m_Layer: 0
   m_Name: mustang 1965.002
   m_TagString: Untagged
@@ -11379,7 +11402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -1359288307646084888, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
+  - {fileID: 2100000, guid: 28a72a68405629849aa864d25b385f37, type: 2}
   - {fileID: 702882185792220066, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: -3666579297070446912, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: 1733048526416795990, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
@@ -11425,6 +11448,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &9095343828231790566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093162027957576405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &2147384544337050306
 GameObject:
   m_ObjectHideFlags: 0
@@ -12933,6 +12976,7 @@ GameObject:
   - component: {fileID: 7006790638866195461}
   - component: {fileID: 904885760103485152}
   - component: {fileID: 8972423972630077769}
+  - component: {fileID: 6181388030144226439}
   m_Layer: 0
   m_Name: Budynek 2.001
   m_TagString: Untagged
@@ -13013,6 +13057,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &6181388030144226439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2317433000162139103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &2378739630295267099
 GameObject:
   m_ObjectHideFlags: 0
@@ -13481,6 +13545,7 @@ GameObject:
   - component: {fileID: 2624592630891151551}
   - component: {fileID: 4650508566221191718}
   - component: {fileID: 6510437366132821219}
+  - component: {fileID: 9216545235104937769}
   m_Layer: 0
   m_Name: mustang 1965.006
   m_TagString: Untagged
@@ -13593,6 +13658,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &9216545235104937769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2448453142670693872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &2472431115439036854
 GameObject:
   m_ObjectHideFlags: 0
@@ -14792,6 +14877,7 @@ GameObject:
   - component: {fileID: 3842370578442894293}
   - component: {fileID: 3225432305920020635}
   - component: {fileID: 8836840644297232813}
+  - component: {fileID: 2596315937578808295}
   m_Layer: 0
   m_Name: Budynek 1.001
   m_TagString: Untagged
@@ -14872,6 +14958,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2596315937578808295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2683238957402969280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &2684398193067662692
 GameObject:
   m_ObjectHideFlags: 0
@@ -19468,6 +19574,7 @@ GameObject:
   - component: {fileID: 7830815503087176255}
   - component: {fileID: 5103959424104240378}
   - component: {fileID: 8210749715497090556}
+  - component: {fileID: 7005484317609323056}
   m_Layer: 0
   m_Name: mustang 1965.004
   m_TagString: Untagged
@@ -19580,6 +19687,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &7005484317609323056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3703548429542366116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &3720603303876753895
 GameObject:
   m_ObjectHideFlags: 0
@@ -24261,6 +24388,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3687608496027649292}
+  - component: {fileID: 2358143639057108510}
   m_Layer: 0
   m_Name: Auta poza mapa
   m_TagString: Untagged
@@ -24285,6 +24413,26 @@ Transform:
   - {fileID: 8479552385064343598}
   m_Father: {fileID: 612748578910783351}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2358143639057108510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4596253560877796396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &4623355538825269617
 GameObject:
   m_ObjectHideFlags: 0
@@ -26970,6 +27118,7 @@ GameObject:
   - component: {fileID: 4752669410011856905}
   - component: {fileID: 3190543376186871581}
   - component: {fileID: 393762656220965539}
+  - component: {fileID: 2444592006493365164}
   m_Layer: 0
   m_Name: Pokoj.001
   m_TagString: Untagged
@@ -27049,6 +27198,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2444592006493365164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230180980374574419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5230869965095731746
 GameObject:
   m_ObjectHideFlags: 0
@@ -27911,6 +28080,7 @@ GameObject:
   - component: {fileID: 8857841089625855337}
   - component: {fileID: 2967922498871547532}
   - component: {fileID: 3035953149703634493}
+  - component: {fileID: 8239759755724708531}
   m_Layer: 0
   m_Name: Budynek 2
   m_TagString: Untagged
@@ -27992,6 +28162,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8239759755724708531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5387838710256209182}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &5392435618022633856
 GameObject:
   m_ObjectHideFlags: 0
@@ -30864,7 +31054,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5483176014125079412, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
+  - {fileID: 2100000, guid: 0fe7eca72a1026c46973208e7971cd6f, type: 2}
   - {fileID: 702882185792220066, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: 1733048526416795990, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: -3666579297070446912, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
@@ -31487,6 +31677,7 @@ GameObject:
   - component: {fileID: 5099217511899280439}
   - component: {fileID: 3347041227291748013}
   - component: {fileID: 3429252234117331957}
+  - component: {fileID: 5105503504823758595}
   m_Layer: 0
   m_Name: Pokoj.002
   m_TagString: Untagged
@@ -31566,6 +31757,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5105503504823758595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6107717799864421516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &6146627393812683816
 GameObject:
   m_ObjectHideFlags: 0
@@ -33114,6 +33325,7 @@ GameObject:
   - component: {fileID: 4787681057348762923}
   - component: {fileID: 6607062711584754398}
   - component: {fileID: 292809795523996601}
+  - component: {fileID: 8028599804431866405}
   m_Layer: 0
   m_Name: Budynek 1
   m_TagString: Untagged
@@ -33195,6 +33407,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8028599804431866405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6495910075080520373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &6534478448195122542
 GameObject:
   m_ObjectHideFlags: 0
@@ -33204,6 +33436,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5840920735745362833}
+  - component: {fileID: 2704863143303447117}
   m_Layer: 0
   m_Name: Auto
   m_TagString: Untagged
@@ -33232,6 +33465,26 @@ Transform:
   - {fileID: 4888165153305131628}
   m_Father: {fileID: 9029024413752379595}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2704863143303447117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6534478448195122542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &6538842058403462345
 GameObject:
   m_ObjectHideFlags: 0
@@ -37046,6 +37299,37 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!1 &7240607676501736200
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3057792189905874593}
+  m_Layer: 3
+  m_Name: SpawnPoint
+  m_TagString: SpawnPoint
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3057792189905874593
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240607676501736200}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -24}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 612748578910783351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7256630353566594995
 GameObject:
   m_ObjectHideFlags: 0
@@ -37901,6 +38185,7 @@ GameObject:
   - component: {fileID: 443953132592136878}
   - component: {fileID: 8331535065379606210}
   - component: {fileID: 7796708549141944148}
+  - component: {fileID: 4862939439655026600}
   m_Layer: 0
   m_Name: mustang 1965.001
   m_TagString: Untagged
@@ -38013,6 +38298,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &4862939439655026600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7347927746264600288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &7348078834818969730
 GameObject:
   m_ObjectHideFlags: 0
@@ -44563,6 +44868,7 @@ GameObject:
   - component: {fileID: 368754748283348723}
   - component: {fileID: 4582820785022136477}
   - component: {fileID: 4875361990449172614}
+  - component: {fileID: 6997449372506947093}
   m_Layer: 0
   m_Name: mustang 1965.003
   m_TagString: Untagged
@@ -44629,7 +44935,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5483176014125079412, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
+  - {fileID: 2100000, guid: 0fe7eca72a1026c46973208e7971cd6f, type: 2}
   - {fileID: 702882185792220066, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: 1733048526416795990, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
   - {fileID: -3666579297070446912, guid: 36c2032610f0b2b4ab36798d1e32be1e, type: 3}
@@ -44675,6 +44981,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &6997449372506947093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8445490317799024538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &8459641718204915913
 GameObject:
   m_ObjectHideFlags: 0
@@ -45703,6 +46029,7 @@ GameObject:
   - component: {fileID: 2520727287589559474}
   - component: {fileID: 6916201354957860577}
   - component: {fileID: 7018588011932631647}
+  - component: {fileID: 8678708213210403054}
   m_Layer: 0
   m_Name: mustang 1965.005
   m_TagString: Untagged
@@ -45815,6 +46142,26 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 9.62, y: 1.9475822, z: 4.28}
   m_Center: {x: 0.123876125, y: 0.16909617, z: 0.00000023841864}
+--- !u!114 &8678708213210403054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8613958025021271484}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e3fdca004f2d45fe8abbed571a8abd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SerializedVersion: 0
+  m_OverrideArea: 1
+  m_Area: 1
+  m_OverrideGenerateLinks: 0
+  m_GenerateLinks: 0
+  m_IgnoreFromBuild: 0
+  m_ApplyToChildren: 1
+  m_AffectedAgents: ffffffff
 --- !u!1 &8644829878513839948
 GameObject:
   m_ObjectHideFlags: 0

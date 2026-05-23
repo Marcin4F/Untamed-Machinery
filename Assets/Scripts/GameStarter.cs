@@ -13,7 +13,7 @@ public class GameStarter : MonoBehaviour
             GameManagement.instance.gameState = 1;
             InGameUI.instance.StartGameHide();
             //SceneManager.LoadScene(Random.Range(2, 8));
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(2);
         }
     }
 
