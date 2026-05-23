@@ -6,8 +6,6 @@ public class Shop2 : MonoBehaviour
     [SerializeField] HealthBar healthBar;
     [SerializeField] Button attackSpeedButton, weaponDamageButton, reloadSpeedButton, maxAmmoButton;
 
-    [SerializeField] HubUI hubUI;
-
     public void Activate()
     {
         attackSpeedButton.onClick.AddListener(BuyAttackSpeed);
@@ -21,7 +19,7 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.attackCooldown > 100 && GameManagement.instance.EnoughMoney(800, 100, 50))
         {
             Player.instance.attackCooldown -= 25;
-            hubUI.SetTextBuildingTwo();
+            InGameUI.instance.SetTextBuildingTwo();
             // DO DODANIA: Przerobiæ zabezpieczenie ilosci kupowania (dodac jakas zmiane w UI gdy ulepszymy na maksa)
         }
         else
@@ -36,7 +34,7 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.weaponDamage < 80 && GameManagement.instance.EnoughMoney(550, 150, 100))
         {
             Player.instance.weaponDamage += 5;
-            hubUI.SetTextBuildingTwo();
+            InGameUI.instance.SetTextBuildingTwo();
         }
         else
         {
@@ -50,7 +48,7 @@ public class Shop2 : MonoBehaviour
         if (Player.instance.reloadSpeed > 100 && GameManagement.instance.EnoughMoney(700, 50, 150))
         {
             Player.instance.reloadSpeed -= 25;
-            hubUI.SetTextBuildingTwo();
+            InGameUI.instance.SetTextBuildingTwo();
         }
         else
         {
@@ -66,7 +64,7 @@ public class Shop2 : MonoBehaviour
             Player.instance.maxAmmo += 5;
             Player.instance.currentAmmo = Player.instance.maxAmmo;
             InGameUI.instance.SetAmmo();
-            hubUI.SetTextBuildingTwo();
+            InGameUI.instance.SetTextBuildingTwo();
         }
         else
         {

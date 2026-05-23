@@ -7,10 +7,18 @@ public class InGameUI : MonoBehaviour
 {
     public static InGameUI instance;
 
-    [SerializeField] GameObject deathPanel, pausePanel;         // deathPanel - panel z ele. UI na smierci, pausePanel - panel z ele. UI na menu pauzy
+    [Header("In-Game UI Elements")]
+    [SerializeField] GameObject deathPanel;     // panel z ele. UI na menu pauzy
+    [SerializeField] GameObject pausePanel;     // panel z ele. UI na smierci
     [SerializeField] Button backToHub, continueButton, quitToHub, quitToMenu;      // przyciski na deathPanel i pausePanel; backToHub jest na smierci
     public TMP_Text currency1, currency2, currency3, ammo;          // tekst z iloscia danej waluty i ilosc amunicji
     [SerializeField] TMP_Text displayHP;                            // tekst z HP wyswietlanym na sliderze
+
+    [Header("Hub UI Elements")]
+    [SerializeField] GameObject building1Panel;
+    [SerializeField] GameObject building2Panel, building3Panel, enterTextPanel, startGamePanel;
+    [SerializeField] TMP_Text maxHealthText, healingMinText, healingMaxText, healingLS, lifeStealText, invincibilityText, rewardMinText, rewardMaxText;
+    [SerializeField] TMP_Text attackSpeedText, weaponDamageText, reloadSpeedText, maxAmmoText;
 
     private bool isPaused = false;
 
@@ -26,8 +34,16 @@ public class InGameUI : MonoBehaviour
             Destroy(transform.root.gameObject);
             return;
         }
-        deathPanel.SetActive(false);
-        pausePanel.SetActive(false);
+
+        if (deathPanel != null) deathPanel.SetActive(false);
+        if (pausePanel != null) pausePanel.SetActive(false);
+
+        // hub
+        if (building1Panel != null) building1Panel.SetActive(false);
+        if (building2Panel != null) building2Panel.SetActive(false);
+        if (building3Panel != null) building3Panel.SetActive(false);
+        if (enterTextPanel != null) enterTextPanel.SetActive(false);
+        if (startGamePanel != null) startGamePanel.SetActive(false);
     }
 
     private void Update()
@@ -41,6 +57,8 @@ public class InGameUI : MonoBehaviour
                 ResumeGame();
         }
     }
+
+    // ------- metody in-game -------
 
     // ustawianie wartosci pol tekstowych
     public void SetCurr1()
@@ -67,8 +85,9 @@ public class InGameUI : MonoBehaviour
     {
         ammo.SetText(Player.instance.currentAmmo.ToString() + " / " + Player.instance.maxAmmo);
     }
-    
-    // funkcje menu pauzy
+
+
+    // ------- funkcje menu pauzy -------
     private void PauseMenu()    // pauzowanie gry
     {
         isPaused = true;
@@ -86,7 +105,7 @@ public class InGameUI : MonoBehaviour
         pausePanel.SetActive(false);
     }
 
-    // funkcje na menu smierci
+    // ------- menu smierci -------
     public void GameOver()
     {
         deathPanel.SetActive(true);
@@ -107,5 +126,74 @@ public class InGameUI : MonoBehaviour
         Player.instance.SaveInfo();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
+    }
+
+    // ------- metody hub -------
+    public void SetTextBuildingOne()
+    {
+        maxHealthText.SetText(Player.instance.maxHealth.ToString());
+        healingMinText.SetText("Min: " + Player.instance.minHealing.ToString());
+        healingMaxText.SetText("Max: " + Player.instance.maxHealing.ToString());
+        healingLS.SetText("LS: " + Player.instance.lifeSteal.ToString());
+        lifeStealText.SetText(Player.instance.lifeStealChance.ToString() + "%");
+        invincibilityText.SetText((Player.instance.invincibilityTime / 1000.0f).ToString());
+        rewardMinText.SetText("Min: " + Player.instance.minReward.ToString());
+        rewardMaxText.SetText("Max: " + Player.instance.maxReward.ToString());
+    }
+
+    public void SetTextBuildingTwo()
+    {
+        attackSpeedText.SetText((Player.instance.attackCooldown / 1000.0f).ToString());
+        weaponDamageText.SetText(Player.instance.weaponDamage.ToString());
+        reloadSpeedText.SetText((Player.instance.reloadSpeed / 100.0f).ToString());
+        maxAmmoText.SetText(Player.instance.maxAmmo.ToString());
+    }
+
+    public void OpenBuilding(int index)     // otwieranie menu danego budynku
+    {
+        switch (index)
+        {
+            case 1:
+                building1Panel.SetActive(true);
+                SetTextBuildingOne();
+                break;
+            case 2:
+                building2Panel.SetActive(true);
+                SetTextBuildingTwo();
+                break;
+            case 3:
+                building3Panel.SetActive(true);
+                break;
+            default:
+                Debug.LogError("Open building Panel");
+                break;
+        }
+    }
+
+    public void EnterTextDisplay()
+    {
+        enterTextPanel.SetActive(true);
+    }
+
+    public void EnterTextHide()
+    {
+        enterTextPanel.SetActive(false);
+    }
+
+    public void StartGameDisplay()
+    {
+        startGamePanel.SetActive(true);
+    }
+
+    public void StartGameHide()
+    {
+        startGamePanel.SetActive(false);
+    }
+
+    public void CloseBuilding()
+    {
+        building1Panel.SetActive(false);
+        building2Panel.SetActive(false);
+        building3Panel.SetActive(false);
     }
 }

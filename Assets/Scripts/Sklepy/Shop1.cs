@@ -5,9 +5,7 @@ using UnityEngine.UI;
 public class Shop1 : MonoBehaviour
 {
     [SerializeField] HealthBar healthBar;
-    [SerializeField] Button maxHealth, healing, lifeSteal, rewardAmound, invincibilityTime;
-
-    [SerializeField] HubUI hubUI;
+    [SerializeField] Button maxHealth, healing, lifeSteal, invincibilityTime, rewardAmound;
 
     public void Activate()
     {
@@ -28,7 +26,7 @@ public class Shop1 : MonoBehaviour
                 Player.instance.currentHealth += 20;
                 healthBar.AddMaxValue(20);
                 InGameUI.instance.SetDisplayHP();
-                hubUI.SetTextBuildingOne();
+                InGameUI.instance.SetTextBuildingOne();
             }
         }
         else
@@ -45,7 +43,7 @@ public class Shop1 : MonoBehaviour
             Player.instance.minHealing += 10;
             Player.instance.maxHealing += 10;
             Player.instance.lifeSteal += 2;
-            hubUI.SetTextBuildingOne();
+            InGameUI.instance.SetTextBuildingOne();
         }
         else
         {
@@ -59,7 +57,7 @@ public class Shop1 : MonoBehaviour
         if (Player.instance.lifeStealChance < 50 && GameManagement.instance.EnoughMoney(100, 350, 500))
         {
             Player.instance.lifeStealChance += 5;
-            hubUI.SetTextBuildingOne();
+            InGameUI.instance.SetTextBuildingOne();
         }
         else
         {
@@ -73,7 +71,7 @@ public class Shop1 : MonoBehaviour
         if (Player.instance.invincibilityTime < 750 && GameManagement.instance.EnoughMoney(175, 200, 750))
         {
             Player.instance.invincibilityTime += 25;
-            hubUI.SetTextBuildingOne();
+            InGameUI.instance.SetTextBuildingOne();
         }
         else
         {
@@ -88,7 +86,7 @@ public class Shop1 : MonoBehaviour
         {
             Player.instance.minReward += 25;
             Player.instance.maxReward += 25;
-            hubUI.SetTextBuildingOne();
+            InGameUI.instance.SetTextBuildingOne();
         }
         else
         {

@@ -3,8 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class GameStarter : MonoBehaviour
 {
-    [SerializeField] HubUI hubUI;
-
     private bool inRange = false;
 
     private void Update()
@@ -20,13 +18,13 @@ public class GameStarter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        hubUI.StartGameDisplay();
+        InGameUI.instance.StartGameDisplay();
         inRange = true;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        hubUI.StartGameHide();
+        InGameUI.instance.StartGameHide();
         inRange = false;
     }
 }

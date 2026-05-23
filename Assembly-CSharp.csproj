@@ -66,7 +66,6 @@
     <Compile Include="Assets\Scripts\Doors\RewardDisplayRight.cs" />
     <Compile Include="Assets\Scripts\Przeciwnicy\EnemyPurple.cs" />
     <Compile Include="Assets\Scripts\Doors\DoorsAnimation.cs" />
-    <Compile Include="Assets\Scripts\UI\HubUI.cs" />
     <Compile Include="Assets\Scripts\Sklepy\Shop2.cs" />
     <Compile Include="Assets\Scripts\UI\InGameUI.cs" />
     <Compile Include="Assets\Scripts\Doors\Doors.cs" />

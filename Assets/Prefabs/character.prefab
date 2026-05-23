@@ -665,6 +665,8 @@ MonoBehaviour:
   currency1: 0
   currency2: 0
   currency3: 0
+  roomsCleared: 0
+  rewardIndex: 0
   cleared: 0
 --- !u!114 &4413338529494063191
 MonoBehaviour:

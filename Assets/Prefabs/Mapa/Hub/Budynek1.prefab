@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 3.2097, y: 3.2097, z: 3.2097}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2716321088998399238}
@@ -99,7 +99,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28b894bd38102cd4ba08fd4d718aff4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hubUI: {fileID: 0}
 --- !u!114 &7691578377510169960
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -116,9 +115,8 @@ MonoBehaviour:
   maxHealth: {fileID: 0}
   healing: {fileID: 0}
   lifeSteal: {fileID: 0}
-  rewardAmound: {fileID: 0}
   invincibilityTime: {fileID: 0}
-  hubUI: {fileID: 0}
+  rewardAmound: {fileID: 0}
 --- !u!1001 &3739956261125760988
 PrefabInstance:
   m_ObjectHideFlags: 0

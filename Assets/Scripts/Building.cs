@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    [SerializeField] HubUI hubUI;
-
     private string buildingIndex;
     private bool inRange = false, open = false;
 
@@ -20,44 +18,44 @@ public class Building : MonoBehaviour
             switch (buildingIndex)
             {
                 case "Budynek1":
-                    hubUI.OpenBuilding(1);
+                    InGameUI.instance.OpenBuilding(1);
                     Shop1 shop1 = GetComponent<Shop1>();
                     shop1.Activate();
                     break;
                 case "Budynek2":
-                    hubUI.OpenBuilding(2);
+                    InGameUI.instance.OpenBuilding(2);
                     Shop2 shop2 = GetComponent<Shop2>();
                     shop2.Activate();
                     break;
                 case "Budynek3":
-                    hubUI.OpenBuilding(3);
+                    InGameUI.instance.OpenBuilding(3);
                     break;
                 default:
                     Debug.LogError("Building tringger enter");
                     break;
             }
-            hubUI.EnterTextHide();
+            InGameUI.instance.EnterTextHide();
         }
 
         else if (open && inRange && (Input.GetKeyDown(KeyCode.Space)))
         {
             open = false;
-            hubUI.CloseBuilding();
-            hubUI.EnterTextDisplay();
+            InGameUI.instance.CloseBuilding();
+            InGameUI.instance.EnterTextDisplay();
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         inRange = true;
-        hubUI.EnterTextDisplay();
+        InGameUI.instance.EnterTextDisplay();
     }
 
     private void OnTriggerExit(Collider other)
     {
         inRange = false;
         open = false;
-        hubUI.CloseBuilding();
-        hubUI.EnterTextHide();
+        InGameUI.instance.CloseBuilding();
+        InGameUI.instance.EnterTextHide();
     }
 }
