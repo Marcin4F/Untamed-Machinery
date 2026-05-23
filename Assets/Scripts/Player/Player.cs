@@ -141,8 +141,6 @@ public class Player : MonoBehaviour
                 Time.timeScale = 0f;
                 InGameUI.instance.GameOver();
                 alive = false;
-                SaveInfo();
-                
             }
         }
 
@@ -155,31 +153,6 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
         InGameUI.instance.SetDisplayHP();
-    }
-
-    public void GetInfo()
-    {
-        maxHealth = PlayerPrefs.GetInt("maxHealth");
-        weaponDamage = PlayerPrefs.GetInt("weaponDamage");
-        reloadSpeed = PlayerPrefs.GetInt("reloadSpeed");
-        attackCooldown = PlayerPrefs.GetInt("attackCooldown");
-        currentHealth = PlayerPrefs.GetInt("PlayerHealth");
-        invincibilityTime = PlayerPrefs.GetInt("invincibilityTime");
-        lifeStealChance = PlayerPrefs.GetInt("lifeStealChance");
-        maxAmmo = PlayerPrefs.GetInt("maxAmmo");
-        minHealing = PlayerPrefs.GetInt("minHealing");
-        maxHealing = PlayerPrefs.GetInt("maxHealing");
-        minReward = PlayerPrefs.GetInt("minReward");
-        maxReward = PlayerPrefs.GetInt("maxReward");
-        lifeSteal = PlayerPrefs.GetInt("lifeSteal");
-    }
-
-    public void SaveInfo()              // zapis informacji do plikow
-    {
-        PlayerPrefs.SetInt("PlayerHealth", currentHealth);
-        PlayerPrefs.SetInt("Currency1", GameManagement.instance.currency1);
-        PlayerPrefs.SetInt("Currency2", GameManagement.instance.currency2);
-        PlayerPrefs.SetInt("Currency3", GameManagement.instance.currency3);
     }
 
     private void OnApplicationQuit()

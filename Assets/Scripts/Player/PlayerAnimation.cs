@@ -7,11 +7,11 @@ public class PlayerAnimation : MonoBehaviour
     Animator animator;
     private Camera mainCamera;
 
-    private int sceneIndex;
     Vector3 playerVelocity;
-    bool isPointing = false, isMoving = false, groundedPlayer = false;
+    bool isPointing = false, isMoving = false;
     Vector3 move;
-    Vector3 moveAmount;
+
+    private int currentSceneIndex;
 
     [SerializeField] float runningSpeed = 3.0f;
     [SerializeField] float walkingSpeed = 1.0f;
@@ -30,9 +30,10 @@ public class PlayerAnimation : MonoBehaviour
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         shooting = GetComponentInChildren<Shooting>();
-        sceneIndex = SceneManager.GetActiveScene().buildIndex;
-
+        
         mainCamera = Camera.main;
+
+        currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     void Update()
@@ -44,16 +45,27 @@ public class PlayerAnimation : MonoBehaviour
         ProcessShot();
     }
 
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += UpdateSceneIndex;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= UpdateSceneIndex;
+    }
+
+    private void UpdateSceneIndex(Scene scene, LoadSceneMode mode)
+    {
+        currentSceneIndex = scene.buildIndex;
+        mainCamera = Camera.main;
+    }
+
     void CheckIfMoving()
     {
-        groundedPlayer = controller.isGrounded;
-        if (groundedPlayer && playerVelocity.y < 0)
-            playerVelocity.y = -2.0f;
-
         move = Vector3.forward * Input.GetAxis("Vertical");
         move += Vector3.right * Input.GetAxis("Horizontal");
         move.y = 0;
-        // Debug.Log("X: " + move.x + ", Z: " + move.z);
 
         if (move.magnitude == 0)
         {
@@ -74,7 +86,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void CheckIfPointing()
     {
-        if (sceneIndex == 1)
+        if (currentSceneIndex == 1)
         {
             if (isPointing)
             {
@@ -138,7 +150,7 @@ public class PlayerAnimation : MonoBehaviour
         }
 
         // grawitacja (schodzenie ze wzniesieñ)
-        if (sceneIndex == 1)
+        if (currentSceneIndex == 1)
         {
             playerVelocity.y += gravityValue * Time.deltaTime;
             controller.Move(playerVelocity * Time.deltaTime);

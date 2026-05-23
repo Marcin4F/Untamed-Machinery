@@ -11,8 +11,10 @@ public class Doors : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("Wejscie w kolizje");
         if (GameManagement.instance.cleared)
         {
+            Debug.Log("if cleared");
             int index = SceneManager.GetActiveScene().buildIndex;
             GameManagement.instance.roomsCleared++;
 
@@ -44,13 +46,13 @@ public class Doors : MonoBehaviour
             }
 
             int newIndex = index;
-
+            Debug.Log("Stary indeks: " + index);
             // TODO: limit by dany pokoj nie pojawial sie tak czesto
             while (index == newIndex)
             {
                 newIndex = Random.Range(minIndex, maxIndex);
             }
-
+            Debug.Log("Nowy indeks: " + newIndex);
             if (active == 0)
                 GameManagement.instance.rewardIndex = rewardSystemLeft.rewardIndex;
             else

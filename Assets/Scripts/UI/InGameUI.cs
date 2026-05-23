@@ -115,7 +115,6 @@ public class InGameUI : MonoBehaviour
     private void GoBack()
     {
         Player.instance.currentHealth = Player.instance.maxHealth;
-        Player.instance.SaveInfo();
         PlayerPrefs.SetInt("GameState", 1);
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
@@ -123,7 +122,6 @@ public class InGameUI : MonoBehaviour
 
     private void Quit()
     {
-        Player.instance.SaveInfo();
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }

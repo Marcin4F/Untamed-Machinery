@@ -11,6 +11,7 @@ public class EnemyPool : MonoBehaviour
     private void Start()
     {
         instance = this;
+        GameManagement.instance.cleared = false;
     }
 
     private void Update()

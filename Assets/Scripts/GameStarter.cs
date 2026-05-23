@@ -9,10 +9,11 @@ public class GameStarter : MonoBehaviour
     {
         if (inRange && Input.GetKeyDown(KeyCode.Space))
         {
-            Player.instance.SaveInfo();
             GameManagement.instance.roomsCleared = 0;
             GameManagement.instance.gameState = 1;
-            SceneManager.LoadScene(Random.Range(2, 8));
+            InGameUI.instance.StartGameHide();
+            //SceneManager.LoadScene(Random.Range(2, 8));
+            SceneManager.LoadScene(4);
         }
     }
 

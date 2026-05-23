@@ -20,10 +20,15 @@ public class RewardSystemRight : MonoBehaviour
 
     private void GetReward()
     {
-        if(GameManagement.instance.gameState == 2)
+        if (GameManagement.instance.gameState > 0)
         {
-            currentReward = GameManagement.instance.rewardIndex;
-            Debug.Log("index: " + currentReward);
+            if (GameManagement.instance.gameState == 1)
+            {
+                currentReward = Random.Range(1, 4);
+                GameManagement.instance.gameState = 2;
+            }
+            else currentReward = GameManagement.instance.rewardIndex;
+
             switch (currentReward)
             {
                 case 0:
@@ -32,19 +37,16 @@ public class RewardSystemRight : MonoBehaviour
                     break;
                 case 1:
                     rewardAmount = Random.Range(Player.instance.minReward, Player.instance.maxReward);
-                    Debug.Log("rw " + rewardAmount);
                     GameManagement.instance.currency1 += rewardAmount;
                     InGameUI.instance.SetCurr1();
                     break;
                 case 2:
                     rewardAmount = Random.Range(Player.instance.minReward, Player.instance.maxReward);
-                    Debug.Log("rw " + rewardAmount);
                     GameManagement.instance.currency2 += rewardAmount;
                     InGameUI.instance.SetCurr2();
                     break;
                 case 3:
                     rewardAmount = Random.Range(Player.instance.minReward, Player.instance.maxReward);
-                    Debug.Log("rw " + rewardAmount);
                     GameManagement.instance.currency3 += rewardAmount;
                     InGameUI.instance.SetCurr3();
                     break;
