@@ -7,12 +7,26 @@ public class InGameUI : MonoBehaviour
 {
     public static InGameUI instance;
 
-    [Header("In-Game UI Elements")]
-    [SerializeField] GameObject deathPanel;     // panel z ele. UI na menu pauzy
-    [SerializeField] GameObject pausePanel;     // panel z ele. UI na smierci
-    [SerializeField] Button backToHub, continueButton, saveButton, quitToMenu;      // przyciski na deathPanel i pausePanel; backToHub jest na smierci
-    public TMP_Text currency1, currency2, currency3, ammo;          // tekst z iloscia danej waluty i ilosc amunicji
-    [SerializeField] TMP_Text displayHP;                            // tekst z HP wyswietlanym na sliderze
+    [Header("Ekrany (Panels)")]
+    [SerializeField] GameObject deathPanel;
+    [SerializeField] GameObject pausePanelNoSave;       // pauza bez mozliwosci zapisu
+    [SerializeField] GameObject pausePanelWithSave;     // pauza z mozliwoscia zapisu
+
+    [Header("Przyciski - Œmieræ")]
+    [SerializeField] Button backToHub;
+
+    [Header("Przyciski - Pauza (Brak Zapisu)")]
+    [SerializeField] Button continueNoButton;
+    [SerializeField] Button quitMenuNoButton;
+
+    [Header("Przyciski - Pauza (Z Zapisem)")]
+    [SerializeField] Button continueSaveButton;
+    [SerializeField] Button saveButton, quitMenuSaveButton;
+
+    [Header("Zasoby")]
+    public TMP_Text currency1;
+    public TMP_Text currency2, currency3, ammo;             // tekst z iloscia danej waluty i ilosc amunicji
+    [SerializeField] TMP_Text displayHP;                    // tekst z HP wyswietlanym na sliderze
 
     [Header("Hub UI Elements")]
     [SerializeField] GameObject building1Panel;
@@ -36,7 +50,8 @@ public class InGameUI : MonoBehaviour
         }
 
         if (deathPanel != null) deathPanel.SetActive(false);
-        if (pausePanel != null) pausePanel.SetActive(false);
+        if (pausePanelNoSave != null) pausePanelNoSave.SetActive(false);
+        if (pausePanelWithSave != null) pausePanelWithSave.SetActive(false);
 
         // hub
         if (building1Panel != null) building1Panel.SetActive(false);
@@ -59,8 +74,6 @@ public class InGameUI : MonoBehaviour
     }
 
     // ------- metody in-game -------
-
-    // ustawianie wartosci pol tekstowych
     public void SetCurr1()
     {
         currency1.SetText(GameManagement.instance.currency1.ToString());
@@ -92,21 +105,30 @@ public class InGameUI : MonoBehaviour
     {
         isPaused = true;
         Time.timeScale = 0f;
-        pausePanel.SetActive(true);
-        continueButton.onClick.AddListener(ResumeGame);
-        quitToMenu.onClick.AddListener(Quit);
+        int currentScene = SceneManager.GetActiveScene().buildIndex;
 
-        if (saveButton != null)
+        // sprawdzenie czy mozna zapisac gre
+        bool isHub = (currentScene == 1);
+        bool isCleared = GameManagement.instance.cleared;
+        bool canSave = (isHub || isCleared);
+
+        if (canSave)
         {
-            saveButton.onClick.RemoveAllListeners();
-            saveButton.onClick.AddListener(SaveGameToJSON);
+            pausePanelWithSave.SetActive(true);
+            pausePanelNoSave.SetActive(false);
 
-            int currentScene = SceneManager.GetActiveScene().buildIndex;
-            bool isHub = (currentScene == 1);
-            bool isCleared = GameManagement.instance.cleared;
+            // logika przyciskow plus czyszczenie poprzedniej zeby 2 razy sie nie wykonywala
+            if (continueSaveButton != null) { continueSaveButton.onClick.RemoveAllListeners(); continueSaveButton.onClick.AddListener(ResumeGame); }
+            if (saveButton != null) { saveButton.onClick.RemoveAllListeners(); saveButton.onClick.AddListener(SaveGameToJSON); }
+            if (quitMenuSaveButton != null) { quitMenuSaveButton.onClick.RemoveAllListeners(); quitMenuSaveButton.onClick.AddListener(Quit); }
+        }
+        else
+        {
+            pausePanelWithSave.SetActive(false);
+            pausePanelNoSave.SetActive(true);
 
-            // Przycisk "Save" jest klikalny tylko w Hubie lub gdy pokój jest wyczyszczony
-            saveButton.interactable = (isHub || isCleared);
+            if (continueNoButton != null) { continueNoButton.onClick.RemoveAllListeners(); continueNoButton.onClick.AddListener(ResumeGame); }
+            if (quitMenuNoButton != null) { quitMenuNoButton.onClick.RemoveAllListeners(); quitMenuNoButton.onClick.AddListener(Quit); }
         }
     }
 
@@ -114,7 +136,8 @@ public class InGameUI : MonoBehaviour
     {
         isPaused = false;
         Time.timeScale = 1.0f;
-        pausePanel.SetActive(false);
+        pausePanelNoSave.SetActive(false);
+        pausePanelWithSave.SetActive(false);
     }
 
     private void SaveGameToJSON()
@@ -161,12 +184,16 @@ public class InGameUI : MonoBehaviour
         Player.instance.currentHealth = Player.instance.maxHealth;
         PlayerPrefs.SetInt("GameState", 1);
         Time.timeScale = 1f;
+        pausePanelNoSave.SetActive(false);
+        pausePanelWithSave.SetActive(false);
         SceneManager.LoadScene(1);
     }
 
     private void Quit()
     {
         Time.timeScale = 1f;
+        pausePanelNoSave.SetActive(false);
+        pausePanelWithSave.SetActive(false);
         SceneManager.LoadScene(0);
     }
 
