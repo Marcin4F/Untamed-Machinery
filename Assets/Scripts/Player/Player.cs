@@ -143,6 +143,7 @@ public class Player : MonoBehaviour
 
             if (currentHealth <= 0)
             {
+                // TODO DZWIEK: smierc gracza
                 Time.timeScale = 0f;
                 InGameUI.instance.GameOver();
                 alive = false;

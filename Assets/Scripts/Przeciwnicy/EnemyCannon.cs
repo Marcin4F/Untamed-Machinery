@@ -61,6 +61,7 @@ public class EnemyCannon : Enemy
 
     protected void Shoot()
     {
+        // TODO DZWIEK: strzal zielonego
         muzzle.FireAShot();
     }
 

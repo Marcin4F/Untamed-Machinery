@@ -130,14 +130,9 @@ public class Enemy : MonoBehaviour
         health -= damage;
         if (health <= 0)
         {
-
+            // TODO DZWIEK: smierc oponenta
             Die();
-            // DO DODANIA: animacja smierci + moze jakis dzwiek
-            //Debug.Log("Smierc");
-            //isAlive = false;
-            //maleDamage = 0;
-            //if (Random.Range(0, 100) < Player.instance.lifeStealChance)
-            //    Player.instance.TakeDamage(-Player.instance.lifeSteal);
+            // DO DODANIA: animacja smierci
         }
     }
 

@@ -30,6 +30,7 @@ public class EnemyPool : MonoBehaviour
 
         else if (GetComponentInChildren<Enemy>() == null)
         {
+            // TODO DZWIEK: sukces
             given = true;
             roomCleared?.Invoke();
             GameManagement.instance.cleared = true;

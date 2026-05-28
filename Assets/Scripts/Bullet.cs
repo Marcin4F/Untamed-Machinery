@@ -39,8 +39,9 @@ public class Bullet : MonoBehaviour
         Vector3 currentPosition = transform.position;
         if (Physics.Linecast(lastPosition, currentPosition, out var rayCastHit, hitLayerMask))       // raycast od obecnej pozycji od ostatniej pozycj, jezeli cos trafil znaczy ze pocisk trafil w obiekt
         {
-            // MARKERY
-            Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);        // zainicjalizowanie markera trafienia (pozniej zmienic na efekt wizualny np. particle
+            // TODO DZWIEK: uderzenie pocisku
+
+            Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);
             Destroy(gameObject);
             Enemy enemy = rayCastHit.transform.GetComponent<Enemy>();
             if (enemy != null && enemy.isAlive)

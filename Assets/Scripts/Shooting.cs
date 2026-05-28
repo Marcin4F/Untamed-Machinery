@@ -49,6 +49,7 @@ public class Shooting : MonoBehaviour
         // zabezpieczenie przed podwojnym przeladowaniem
         if (isReloading) yield break;
 
+        // TODO DZWIEK: przeladowanie
         isReloading = true;
         shotReady = false;
 

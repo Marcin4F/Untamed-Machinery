@@ -161,6 +161,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (Input.GetMouseButton(0) && isPointing && shooting.shotReady && !shooting.isReloading)
         {
+            // TODO DZWIEK: strzal gracza
             animator.SetTrigger("shot");
             firingGun?.Invoke();
             shooting.shotReady = false;

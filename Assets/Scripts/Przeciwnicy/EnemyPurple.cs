@@ -63,6 +63,7 @@ public class EnemyPurple : Enemy
 
     protected void Shoot()
     {
+        // TODO DZWIEK: strzal fioletowego
         muzzleStraight.FireAShot();
         muzzleRight.FireAShot();
         muzzleLeft.FireAShot();
