@@ -8,10 +8,17 @@ public class EnemyPool : MonoBehaviour
 
     bool given = false;
 
+    [SerializeField] private GameObject enemiesContainer;
+
     private void Start()
     {
         instance = this;
-        GameManagement.instance.cleared = false;
+        if (GameManagement.instance.cleared)
+        {
+            given = true;
+
+            Destroy(gameObject);
+        }
     }
 
     private void Update()
@@ -23,7 +30,6 @@ public class EnemyPool : MonoBehaviour
 
         else if (GetComponentInChildren<Enemy>() == null)
         {
-            Debug.Log("a");
             given = true;
             roomCleared?.Invoke();
             GameManagement.instance.cleared = true;

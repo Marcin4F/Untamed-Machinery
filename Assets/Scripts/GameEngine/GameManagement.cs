@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManagement : MonoBehaviour
 {
@@ -23,9 +24,62 @@ public class GameManagement : MonoBehaviour
 
     private void Start()
     {
-        InGameUI.instance.SetCurr1();
-        InGameUI.instance.SetCurr2();
-        InGameUI.instance.SetCurr3();
+        if (SaveSystem.loadFromSave)
+        {
+            ApplySaveData();
+            SaveSystem.loadFromSave = false;
+        }
+        else
+        {
+            InGameUI.instance.SetCurr1();
+            InGameUI.instance.SetCurr2();
+            InGameUI.instance.SetCurr3();
+        }
+    }
+
+    private void ApplySaveData()
+    {
+        SaveData data = SaveSystem.Load();
+        if (data != null)
+        {
+            // waluty i progres
+            currency1 = data.currency1;
+            currency2 = data.currency2;
+            currency3 = data.currency3;
+            roomsCleared = data.roomsCleared;
+
+            // statystyki
+            Player.instance.maxHealth = data.maxHealth;
+            Player.instance.currentHealth = data.currentHealth;
+            Player.instance.maxAmmo = data.maxAmmo;
+            Player.instance.currentAmmo = data.currentAmmo;
+            Player.instance.minHealing = data.minHealing;
+            Player.instance.maxHealing = data.maxHealing;
+            Player.instance.minReward = data.minReward;
+            Player.instance.maxReward = data.maxReward;
+            Player.instance.lifeSteal = data.lifeSteal;
+            Player.instance.invincibilityTime = data.invincibilityTime;
+            Player.instance.weaponDamage = data.weaponDamage;
+            Player.instance.lifeStealChance = data.lifeStealChance;
+            Player.instance.reloadSpeed = data.reloadSpeed;
+            Player.instance.attackCooldown = data.attackCooldown;
+
+            // odswierzenie UI
+            InGameUI.instance.SetCurr1();
+            InGameUI.instance.SetCurr2();
+            InGameUI.instance.SetCurr3();
+            Player.instance.healthBar.SetMaxValue(Player.instance.maxHealth);
+            Player.instance.healthBar.SetHealth(Player.instance.currentHealth);
+            InGameUI.instance.SetDisplayHP();
+            InGameUI.instance.SetAmmo();
+
+            // przeniesienie do odpowiedniego pokoju
+            if (data.savedSceneIndex != 1)
+            {
+                cleared = true;
+                SceneManager.LoadScene(data.savedSceneIndex);
+            }
+        }
     }
 
     public bool EnoughMoney(int curr1, int curr2, int curr3)

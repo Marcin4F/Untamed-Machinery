@@ -184,16 +184,19 @@ public class InGameUI : MonoBehaviour
         Player.instance.currentHealth = Player.instance.maxHealth;
         PlayerPrefs.SetInt("GameState", 1);
         Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
         pausePanelNoSave.SetActive(false);
         pausePanelWithSave.SetActive(false);
-        SceneManager.LoadScene(1);
     }
 
     private void Quit()
     {
         Time.timeScale = 1f;
-        pausePanelNoSave.SetActive(false);
-        pausePanelWithSave.SetActive(false);
+
+        if (Player.instance != null) Destroy(Player.instance.gameObject);
+        if (GameManagement.instance != null) Destroy(GameManagement.instance.gameObject);
+        Destroy(transform.root.gameObject);
+
         SceneManager.LoadScene(0);
     }
 

@@ -11,10 +11,10 @@ public class Doors : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Wejscie w kolizje");
         if (GameManagement.instance.cleared)
         {
-            Debug.Log("if cleared");
+            GameManagement.instance.cleared = false;
+
             int index = SceneManager.GetActiveScene().buildIndex;
             GameManagement.instance.roomsCleared++;
 

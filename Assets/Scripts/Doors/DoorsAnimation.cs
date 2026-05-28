@@ -13,7 +13,15 @@ public class DoorsAnimation : MonoBehaviour
     {
         closedPosition = transform.position;
         openPosition = closedPosition + openOffset;
-        EnemyPool.roomCleared += OpenDoors;
+
+        if (GameManagement.instance.cleared)
+        {
+            transform.localPosition = openPosition;
+        }
+        else
+        {
+            EnemyPool.roomCleared += OpenDoors;
+        }
     }
 
     // Update is called once per frame

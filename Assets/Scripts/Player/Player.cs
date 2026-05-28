@@ -154,9 +154,4 @@ public class Player : MonoBehaviour
         }
         InGameUI.instance.SetDisplayHP();
     }
-
-    private void OnApplicationQuit()
-    {
-        PlayerPrefs.DeleteAll();
-    }
 }
