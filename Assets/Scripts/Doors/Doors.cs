@@ -57,6 +57,8 @@ public class Doors : MonoBehaviour
                 GameManagement.instance.rewardIndex = rewardSystemLeft.rewardIndex;
             else
                 GameManagement.instance.rewardIndex = rewardSystemRight.rewardIndex;
+
+            InGameUI.instance.ShowCurtain();
             SceneManager.LoadScene(newIndex);
         }
     }

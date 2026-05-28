@@ -77,6 +77,11 @@ public class Player : MonoBehaviour
         {
             vcam.Follow = transform;
         }
+
+        if (scene.buildIndex != 1)
+        {
+            InGameUI.instance.HideCurtain();
+        }
     }
 
     void Update()

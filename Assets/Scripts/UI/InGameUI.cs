@@ -23,6 +23,10 @@ public class InGameUI : MonoBehaviour
     [SerializeField] Button continueSaveButton;
     [SerializeField] Button saveButton, quitMenuSaveButton;
 
+
+    [Header("Ekran £adowania")]
+    [SerializeField] GameObject loadingCurtain;
+
     [Header("Zasoby")]
     public TMP_Text currency1;
     public TMP_Text currency2, currency3, ammo;             // tekst z iloscia danej waluty i ilosc amunicji
@@ -170,6 +174,8 @@ public class InGameUI : MonoBehaviour
         // zapis
         SaveSystem.Save(data);
         Debug.Log("Zapisano poprawnie z poziomu InGameUI!");
+
+        ResumeGame();
     }
 
     // ------- menu smierci -------
@@ -185,8 +191,6 @@ public class InGameUI : MonoBehaviour
         PlayerPrefs.SetInt("GameState", 1);
         Time.timeScale = 1f;
         SceneManager.LoadScene(1);
-        pausePanelNoSave.SetActive(false);
-        pausePanelWithSave.SetActive(false);
     }
 
     private void Quit()
@@ -198,6 +202,17 @@ public class InGameUI : MonoBehaviour
         Destroy(transform.root.gameObject);
 
         SceneManager.LoadScene(0);
+    }
+
+    // ------- metody ekranu laodwania -------
+    public void ShowCurtain()
+    {
+        if (loadingCurtain != null) loadingCurtain.SetActive(true);
+    }
+
+    public void HideCurtain()
+    {
+        if (loadingCurtain != null) loadingCurtain.SetActive(false);
     }
 
     // ------- metody hub -------

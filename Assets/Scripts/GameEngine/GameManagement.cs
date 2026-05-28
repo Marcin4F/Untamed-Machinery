@@ -34,6 +34,7 @@ public class GameManagement : MonoBehaviour
             InGameUI.instance.SetCurr1();
             InGameUI.instance.SetCurr2();
             InGameUI.instance.SetCurr3();
+            InGameUI.instance.HideCurtain();
         }
     }
 
@@ -78,6 +79,11 @@ public class GameManagement : MonoBehaviour
             {
                 cleared = true;
                 SceneManager.LoadScene(data.savedSceneIndex);
+            }
+            else
+            {
+                // zapis byl w hubie wiêc podnosimy kurtyne
+                InGameUI.instance.HideCurtain();
             }
         }
     }
