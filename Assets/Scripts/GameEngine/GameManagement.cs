@@ -93,6 +93,7 @@ public class GameManagement : MonoBehaviour
     {
         if (curr1 <= currency1 && curr2 <= currency2 && curr3 <= currency3)
         {
+            // TODO DZWIEK: dokonianie zakupu
             currency1 -= curr1;
             currency2 -= curr2;
             currency3 -= curr3;
