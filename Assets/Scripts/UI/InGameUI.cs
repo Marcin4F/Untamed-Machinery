@@ -222,7 +222,7 @@ public class InGameUI : MonoBehaviour
         maxHealthText.SetText(Player.instance.maxHealth.ToString());
         healingMinText.SetText("Min: " + Player.instance.minHealing.ToString());
         healingMaxText.SetText("Max: " + Player.instance.maxHealing.ToString());
-        healingLS.SetText("LS: " + Player.instance.lifeSteal.ToString());
+        healingLS.SetText("LifeSteal: " + Player.instance.lifeSteal.ToString());
         lifeStealText.SetText(Player.instance.lifeStealChance.ToString() + "%");
         invincibilityText.SetText((Player.instance.invincibilityTime / 1000.0f).ToString());
         rewardMinText.SetText("Min: " + Player.instance.minReward.ToString());
