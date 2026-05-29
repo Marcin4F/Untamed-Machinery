@@ -9,6 +9,7 @@ public class SaveData
     public int currency3;
     public int roomsCleared;
     public int savedSceneIndex; // indeks sceny na ktorej zapisujemy
+    public int gameState;
 
     // zmienne z Player
     public int maxHealth;

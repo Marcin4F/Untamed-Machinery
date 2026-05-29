@@ -48,6 +48,7 @@ public class GameManagement : MonoBehaviour
             currency2 = data.currency2;
             currency3 = data.currency3;
             roomsCleared = data.roomsCleared;
+            gameState = data.gameState;
 
             // statystyki
             Player.instance.maxHealth = data.maxHealth;

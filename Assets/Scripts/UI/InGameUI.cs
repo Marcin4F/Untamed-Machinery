@@ -154,6 +154,7 @@ public class InGameUI : MonoBehaviour
         data.currency2 = GameManagement.instance.currency2;
         data.currency3 = GameManagement.instance.currency3;
         data.roomsCleared = GameManagement.instance.roomsCleared;
+        data.gameState = GameManagement.instance.gameState;
 
         // pobieranie statystyk gracza
         data.maxHealth = Player.instance.maxHealth;
