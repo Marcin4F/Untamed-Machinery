@@ -12,7 +12,8 @@ public class GameStarter : MonoBehaviour
             GameManagement.instance.roomsCleared = 0;
             GameManagement.instance.gameState = 1;
             InGameUI.instance.StartGameHide();
-            SceneManager.LoadScene(Random.Range(2, 8));
+            //SceneManager.LoadScene(Random.Range(2, 8));
+            SceneManager.LoadScene(26);
         }
     }
 
