@@ -272,6 +272,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b0658381690ee040a6cc18246f79132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemiesContainer: {fileID: 0}
 --- !u!4 &223482283
 Transform:
   m_ObjectHideFlags: 0
@@ -1178,6 +1179,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 831117277765229722, guid: 098758036c0e0304f99db340674e94bb, type: 3}
   m_PrefabInstance: {fileID: 1068520310}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1155680852
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2728478842291363967, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_Name
+      value: pokoj_serwerownia_alarm_kopia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
 --- !u!1 &1511690061
 GameObject:
   m_ObjectHideFlags: 0
@@ -1471,63 +1529,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1123134591334353045
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2415645905139898659, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5594585947460693934, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
-      propertyPath: m_Name
-      value: pokoj_serwerownia_alarm
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 80871f3a0c274e747878d3f24fc5706e, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1536,9 +1537,9 @@ SceneRoots:
   - {fileID: 303958258}
   - {fileID: 832575519}
   - {fileID: 2101838513}
-  - {fileID: 1123134591334353045}
   - {fileID: 800864567}
   - {fileID: 1511690063}
   - {fileID: 1555390342}
   - {fileID: 223482283}
   - {fileID: 1558663073}
+  - {fileID: 1155680852}
