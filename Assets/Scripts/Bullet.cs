@@ -9,6 +9,8 @@ public class Bullet : MonoBehaviour
     private float lifeTime = 0.0f;                              // czas zycia pocisku
     [SerializeField] float bulletSpeed = 40.0f;
 
+    private int shieldLayerIndex;
+
     private int shotDamage;
 
     public void SetShotDamage(int damage) // setter do ustawienia obrazen od przeciwnika
@@ -19,6 +21,7 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         lastPosition = transform.position;
+        shieldLayerIndex = LayerMask.NameToLayer("Shield");
     }
 
     private void Update()
@@ -42,6 +45,13 @@ public class Bullet : MonoBehaviour
             // TODO DZWIEK: uderzenie pocisku
 
             Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);
+
+            if (rayCastHit.transform.gameObject.layer == shieldLayerIndex)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             Destroy(gameObject);
             Enemy enemy = rayCastHit.transform.GetComponent<Enemy>();
             if (enemy != null && enemy.isAlive)

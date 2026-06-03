@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     private WaitForSeconds invincibilityWait;
 
+    [SerializeField] GameObject shield;
+
     Shooting shooting;
 
     private void Awake()
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
         InGameUI.instance.SetDisplayHP();
         InGameUI.instance.SetAmmo();
         invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f); // czas trwania w sekundach
+        shield.SetActive(false);
     }
 
     // wlaczenie nasluchwania na zaladownianie nowej sceny
@@ -86,11 +89,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !shooting.isReloading && currentAmmo < maxAmmo)
+        if (Input.GetKeyDown(KeyCode.R) && !shooting.isReloading && currentAmmo < maxAmmo)      // przeladowanie
         {
             StartCoroutine(shooting.Reloading());
         }
-        else if (Input.GetKeyDown(KeyCode.U))       // DO TESTOW
+
+        if (Input.GetKeyDown(KeyCode.U))       // DO TESTOW
         {
             GameManagement.instance.currency1 += 1000;
             InGameUI.instance.SetCurr1();
@@ -98,6 +102,12 @@ public class Player : MonoBehaviour
             InGameUI.instance.SetCurr2();
             GameManagement.instance.currency3 += 1000;
             InGameUI.instance.SetCurr3();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q) && !shield.activeInHierarchy)       // tarcza
+        {
+            shield.SetActive(true);
+            StartCoroutine(ShieldDuration());
         }
     }
 
@@ -159,5 +169,11 @@ public class Player : MonoBehaviour
             healthBar.SetHealth(currentHealth);
         }
         InGameUI.instance.SetDisplayHP();
+    }
+
+    IEnumerator ShieldDuration()
+    {
+        yield return new WaitForSeconds(5);
+        shield.SetActive(false);
     }
 }
