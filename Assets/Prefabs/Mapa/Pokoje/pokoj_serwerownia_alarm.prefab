@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 6802643924463039048}
   - component: {fileID: 3716086664574244853}
   m_Layer: 0
-  m_Name: pokoj_serwerownia_alarm_kopia
+  m_Name: pokoj_serwerownia_alarm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

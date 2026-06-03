@@ -1291,7 +1291,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2728478842291363967, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
       propertyPath: m_Name
-      value: pokoj_serwerownia_alarm_kopia
+      value: pokoj_serwerownia_alarm
       objectReference: {fileID: 0}
     - target: {fileID: 3356960326619921093, guid: a4bbf65306ccee141a75d16bb529dcb9, type: 3}
       propertyPath: m_LocalPosition.x

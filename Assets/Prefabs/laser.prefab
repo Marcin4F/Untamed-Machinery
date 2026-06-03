@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6878626776121240226}
   - component: {fileID: 7094720239168657886}
   - component: {fileID: 7890839641165748668}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: laser
   m_TagString: Bullet
   m_Icon: {fileID: 0}
@@ -103,7 +103,6 @@ MonoBehaviour:
   hitLayerMask:
     serializedVersion: 2
     m_Bits: 128
-  marker: {fileID: 5976002020587030161, guid: 6531ff3651fecc6458fcb1bd18bd39a3, type: 3}
   hitParticles: {fileID: 3543648520723991898, guid: 8b47cdb5596a3f04ba95cfe82464e3cd, type: 3}
   bulletSpeed: 40
 --- !u!65 &7890839641165748668
