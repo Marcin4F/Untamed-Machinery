@@ -25,7 +25,6 @@ public class Player : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            // nie trzeba DontDestroyOnLoad bo robi to juz GameManagement na tym samym obiekcie
         }
         else if (instance != this)
         {
@@ -41,31 +40,26 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         InGameUI.instance.SetDisplayHP();
         InGameUI.instance.SetAmmo();
-        invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f); // czas trwania w sekundach
+        invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f);
         shield.SetActive(false);
     }
 
-    // wlaczenie nasluchwania na zaladownianie nowej sceny
     private void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    // wylaczenie nasluchiwania
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
 
-    // przy zmianie sceny
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
-        // znalezienie punktu spawnu
         GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
 
         if (spawnPoint != null)
         {
-            // wylaczenie CharacterController bo blokuje fizyczne przenoszenie obiektu
             CharacterController cc = GetComponent<CharacterController>();
             if (cc != null) cc.enabled = false;
 
@@ -89,12 +83,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R) && !shooting.isReloading && currentAmmo < maxAmmo)      // przeladowanie
-        {
-            StartCoroutine(shooting.Reloading());
-        }
-
-        if (Input.GetKeyDown(KeyCode.U))       // DO TESTOW
+        // Kept for PC testing
+        if (Input.GetKeyDown(KeyCode.R)) MobileReload();
+        if (Input.GetKeyDown(KeyCode.Q)) MobileShield();
+        
+        if (Input.GetKeyDown(KeyCode.U))
         {
             GameManagement.instance.currency1 += 1000;
             InGameUI.instance.SetCurr1();
@@ -103,15 +96,27 @@ public class Player : MonoBehaviour
             GameManagement.instance.currency3 += 1000;
             InGameUI.instance.SetCurr3();
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Q) && !shield.activeInHierarchy)       // tarcza
+    // Call this from a UI Button OnClick() event
+    public void MobileReload()
+    {
+        if (!shooting.isReloading && currentAmmo < maxAmmo)
+        {
+            StartCoroutine(shooting.Reloading());
+        }
+    }
+
+    // Call this from a UI Button OnClick() event
+    public void MobileShield()
+    {
+        if (!shield.activeInHierarchy)
         {
             shield.SetActive(true);
             StartCoroutine(ShieldDuration());
         }
     }
 
-    // DOSTAWANIE OBRAZEN OD PRZECIWNIKOW PRZENIESC NA ICH SKRYPTY
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         if (hit.gameObject.CompareTag("Enemy"))
@@ -127,43 +132,39 @@ public class Player : MonoBehaviour
             TakeDamage(5);
     }
 
-    // TODO: optymalizacja (cos innego zamiast onTriggerStay 
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Damaging"))
             TakeDamage(5);
     }
 
-    private IEnumerator InvincibilityFrames()       // klatki niesmiertelnosci (bez tego "ciagle" obrazenia natychmiastowo zabijaja)
+    private IEnumerator InvincibilityFrames()
     {
-        // DO DODANIA efekt wizualny np. mruganie postaci na czerwono
         yield return invincibilityWait;
         invincibility = false;
     }
 
-    public void TakeDamage(int damage)       // otrzymywanie obrazen (dajac za parametr wartosc ujemna dziala jako leczenie)
+    public void TakeDamage(int damage)
     {
         if (!invincibility && damage > 0)
         {
             invincibility = true;
             currentHealth -= damage;
 
-            healthBar.SetHealth(currentHealth);     // zmiana poziomu paska hp
+            healthBar.SetHealth(currentHealth);
             StartCoroutine(InvincibilityFrames());
 
             if (currentHealth <= 0)
             {
-                // TODO DZWIEK: smierc gracza
                 Time.timeScale = 0f;
                 InGameUI.instance.GameOver();
                 alive = false;
             }
         }
-
         else if (damage < 0)
         {
             currentHealth -= damage;
-            if (currentHealth > maxHealth)      // hp nie moze byc wieksze do max hp
+            if (currentHealth > maxHealth)
                 currentHealth = maxHealth;
 
             healthBar.SetHealth(currentHealth);

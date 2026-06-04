@@ -35,6 +35,9 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-9:
       value: 560802505c565a5a085a557141255d444f4f1b7f7c2c7e337e7b1e60e3b03668
       flags: 0
+    UnityRemoteDevice:
+      value: 530104565d045b0b405e5c7240720b3540454e7a787a766108
+      flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
       flags: 0

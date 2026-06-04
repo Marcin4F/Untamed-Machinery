@@ -17,9 +17,11 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] float walkingSpeed = 1.0f;
     [SerializeField] float rotationSpeed = 720.0f;
     [SerializeField] float gravityValue = -9.81f;
-
-
     [SerializeField] private LayerMask groundMask;
+
+    [Header("Mobile Controls")]
+    public MobileJoystick moveJoystick;
+    public MobileJoystick aimJoystick;
 
     public delegate void FiringGun();
     public static event FiringGun firingGun;
@@ -32,14 +34,13 @@ public class PlayerAnimation : MonoBehaviour
         shooting = GetComponentInChildren<Shooting>();
         
         mainCamera = Camera.main;
-
         currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     void Update()
     {
-        CheckIfPointing();
         CheckIfMoving(); 
+        CheckIfPointing();
         ProcessRotation();
         ProcessMovement();
         ProcessShot();
@@ -59,12 +60,21 @@ public class PlayerAnimation : MonoBehaviour
     {
         currentSceneIndex = scene.buildIndex;
         mainCamera = Camera.main;
+
+        GameObject moveObj = GameObject.Find("MoveJoystick_BG");
+        if (moveObj != null) moveJoystick = moveObj.GetComponent<MobileJoystick>();
+
+        GameObject aimObj = GameObject.Find("AimJoystick_BG");
+        if (aimObj != null) aimJoystick = aimObj.GetComponent<MobileJoystick>();
     }
 
     void CheckIfMoving()
     {
-        move = Vector3.forward * Input.GetAxis("Vertical");
-        move += Vector3.right * Input.GetAxis("Horizontal");
+        // Replace Input.GetAxis with Mobile Joystick input
+        float moveX = moveJoystick != null ? moveJoystick.Horizontal : Input.GetAxis("Horizontal");
+        float moveZ = moveJoystick != null ? moveJoystick.Vertical : Input.GetAxis("Vertical");
+
+        move = Vector3.forward * moveZ + Vector3.right * moveX;
         move.y = 0;
 
         if (move.magnitude == 0)
@@ -81,7 +91,9 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("isMoving", true);
         }
 
-        move.Normalize();
+        // Avoid normalizing if magnitude is very small to allow for slow walking on slight joystick pushes
+        if (move.magnitude > 1f)
+            move.Normalize();
     }
 
     void CheckIfPointing()
@@ -96,15 +108,28 @@ public class PlayerAnimation : MonoBehaviour
             return;
         }
 
-        if (Input.GetMouseButtonDown(1) && !isPointing)
+        // Get aim input from right joystick (fallback to PC Right-Click for testing)
+        bool isAimingWithMouse = Input.GetMouseButton(1);
+        float aimX = aimJoystick != null ? aimJoystick.Horizontal : 0;
+        float aimZ = aimJoystick != null ? aimJoystick.Vertical : 0;
+        Vector3 aimInput = new Vector3(aimX, 0, aimZ);
+
+        // A deadzone of 0.1f prevents jittering when the joystick resets
+        if (aimInput.magnitude > 0.1f || isAimingWithMouse)
         {
-            isPointing = true;
-            animator.SetBool("isPointing", true);
+            if (!isPointing)
+            {
+                isPointing = true;
+                animator.SetBool("isPointing", true);
+            }
         }
-        else if (Input.GetMouseButtonUp(1) && isPointing)
+        else
         {
-            isPointing = false;
-            animator.SetBool("isPointing", false);
+            if (isPointing)
+            {
+                isPointing = false;
+                animator.SetBool("isPointing", false);
+            }
         }
 
         if (isPointing)
@@ -119,7 +144,7 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (!isPointing && isMoving)
         {
-            // to znaczy ze biega
+            // Player is just running, face movement direction
             if (move != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
@@ -128,28 +153,35 @@ public class PlayerAnimation : MonoBehaviour
         }
         else if (isPointing)
         {
-            // to znaczy ze jest wcelowany (albo chodzi albo stoi)
-            var (success, position) = GetMousePosition();
-            if (success)
+            // Player is aiming via Mobile Joystick
+            if (aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f)
             {
-                // transform.forward = position - transform.position;
-                // position.y = 0.0f;
-                position.y = transform.position.y;
-                transform.LookAt(position, Vector3.up);
+                Vector3 aimDirection = new Vector3(aimJoystick.Horizontal, 0, aimJoystick.Vertical);
+                Quaternion toRotation = Quaternion.LookRotation(aimDirection, Vector3.up);
+                // We use RotateTowards so they snap fast but smoothly, adjust rotationSpeed if it feels too sluggish
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * 2 * Time.deltaTime);
+            }
+            // Fallback for PC mouse testing
+            else if (Input.GetMouseButton(1))
+            {
+                var (success, position) = GetMousePosition();
+                if (success)
+                {
+                    position.y = transform.position.y;
+                    transform.LookAt(position, Vector3.up);
+                }
             }
         }
     }
 
     void ProcessMovement()
     {
-        // obsluga ruchu poziomego
         if (isMoving)
         {
             float currentSpeed = isPointing ? walkingSpeed : runningSpeed;
             controller.Move(move * currentSpeed * Time.deltaTime);
         }
 
-        // grawitacja (schodzenie ze wzniesieñ)
         if (currentSceneIndex == 1)
         {
             playerVelocity.y += gravityValue * Time.deltaTime;
@@ -159,14 +191,18 @@ public class PlayerAnimation : MonoBehaviour
 
     void ProcessShot()
     {
-        if (Input.GetMouseButton(0) && isPointing && shooting.shotReady && !shooting.isReloading)
+        // Auto-shoot when pointing (Mobile), or Left Click when pointing (PC fallback)
+        bool tryingToShoot = (isPointing && aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f) 
+                             || (isPointing && Input.GetMouseButton(0));
+
+        if (tryingToShoot && shooting.shotReady && !shooting.isReloading)
         {
-            // TODO DZWIEK: strzal gracza
             animator.SetTrigger("shot");
             firingGun?.Invoke();
             shooting.shotReady = false;
             Player.instance.currentAmmo -= 1;
             InGameUI.instance.SetAmmo();
+            
             if (Player.instance.currentAmmo <= 0)
                 StartCoroutine(shooting.Reloading());
             else
@@ -174,23 +210,13 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    // https://www.youtube.com/watch?v=AOVCKEJE6A8
     private (bool success, Vector3 position) GetMousePosition()
     {
         var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        // Debug.Log("Ray Origin: " + ray.origin);
-        // Debug.Log("Ray Direction: " + ray.direction);
-        // Debug.DrawRay(ray.origin, ray.direction * 100, Color.red, 2.0f);
-
         if (Physics.Raycast(ray, out var hitInfo, 50.0f, groundMask))
         {
-            // The Raycast hit something, return with the position.
             return (success: true, position: hitInfo.point);
         }
-        else
-        {
-            // The Raycast did not hit anything.
-            return (success: false, position: Vector3.zero);
-        }
+        return (success: false, position: Vector3.zero);
     }
 }
