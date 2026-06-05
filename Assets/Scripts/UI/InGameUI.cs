@@ -37,6 +37,7 @@ public class InGameUI : MonoBehaviour
     [SerializeField] GameObject building2Panel, building3Panel, enterTextPanel, startGamePanel;
     [SerializeField] TMP_Text maxHealthText, healingMinText, healingMaxText, healingLS, lifeStealText, invincibilityText, rewardMinText, rewardMaxText;
     [SerializeField] TMP_Text attackSpeedText, weaponDamageText, reloadSpeedText, maxAmmoText;
+    [SerializeField] Button startGameButton;
 
     private bool isPaused = false;
 
@@ -278,11 +279,21 @@ public class InGameUI : MonoBehaviour
     public void StartGameDisplay()
     {
         startGamePanel.SetActive(true);
+        if (startGameButton != null) { startGameButton.onClick.RemoveAllListeners(); startGameButton.onClick.AddListener(GameStarter); }
     }
 
     public void StartGameHide()
     {
         startGamePanel.SetActive(false);
+    }
+
+    private void GameStarter()
+    {
+        GameManagement.instance.roomsCleared = 0;
+        GameManagement.instance.gameState = 1;
+        InGameUI.instance.StartGameHide();
+        SceneManager.LoadScene(Random.Range(2, 8));
+        //SceneManager.LoadScene(26);
     }
 
     public void CloseBuilding()
