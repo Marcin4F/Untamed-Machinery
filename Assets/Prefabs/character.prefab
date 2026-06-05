@@ -571,7 +571,6 @@ Transform:
   - {fileID: 5796905572395329652}
   - {fileID: 5538108216840288817}
   - {fileID: 4497506230069960312}
-  - {fileID: 4357307123797407763}
   - {fileID: 2943066791977457578}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -22.3, z: 0}
@@ -615,8 +614,8 @@ CharacterController:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2.26
-  m_Radius: 0.3
+  m_Height: 2.2
+  m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
@@ -689,6 +688,8 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 320
+  moveJoystick: {fileID: 0}
+  aimJoystick: {fileID: 0}
 --- !u!1 &3086212282827663554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,61 +1019,6 @@ Transform:
   - {fileID: 6227241779030075539}
   m_Father: {fileID: 3507423903618658064}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &4292734323676369405
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4357307123797407763}
-  - component: {fileID: 2353298951904189236}
-  m_Layer: 7
-  m_Name: HitColliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4357307123797407763
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4292734323676369405}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3225258710057154794}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &2353298951904189236
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4292734323676369405}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2.2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4605348450696234368
 GameObject:
   m_ObjectHideFlags: 0

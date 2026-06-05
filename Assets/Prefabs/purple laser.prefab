@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitLayerMask:
     serializedVersion: 2
-    m_Bits: 2176
+    m_Bits: 2184
   hitParticles: {fileID: 3543648520723991898, guid: b42b36f956ac0fe4a95e525f7bdfc14e, type: 3}
   bulletSpeed: 20
 --- !u!65 &7890839641165748668

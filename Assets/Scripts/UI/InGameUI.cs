@@ -179,21 +179,6 @@ public class InGameUI : MonoBehaviour
         ResumeGame();
     }
 
-    // ------- menu smierci -------
-    public void GameOver()
-    {
-        deathPanel.SetActive(true);
-        backToHub.onClick.AddListener(GoBack);
-    }
-
-    private void GoBack()
-    {
-        Player.instance.currentHealth = Player.instance.maxHealth;
-        PlayerPrefs.SetInt("GameState", 1);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(1);
-    }
-
     private void Quit()
     {
         Time.timeScale = 1f;
@@ -203,6 +188,28 @@ public class InGameUI : MonoBehaviour
         Destroy(transform.root.gameObject);
 
         SceneManager.LoadScene(0);
+    }
+
+    // ------- menu smierci -------
+    public void GameOver()
+    {
+        deathPanel.SetActive(true);
+        if (backToHub != null) { backToHub.onClick.RemoveAllListeners(); backToHub.onClick.AddListener(GoBack); }
+    }
+
+    private void GoBack()
+    {
+        Player.instance.currentHealth = Player.instance.maxHealth;
+        GameManagement.instance.gameState = 1;
+        Player.instance.alive = true;
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(1);
+    }
+
+    public void HideDeathPanel()
+    {
+        if (deathPanel != null)
+            deathPanel.SetActive(false);
     }
 
     // ------- metody ekranu laodwania -------

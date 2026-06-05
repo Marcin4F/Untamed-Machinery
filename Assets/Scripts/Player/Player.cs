@@ -56,6 +56,14 @@ public class Player : MonoBehaviour
 
     private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
+        healthBar.SetHealth(currentHealth);
+        shield.SetActive(false);
+        currentAmmo = maxAmmo;
+
+        InGameUI.instance.SetDisplayHP();
+        InGameUI.instance.SetAmmo();
+        InGameUI.instance.HideDeathPanel();
+
         GameObject spawnPoint = GameObject.FindWithTag("SpawnPoint");
 
         if (spawnPoint != null)
