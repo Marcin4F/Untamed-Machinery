@@ -125,21 +125,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void OnControllerColliderHit(ControllerColliderHit hit)
-    {
-        if (hit.gameObject.CompareTag("Enemy"))
-        {
-            if (hit.gameObject.TryGetComponent<Enemy>(out var enemy))
-            {
-                // TakeDamage(enemy.maleDamage);
-            }
-            else
-                Debug.LogError("No 'Enemy' component on object with 'Enemy' tag");
-        }
-        else if (hit.gameObject.CompareTag("Damaging"))
-            TakeDamage(5);
-    }
-
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Damaging"))
