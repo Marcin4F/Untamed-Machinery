@@ -1,0 +1,2 @@
+D:\Users\HARDPC\Studia\informatyka\semestr6\Aplikacje Mobilne\laby\Untamed-Machinery\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+D:\Users\HARDPC\Studia\informatyka\semestr6\Aplikacje Mobilne\laby\Untamed-Machinery\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt
