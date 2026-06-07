@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4879151634239997795}
   - component: {fileID: 5757452174631862557}
   - component: {fileID: 3217412447469209544}
-  - component: {fileID: 8970695553283056839}
   m_Layer: 0
   m_Name: floor-spikes.026
   m_TagString: Damaging
@@ -110,33 +109,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &8970695553283056839
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18074089460324562}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &93822382173636726
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +121,6 @@ GameObject:
   - component: {fileID: 6616155040044617088}
   - component: {fileID: 2561328378875986498}
   - component: {fileID: 1718063662627993989}
-  - component: {fileID: 1948510279035644248}
   m_Layer: 0
   m_Name: floor-spikes
   m_TagString: Damaging
@@ -247,33 +218,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1948510279035644248
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 93822382173636726}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &208509921753261801
 GameObject:
   m_ObjectHideFlags: 0
@@ -827,7 +771,6 @@ GameObject:
   - component: {fileID: 2870531284702365865}
   - component: {fileID: 6177686890394970782}
   - component: {fileID: 839595856256555631}
-  - component: {fileID: 5482896976440430674}
   m_Layer: 0
   m_Name: floor-spikes.004
   m_TagString: Damaging
@@ -925,33 +868,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5482896976440430674
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1026899151952070669}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1282669694250078217
 GameObject:
   m_ObjectHideFlags: 0
@@ -964,7 +880,6 @@ GameObject:
   - component: {fileID: 6611352008778858998}
   - component: {fileID: 6853087477746348098}
   - component: {fileID: 3952650574461922507}
-  - component: {fileID: 353768973737095774}
   m_Layer: 0
   m_Name: floor-spikes.012
   m_TagString: Damaging
@@ -1062,33 +977,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &353768973737095774
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1282669694250078217}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1326697305611063587
 GameObject:
   m_ObjectHideFlags: 0
@@ -1101,7 +989,6 @@ GameObject:
   - component: {fileID: 2255836410049654464}
   - component: {fileID: 3832114452553242007}
   - component: {fileID: 3869249709652738737}
-  - component: {fileID: 3221727639707907575}
   m_Layer: 0
   m_Name: floor-spikes.042
   m_TagString: Damaging
@@ -1199,33 +1086,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &3221727639707907575
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1326697305611063587}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1382571713189514877
 GameObject:
   m_ObjectHideFlags: 0
@@ -1410,7 +1270,6 @@ GameObject:
   - component: {fileID: 6209890723348907687}
   - component: {fileID: 6743042580752705731}
   - component: {fileID: 2210423483547737165}
-  - component: {fileID: 575363747301861903}
   m_Layer: 0
   m_Name: floor-spikes.030
   m_TagString: Damaging
@@ -1508,33 +1367,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &575363747301861903
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1523002445387138754}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &1672439171487010481
 GameObject:
   m_ObjectHideFlags: 0
@@ -2115,7 +1947,6 @@ GameObject:
   - component: {fileID: 6217641710476718672}
   - component: {fileID: 6903079073975275849}
   - component: {fileID: 7625597784105848981}
-  - component: {fileID: 476524100092055297}
   m_Layer: 0
   m_Name: floor-spikes.020
   m_TagString: Damaging
@@ -2213,33 +2044,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &476524100092055297
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2205780639105066935}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &2378397076304384704
 GameObject:
   m_ObjectHideFlags: 0
@@ -2252,7 +2056,6 @@ GameObject:
   - component: {fileID: 8464681005345976251}
   - component: {fileID: 5078278781280965663}
   - component: {fileID: 1411393551839428017}
-  - component: {fileID: 8963650728395589547}
   m_Layer: 0
   m_Name: floor-spikes.034
   m_TagString: Damaging
@@ -2350,33 +2153,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &8963650728395589547
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2378397076304384704}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &2421758654406526482
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,7 +2414,6 @@ GameObject:
   - component: {fileID: 8370537336238971959}
   - component: {fileID: 3350979700942189907}
   - component: {fileID: 2106019171810139040}
-  - component: {fileID: 1685173118542259246}
   m_Layer: 0
   m_Name: floor-spikes.025
   m_TagString: Damaging
@@ -2736,33 +2511,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1685173118542259246
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673680627370627384}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &2713433192914409708
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +2782,6 @@ GameObject:
   - component: {fileID: 7535565297461450617}
   - component: {fileID: 3529685146777413156}
   - component: {fileID: 391544118655781770}
-  - component: {fileID: 3104044785548141280}
   m_Layer: 0
   m_Name: floor-spikes.010
   m_TagString: Damaging
@@ -3132,33 +2879,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &3104044785548141280
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3121560419370118699}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &3256382283348999997
 GameObject:
   m_ObjectHideFlags: 0
@@ -3667,7 +3387,6 @@ GameObject:
   - component: {fileID: 8389675243022200407}
   - component: {fileID: 4240776620171928256}
   - component: {fileID: 1271471515888727439}
-  - component: {fileID: 586281249440561084}
   m_Layer: 0
   m_Name: floor-spikes.029
   m_TagString: Damaging
@@ -3765,33 +3484,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &586281249440561084
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3656508000231074968}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4118581915832997792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3804,7 +3496,6 @@ GameObject:
   - component: {fileID: 534551225777382171}
   - component: {fileID: 3056360356715004691}
   - component: {fileID: 5335864435501893451}
-  - component: {fileID: 8779152686323409117}
   m_Layer: 0
   m_Name: floor-spikes.017
   m_TagString: Damaging
@@ -3902,33 +3593,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &8779152686323409117
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4118581915832997792}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &4247246551801310995
 GameObject:
   m_ObjectHideFlags: 0
@@ -4421,7 +4085,6 @@ GameObject:
   - component: {fileID: 1302006490914817349}
   - component: {fileID: 9055375800583353000}
   - component: {fileID: 3546653811215668209}
-  - component: {fileID: 1852862769865086450}
   m_Layer: 0
   m_Name: floor-spikes.028
   m_TagString: Damaging
@@ -4519,33 +4182,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1852862769865086450
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5007911699689561539}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5223372318965348956
 GameObject:
   m_ObjectHideFlags: 0
@@ -4558,7 +4194,6 @@ GameObject:
   - component: {fileID: 8297446321353223189}
   - component: {fileID: 9140602483536638517}
   - component: {fileID: 5974110394793876515}
-  - component: {fileID: 3420545437150883665}
   m_Layer: 0
   m_Name: floor-spikes.018
   m_TagString: Damaging
@@ -4656,33 +4291,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &3420545437150883665
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5223372318965348956}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5340428654193199745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4695,7 +4303,6 @@ GameObject:
   - component: {fileID: 7952796058289769065}
   - component: {fileID: 8218705118846023308}
   - component: {fileID: 2873382825073828066}
-  - component: {fileID: 7781717300268581830}
   m_Layer: 0
   m_Name: floor-spikes.007
   m_TagString: Damaging
@@ -4793,33 +4400,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &7781717300268581830
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5340428654193199745}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5440516266939360989
 GameObject:
   m_ObjectHideFlags: 0
@@ -4832,7 +4412,6 @@ GameObject:
   - component: {fileID: 4564367492918951028}
   - component: {fileID: 3808022072423480412}
   - component: {fileID: 1123312942559068875}
-  - component: {fileID: 5838488204976986243}
   m_Layer: 0
   m_Name: floor-spikes.009
   m_TagString: Damaging
@@ -4930,33 +4509,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5838488204976986243
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5440516266939360989}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5454230994258330655
 GameObject:
   m_ObjectHideFlags: 0
@@ -4969,7 +4521,6 @@ GameObject:
   - component: {fileID: 1808001079515656486}
   - component: {fileID: 1698478126729595541}
   - component: {fileID: 5632447901329636798}
-  - component: {fileID: 7706765342234172693}
   m_Layer: 0
   m_Name: floor-spikes.038
   m_TagString: Damaging
@@ -5067,33 +4618,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &7706765342234172693
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5454230994258330655}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5469595613069938661
 GameObject:
   m_ObjectHideFlags: 0
@@ -5106,7 +4630,6 @@ GameObject:
   - component: {fileID: 7599498174789190463}
   - component: {fileID: 4372745284017654496}
   - component: {fileID: 4353226746574387260}
-  - component: {fileID: 5053496741781564390}
   m_Layer: 0
   m_Name: floor-spikes.015
   m_TagString: Damaging
@@ -5204,33 +4727,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5053496741781564390
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5469595613069938661}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5526489668027762562
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,7 +4739,6 @@ GameObject:
   - component: {fileID: 9083167857698613278}
   - component: {fileID: 5399203302777701479}
   - component: {fileID: 2363174747858494085}
-  - component: {fileID: 5146507454213651551}
   m_Layer: 0
   m_Name: floor-spikes.024
   m_TagString: Damaging
@@ -5341,33 +4836,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5146507454213651551
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5526489668027762562}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5532843228900436249
 GameObject:
   m_ObjectHideFlags: 0
@@ -5380,7 +4848,6 @@ GameObject:
   - component: {fileID: 3376161659980262407}
   - component: {fileID: 7236882473935270750}
   - component: {fileID: 2585102630974143196}
-  - component: {fileID: 7037101725277116994}
   m_Layer: 0
   m_Name: floor-spikes.003
   m_TagString: Damaging
@@ -5478,33 +4945,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &7037101725277116994
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5532843228900436249}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5534699866029048198
 GameObject:
   m_ObjectHideFlags: 0
@@ -5517,7 +4957,6 @@ GameObject:
   - component: {fileID: 6773845141819162227}
   - component: {fileID: 2418368539301863542}
   - component: {fileID: 4182129729083582437}
-  - component: {fileID: 9020018631732831941}
   m_Layer: 0
   m_Name: floor-spikes.008
   m_TagString: Damaging
@@ -5615,33 +5054,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &9020018631732831941
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534699866029048198}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5640383505828731266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5654,7 +5066,6 @@ GameObject:
   - component: {fileID: 3884308540171756030}
   - component: {fileID: 6719537793330859009}
   - component: {fileID: 652037769553482807}
-  - component: {fileID: 7181983058523995807}
   m_Layer: 0
   m_Name: floor-spikes.040
   m_TagString: Damaging
@@ -5752,33 +5163,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &7181983058523995807
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5640383505828731266}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &5791010495032248222
 GameObject:
   m_ObjectHideFlags: 0
@@ -5878,7 +5262,6 @@ GameObject:
   - component: {fileID: 293587574220357860}
   - component: {fileID: 2189650171685656569}
   - component: {fileID: 5048319440326410866}
-  - component: {fileID: 3602536830752687340}
   m_Layer: 0
   m_Name: floor-spikes.027
   m_TagString: Damaging
@@ -5976,33 +5359,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &3602536830752687340
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5921026072487063470}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6121640864539743701
 GameObject:
   m_ObjectHideFlags: 0
@@ -6228,7 +5584,6 @@ GameObject:
   - component: {fileID: 1399140957761838351}
   - component: {fileID: 7347857208817199310}
   - component: {fileID: 2642845555822390153}
-  - component: {fileID: 6037403450343471806}
   m_Layer: 0
   m_Name: floor-spikes.033
   m_TagString: Damaging
@@ -6326,33 +5681,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &6037403450343471806
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6391907472570467112}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6427233471794057291
 GameObject:
   m_ObjectHideFlags: 0
@@ -6365,7 +5693,6 @@ GameObject:
   - component: {fileID: 8885003110496916267}
   - component: {fileID: 7712603234600534272}
   - component: {fileID: 4038578813447650740}
-  - component: {fileID: 5877716556596384104}
   m_Layer: 0
   m_Name: floor-spikes.039
   m_TagString: Damaging
@@ -6463,33 +5790,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5877716556596384104
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6427233471794057291}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6550647283797382973
 GameObject:
   m_ObjectHideFlags: 0
@@ -6592,7 +5892,6 @@ GameObject:
   - component: {fileID: 8128190914018658555}
   - component: {fileID: 4969681374281222995}
   - component: {fileID: 280580378923764573}
-  - component: {fileID: 6190592237252594614}
   m_Layer: 0
   m_Name: floor-spikes.016
   m_TagString: Damaging
@@ -6690,33 +5989,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &6190592237252594614
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6678989535315552970}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6715510720599052604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6842,7 +6114,6 @@ GameObject:
   - component: {fileID: 6809129118272559906}
   - component: {fileID: 5415874738081617351}
   - component: {fileID: 6227212355823289469}
-  - component: {fileID: 1221148835682029934}
   m_Layer: 0
   m_Name: floor-spikes.019
   m_TagString: Damaging
@@ -6940,33 +6211,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1221148835682029934
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6934506044527335767}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &6963227276621365954
 GameObject:
   m_ObjectHideFlags: 0
@@ -7251,7 +6495,6 @@ GameObject:
   - component: {fileID: 6415946701992081621}
   - component: {fileID: 7440135716817593349}
   - component: {fileID: 6152539940228817327}
-  - component: {fileID: 5660099279253384514}
   m_Layer: 0
   m_Name: floor-spikes.032
   m_TagString: Damaging
@@ -7349,33 +6592,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &5660099279253384514
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7269512988229423308}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7379375485223812872
 GameObject:
   m_ObjectHideFlags: 0
@@ -7388,7 +6604,6 @@ GameObject:
   - component: {fileID: 5648137166291129832}
   - component: {fileID: 3478655693585345383}
   - component: {fileID: 6577037373609280796}
-  - component: {fileID: 8337513336955346381}
   m_Layer: 0
   m_Name: floor-spikes.021
   m_TagString: Damaging
@@ -7486,33 +6701,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &8337513336955346381
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7379375485223812872}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7475853734531459092
 GameObject:
   m_ObjectHideFlags: 0
@@ -7525,7 +6713,6 @@ GameObject:
   - component: {fileID: 676827420234259715}
   - component: {fileID: 2167994512796570172}
   - component: {fileID: 4389522128196666055}
-  - component: {fileID: 770857803671511156}
   m_Layer: 0
   m_Name: floor-spikes.036
   m_TagString: Damaging
@@ -7623,33 +6810,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &770857803671511156
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7475853734531459092}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7497199522210811902
 GameObject:
   m_ObjectHideFlags: 0
@@ -7707,7 +6867,6 @@ GameObject:
   - component: {fileID: 2264602499115724436}
   - component: {fileID: 1826628671143583185}
   - component: {fileID: 8408370394531346897}
-  - component: {fileID: 4231753117914192940}
   m_Layer: 0
   m_Name: floor-spikes.002
   m_TagString: Damaging
@@ -7805,33 +6964,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &4231753117914192940
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7657139800101279896}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7663427152578214894
 GameObject:
   m_ObjectHideFlags: 0
@@ -7934,7 +7066,6 @@ GameObject:
   - component: {fileID: 8227367600822183022}
   - component: {fileID: 4926258618847824891}
   - component: {fileID: 1371757842013552013}
-  - component: {fileID: 4266093073505452265}
   m_Layer: 0
   m_Name: floor-spikes.011
   m_TagString: Damaging
@@ -8032,33 +7163,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &4266093073505452265
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7773432047178223064}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7801817813422419204
 GameObject:
   m_ObjectHideFlags: 0
@@ -8102,7 +7206,6 @@ GameObject:
   - component: {fileID: 5251804333130116726}
   - component: {fileID: 935451189789907854}
   - component: {fileID: 4414699312234890764}
-  - component: {fileID: 4265296259324612919}
   m_Layer: 0
   m_Name: floor-spikes.005
   m_TagString: Damaging
@@ -8200,33 +7303,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &4265296259324612919
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7904689045830353937}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &7915862897133736514
 GameObject:
   m_ObjectHideFlags: 0
@@ -8326,7 +7402,6 @@ GameObject:
   - component: {fileID: 560967469586974456}
   - component: {fileID: 2603349804718923846}
   - component: {fileID: 9066732357875171357}
-  - component: {fileID: 6202269037344203088}
   m_Layer: 0
   m_Name: floor-spikes.022
   m_TagString: Damaging
@@ -8424,33 +7499,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &6202269037344203088
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7998418345201256070}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8103565351583286000
 GameObject:
   m_ObjectHideFlags: 0
@@ -8463,7 +7511,6 @@ GameObject:
   - component: {fileID: 2906946513595946251}
   - component: {fileID: 2762992028233114231}
   - component: {fileID: 5889029164021955612}
-  - component: {fileID: 4705868539593578256}
   m_Layer: 0
   m_Name: floor-spikes.023
   m_TagString: Damaging
@@ -8561,33 +7608,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &4705868539593578256
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8103565351583286000}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8183193217043578562
 GameObject:
   m_ObjectHideFlags: 0
@@ -8600,7 +7620,6 @@ GameObject:
   - component: {fileID: 7681533828633156462}
   - component: {fileID: 8829470373412696059}
   - component: {fileID: 8458736324127813211}
-  - component: {fileID: 7294767724387742214}
   m_Layer: 0
   m_Name: floor-spikes.041
   m_TagString: Damaging
@@ -8698,33 +7717,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &7294767724387742214
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8183193217043578562}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8638661109367541240
 GameObject:
   m_ObjectHideFlags: 0
@@ -8737,7 +7729,6 @@ GameObject:
   - component: {fileID: 1180574715330350027}
   - component: {fileID: 1094979188686939305}
   - component: {fileID: 7920821925374421053}
-  - component: {fileID: 1295894922691758482}
   m_Layer: 0
   m_Name: floor-spikes.037
   m_TagString: Damaging
@@ -8835,33 +7826,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1295894922691758482
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8638661109367541240}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8781733595168103742
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,7 +7838,6 @@ GameObject:
   - component: {fileID: 245315730815800868}
   - component: {fileID: 5332058755130417467}
   - component: {fileID: 6541509269709482385}
-  - component: {fileID: 1978465646223930937}
   m_Layer: 0
   m_Name: floor-spikes.006
   m_TagString: Damaging
@@ -8972,33 +7935,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1978465646223930937
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8781733595168103742}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8843097492141526558
 GameObject:
   m_ObjectHideFlags: 0
@@ -9011,7 +7947,6 @@ GameObject:
   - component: {fileID: 4015340217039367408}
   - component: {fileID: 6934032555867075175}
   - component: {fileID: 6121065497530866943}
-  - component: {fileID: 85820244052258563}
   m_Layer: 0
   m_Name: floor-spikes.031
   m_TagString: Damaging
@@ -9109,33 +8044,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &85820244052258563
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8843097492141526558}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &8937740958461238075
 GameObject:
   m_ObjectHideFlags: 0
@@ -9235,7 +8143,6 @@ GameObject:
   - component: {fileID: 5788367816436929062}
   - component: {fileID: 1774859140589039716}
   - component: {fileID: 6430701471964111766}
-  - component: {fileID: 6791634767793520851}
   m_Layer: 0
   m_Name: floor-spikes.001
   m_TagString: Damaging
@@ -9333,33 +8240,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &6791634767793520851
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8976436139241477051}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1 &9068762745082087132
 GameObject:
   m_ObjectHideFlags: 0
@@ -9372,7 +8252,6 @@ GameObject:
   - component: {fileID: 5007737109728406731}
   - component: {fileID: 3678307347837446573}
   - component: {fileID: 5906925272085232552}
-  - component: {fileID: 1058625174909686750}
   m_Layer: 0
   m_Name: floor-spikes.035
   m_TagString: Damaging
@@ -9470,33 +8349,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
---- !u!54 &1058625174909686750
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9068762745082087132}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 126
-  m_CollisionDetection: 0
 --- !u!1001 &841550733866204001
 PrefabInstance:
   m_ObjectHideFlags: 0
