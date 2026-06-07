@@ -15,6 +15,9 @@ public class InGameUI : MonoBehaviour
     [Header("Przyciski - Œmieræ")]
     [SerializeField] Button backToHub;
 
+    [Header("Przyciski - Pauza")]
+    [SerializeField] Button pauseButton;
+
     [Header("Przyciski - Pauza (Brak Zapisu)")]
     [SerializeField] Button continueNoButton;
     [SerializeField] Button quitMenuNoButton;
@@ -64,18 +67,7 @@ public class InGameUI : MonoBehaviour
         if (building3Panel != null) building3Panel.SetActive(false);
         if (enterTextPanel != null) enterTextPanel.SetActive(false);
         if (startGamePanel != null) startGamePanel.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Escape))        // otwieranie / zamykanie menu pauzy
-        {
-            if (!isPaused)
-                PauseMenu();
-
-            else
-                ResumeGame();
-        }
+        if (pauseButton != null) { pauseButton.onClick.RemoveAllListeners(); pauseButton.onClick.AddListener(TogglePause); }
     }
 
     // ------- metody in-game -------
@@ -106,6 +98,15 @@ public class InGameUI : MonoBehaviour
 
 
     // ------- funkcje menu pauzy -------
+    private void TogglePause()
+    {
+        if (!isPaused)
+            PauseMenu();
+
+        else
+            ResumeGame();
+    }
+
     private void PauseMenu()    // pauzowanie gry
     {
         isPaused = true;
