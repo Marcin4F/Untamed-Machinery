@@ -2,60 +2,27 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-    private string buildingIndex;
-    private bool inRange = false, open = false;
+    private string buildingName;
+    private int buildingIndex;
 
     private void Start()
     {
-        buildingIndex = gameObject.name;
-    }
-
-    private void Update()
-    {
-        if (inRange && !open && Input.GetKeyDown(KeyCode.Space))        // otwieranie menu budynku
-        {
-            open = true;
-            switch (buildingIndex)
-            {
-                case "Budynek1":
-                    InGameUI.instance.OpenBuilding(1);
-                    Shop1 shop1 = GetComponent<Shop1>();
-                    shop1.Activate();
-                    break;
-                case "Budynek2":
-                    InGameUI.instance.OpenBuilding(2);
-                    Shop2 shop2 = GetComponent<Shop2>();
-                    shop2.Activate();
-                    break;
-                case "Budynek3":
-                    InGameUI.instance.OpenBuilding(3);
-                    break;
-                default:
-                    Debug.LogError("Building tringger enter");
-                    break;
-            }
-            InGameUI.instance.EnterTextHide();
-        }
-
-        else if (open && inRange && (Input.GetKeyDown(KeyCode.Space)))
-        {
-            open = false;
-            InGameUI.instance.CloseBuilding();
-            InGameUI.instance.EnterTextDisplay();
-        }
+        buildingName = gameObject.name;
+        if (buildingName == "Budynek1")
+            buildingIndex = 1;
+        else
+            buildingIndex = 2;
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        inRange = true;
-        InGameUI.instance.EnterTextDisplay();
+        InGameUI.instance.EnterPanelDisplay();
+        InGameUI.instance.shopIndex = buildingIndex;
     }
 
     private void OnTriggerExit(Collider other)
     {
-        inRange = false;
-        open = false;
-        InGameUI.instance.CloseBuilding();
-        InGameUI.instance.EnterTextHide();
+        InGameUI.instance.CloseShop();
+        InGameUI.instance.EnterPanelHide();
     }
 }

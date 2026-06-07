@@ -37,10 +37,16 @@ public class InGameUI : MonoBehaviour
 
     [Header("Hub UI Elements")]
     [SerializeField] GameObject building1Panel;
-    [SerializeField] GameObject building2Panel, building3Panel, enterTextPanel, startGamePanel;
+    [SerializeField] GameObject building2Panel, building3Panel, enterShopPanel, startGamePanel;
     [SerializeField] TMP_Text maxHealthText, healingMinText, healingMaxText, healingLS, lifeStealText, invincibilityText, rewardMinText, rewardMaxText;
     [SerializeField] TMP_Text attackSpeedText, weaponDamageText, reloadSpeedText, maxAmmoText;
-    [SerializeField] Button startGameButton;
+    [SerializeField] TMP_Text shopButtonText;
+    [SerializeField] Button startGameButton, openCloseShopButton;
+
+    [Header("Elementy sklepu")]
+    [SerializeField] Shop1 shop1;
+    [SerializeField] Shop2 shop2;
+    public int shopIndex = 1;
 
     private bool isPaused = false;
 
@@ -65,7 +71,7 @@ public class InGameUI : MonoBehaviour
         if (building1Panel != null) building1Panel.SetActive(false);
         if (building2Panel != null) building2Panel.SetActive(false);
         if (building3Panel != null) building3Panel.SetActive(false);
-        if (enterTextPanel != null) enterTextPanel.SetActive(false);
+        if (enterShopPanel != null) enterShopPanel.SetActive(false);
         if (startGamePanel != null) startGamePanel.SetActive(false);
         if (pauseButton != null) { pauseButton.onClick.RemoveAllListeners(); pauseButton.onClick.AddListener(TogglePause); }
     }
@@ -267,14 +273,35 @@ public class InGameUI : MonoBehaviour
         }
     }
 
-    public void EnterTextDisplay()
+    public void EnterPanelDisplay()
     {
-        enterTextPanel.SetActive(true);
+        enterShopPanel.SetActive(true);
+        if (openCloseShopButton != null) { openCloseShopButton.onClick.RemoveAllListeners(); openCloseShopButton.onClick.AddListener(OpenShop); }
     }
 
-    public void EnterTextHide()
+    public void EnterPanelHide()
     {
-        enterTextPanel.SetActive(false);
+        enterShopPanel.SetActive(false);
+    }
+
+    private void OpenShop()
+    {
+        shopButtonText.SetText("Close shop");
+        if (openCloseShopButton != null) { openCloseShopButton.onClick.RemoveAllListeners(); openCloseShopButton.onClick.AddListener(CloseShop); }
+        OpenBuilding(shopIndex);
+        if (shopIndex == 1)
+            shop1.Activate();
+        else
+            shop2.Activate();
+    }
+
+    public void CloseShop()
+    {
+        shopButtonText.SetText("Open shop");
+        if (openCloseShopButton != null) { openCloseShopButton.onClick.RemoveAllListeners(); openCloseShopButton.onClick.AddListener(OpenShop); }
+        building1Panel.SetActive(false);
+        building2Panel.SetActive(false);
+        building3Panel.SetActive(false);
     }
 
     public void StartGameDisplay()
@@ -295,12 +322,5 @@ public class InGameUI : MonoBehaviour
         InGameUI.instance.StartGameHide();
         SceneManager.LoadScene(Random.Range(2, 8));
         //SceneManager.LoadScene(26);
-    }
-
-    public void CloseBuilding()
-    {
-        building1Panel.SetActive(false);
-        building2Panel.SetActive(false);
-        building3Panel.SetActive(false);
     }
 }
