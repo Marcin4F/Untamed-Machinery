@@ -11544,6 +11544,9 @@ MonoBehaviour:
   pausePanelNoSave: {fileID: 5175883586728818026}
   pausePanelWithSave: {fileID: 2270876498514524409}
   backToHub: {fileID: 727754101888288375}
+  backgroundImage: {fileID: 2864467081031816441}
+  deathBackground: {fileID: 21300000, guid: 2626655051734544889b74dcb98e3658, type: 3}
+  winBackground: {fileID: 21300000, guid: 5113ced63b3fea7489dd7e03f635f612, type: 3}
   pauseButton: {fileID: 7255552731249632239}
   continueNoButton: {fileID: 3195048973555143496}
   quitMenuNoButton: {fileID: 4779325013844786508}
@@ -11558,7 +11561,6 @@ MonoBehaviour:
   displayHP: {fileID: 2889437981826426363}
   building1Panel: {fileID: 6385150882129119624}
   building2Panel: {fileID: 2294869301448059492}
-  building3Panel: {fileID: 0}
   enterShopPanel: {fileID: 7294593634523963180}
   startGamePanel: {fileID: 6055892010215347575}
   maxHealthText: {fileID: 2377363025778138577}
@@ -12601,7 +12603,7 @@ GameObject:
   - component: {fileID: 4598465464504460347}
   - component: {fileID: 2864467081031816441}
   m_Layer: 5
-  m_Name: Death
+  m_Name: EndGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -82,7 +82,7 @@ public class Shop1 : MonoBehaviour
 
     private void BuyRewardAmount()
     {
-        if (Player.instance.minReward < 280 && GameManagement.instance.EnoughMoney(200, 50, 900))
+        if (Player.instance.minReward < 400 && GameManagement.instance.EnoughMoney(200, 50, 900))
         {
             Player.instance.minReward += 25;
             Player.instance.maxReward += 25;

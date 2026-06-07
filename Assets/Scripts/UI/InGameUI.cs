@@ -12,8 +12,10 @@ public class InGameUI : MonoBehaviour
     [SerializeField] GameObject pausePanelNoSave;       // pauza bez mozliwosci zapisu
     [SerializeField] GameObject pausePanelWithSave;     // pauza z mozliwoscia zapisu
 
-    [Header("Przyciski - Œmieræ")]
+    [Header("Koniec gry")]
     [SerializeField] Button backToHub;
+    [SerializeField] Image backgroundImage;
+    [SerializeField] Sprite deathBackground, winBackground;
 
     [Header("Przyciski - Pauza")]
     [SerializeField] Button pauseButton;
@@ -200,6 +202,14 @@ public class InGameUI : MonoBehaviour
     // ------- menu smierci -------
     public void GameOver()
     {
+        backgroundImage.sprite = deathBackground;
+        deathPanel.SetActive(true);
+        if (backToHub != null) { backToHub.onClick.RemoveAllListeners(); backToHub.onClick.AddListener(GoBack); }
+    }
+
+    public void GameWon()
+    {
+        backgroundImage.sprite = winBackground;
         deathPanel.SetActive(true);
         if (backToHub != null) { backToHub.onClick.RemoveAllListeners(); backToHub.onClick.AddListener(GoBack); }
     }
@@ -314,8 +324,8 @@ public class InGameUI : MonoBehaviour
     {
         GameManagement.instance.roomsCleared = 0;
         GameManagement.instance.gameState = 1;
-        InGameUI.instance.StartGameHide();
+        StartGameHide();
         SceneManager.LoadScene(Random.Range(2, 8));
-        //SceneManager.LoadScene(26);
+        //SceneManager.LoadScene(25);
     }
 }

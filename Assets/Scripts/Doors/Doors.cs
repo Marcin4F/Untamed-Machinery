@@ -22,7 +22,6 @@ public class Doors : MonoBehaviour
             int difficultyTier = GameManagement.instance.roomsCleared / 5;
             int minIndex, maxIndex;
 
-            // TODO: po pewnej ilosci pokoi ma byc pokoj z bossem
             // ---------------- UWAGA przy zmianie ilosci pokoi latwych trzeba zmienic wartosci w GameStarter ----------------
             // ---------------- TODO: przeniesc zaczynanie gry do tego skryptu ----------------
             switch (difficultyTier)
@@ -39,9 +38,13 @@ public class Doors : MonoBehaviour
                     minIndex = 14;
                     maxIndex = 20; // losuje indeksy od 14 do 19
                     break;
-                default: // pokoje numer 16+ bardzo trudne
+                case 3: // pokoje numer 16-20 bardzo trudne
                     minIndex = 20;
                     maxIndex = 26; // losuje indeksy od 20 do 25
+                    break;
+                default:
+                    minIndex = 26;
+                    maxIndex = 27;
                     break;
             }
 

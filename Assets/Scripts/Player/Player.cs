@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     public static Player instance;
     public HealthBar healthBar;
 
-    public int maxHealth = 100, currentHealth = 100, maxAmmo = 20, currentAmmo = 20, minHealing = 10, maxHealing = 20, minReward = 80, maxReward = 200, lifeSteal = 2, invincibilityTime = 500,
+    public int maxHealth = 100, currentHealth = 100, maxAmmo = 20, currentAmmo = 20, minHealing = 10, maxHealing = 20, minReward = 200, maxReward = 400, lifeSteal = 2, invincibilityTime = 500,
         weaponDamage = 20, lifeStealChance = 0, reloadSpeed = 250, attackCooldown = 400;
 
     public bool alive = true;
