@@ -37,7 +37,7 @@ public class InGameUI : MonoBehaviour
 
     [Header("Hub UI Elements")]
     [SerializeField] GameObject building1Panel;
-    [SerializeField] GameObject building2Panel, building3Panel, enterShopPanel, startGamePanel;
+    [SerializeField] GameObject building2Panel, enterShopPanel, startGamePanel;
     [SerializeField] TMP_Text maxHealthText, healingMinText, healingMaxText, healingLS, lifeStealText, invincibilityText, rewardMinText, rewardMaxText;
     [SerializeField] TMP_Text attackSpeedText, weaponDamageText, reloadSpeedText, maxAmmoText;
     [SerializeField] TMP_Text shopButtonText;
@@ -70,7 +70,6 @@ public class InGameUI : MonoBehaviour
         // hub
         if (building1Panel != null) building1Panel.SetActive(false);
         if (building2Panel != null) building2Panel.SetActive(false);
-        if (building3Panel != null) building3Panel.SetActive(false);
         if (enterShopPanel != null) enterShopPanel.SetActive(false);
         if (startGamePanel != null) startGamePanel.SetActive(false);
         if (pauseButton != null) { pauseButton.onClick.RemoveAllListeners(); pauseButton.onClick.AddListener(TogglePause); }
@@ -264,9 +263,6 @@ public class InGameUI : MonoBehaviour
                 building2Panel.SetActive(true);
                 SetTextBuildingTwo();
                 break;
-            case 3:
-                building3Panel.SetActive(true);
-                break;
             default:
                 Debug.LogError("Open building Panel");
                 break;
@@ -301,7 +297,6 @@ public class InGameUI : MonoBehaviour
         if (openCloseShopButton != null) { openCloseShopButton.onClick.RemoveAllListeners(); openCloseShopButton.onClick.AddListener(OpenShop); }
         building1Panel.SetActive(false);
         building2Panel.SetActive(false);
-        building3Panel.SetActive(false);
     }
 
     public void StartGameDisplay()
