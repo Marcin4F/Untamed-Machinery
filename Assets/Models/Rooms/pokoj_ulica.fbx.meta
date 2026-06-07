@@ -1,0 +1,402 @@
+fileFormatVersion: 2
+guid: 697fda83b5898004b8d7b73440487515
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: 23c649a2f44979b4787168537906f152, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: asfalt
+    second: {fileID: 2100000, guid: 75c1fd1b2145fd642995c086ebb673bd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: beton
+    second: {fileID: 2100000, guid: e1a6dc3281c011544984a37d4d5af4be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 1
+    second: {fileID: 2100000, guid: 3a50925d53f356c479f4a29296d75fe2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 3
+    second: {fileID: 2100000, guid: 5168321c632fd064d980945f3dc56e0d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 5
+    second: {fileID: 2100000, guid: 4528a5b7072fafe47aeb23a06672bb1e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 6
+    second: {fileID: 2100000, guid: 549aa5707d291e545acadfa16794763a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 7
+    second: {fileID: 2100000, guid: 89af9e7b015b02c4cb25d95ae6ab6984, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 8
+    second: {fileID: 2100000, guid: 0a17bf6dcf2373741883c4915ed44074, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: budynek 9
+    second: {fileID: 2100000, guid: 18c95cec47bc5b84093edb82a86b6e55, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: butelka
+    second: {fileID: 2100000, guid: 6f30807b3c289504ab0293f7c4253918, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: chrom
+    second: {fileID: 2100000, guid: 581e644843014d04b9cc1466497cb6b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "ciemno\u015B\u0107"
+    second: {fileID: 2100000, guid: 11c5b5264b595dd4baae1d57d51cad4f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ciemny szary
+    second: {fileID: 2100000, guid: 2dbd64837dcfc314bae343de223e019b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ciemny szary.001
+    second: {fileID: 2100000, guid: f7dcedd74e992984185bd6965ba2f993, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: czarny
+    second: {fileID: 2100000, guid: 2813fe05426914744a045c584af06ae3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: czarny.001
+    second: {fileID: 2100000, guid: 49e0687f877db3f4ab6cd722b13be744, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drewno
+    second: {fileID: 2100000, guid: 46fb0d47ee2456a4eb99d1bb1394d6e1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drzwi 1
+    second: {fileID: 2100000, guid: 1096995e603d3ee47b441c74e2084e48, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drzwi 2
+    second: {fileID: 2100000, guid: 35b40e38d85d48e42af0756d8f111358, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drzwi 3
+    second: {fileID: 2100000, guid: 04abf82c3ee6e0f4e9507a53cc7c58c9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: framuga
+    second: {fileID: 2100000, guid: f90b0c5b351b675448720570dda6d49f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: krata
+    second: {fileID: 2100000, guid: fa22bbe44151a20408cbdc048f45d5f7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "kraw\u0119\u017Cnik"
+    second: {fileID: 2100000, guid: 136882e01685cfe41baa2ff80decb05f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lakier czerwony
+    second: {fileID: 2100000, guid: 598360e4aded2d64d8cfa891cff8eb85, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "lakier pomara\u0144czowy"
+    second: {fileID: 2100000, guid: aad8da9a54bd711439aa47f6c97c4ceb, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lampa
+    second: {fileID: 2100000, guid: 64ca035da59e1ad44820598d90c7cf83, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal
+    second: {fileID: 2100000, guid: 525f1899e30562e4ea32bae0006380e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal 2
+    second: {fileID: 2100000, guid: 97b30a595d26d6a448cbc9d27df463d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: metal 3
+    second: {fileID: 2100000, guid: 7feca02a8b27c164394798892484746d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "neon \u017C\xF3\u0142ty"
+    second: {fileID: 2100000, guid: 7eb43a7bc2e46d44da2b1eb52bf1f0ff, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: niebieski neon
+    second: {fileID: 2100000, guid: e75d7f646c2e84c4ab20fad6e74bd6e5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno
+    second: {fileID: 2100000, guid: 81868cf0cb84a974dac80df9afa3197b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.001
+    second: {fileID: 2100000, guid: 8498b6202a98999448dc39d37e4046bf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.002
+    second: {fileID: 2100000, guid: c12c2d21bdf22814faa8622005bee8c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.003
+    second: {fileID: 2100000, guid: b4a95fad1c752cb479a3dbd008560da2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.004
+    second: {fileID: 2100000, guid: f7c48ad0816069c47a8795da418ea34a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.005
+    second: {fileID: 2100000, guid: f7e45dc757ece5144b3ec390d9b3b00f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: okno.006
+    second: {fileID: 2100000, guid: a0aae5f26dbae9344b668d403d216433, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: opona
+    second: {fileID: 2100000, guid: 56f47e87915ec04418ae14e755227bc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: opona.001
+    second: {fileID: 2100000, guid: 9324834e9d637704695d6577371ba8bc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "otch\u0142a\u0144"
+    second: {fileID: 2100000, guid: 8ed0693b01c6797438c1140c5f05ed22, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: papier
+    second: {fileID: 2100000, guid: 5d9f189ff81a6764aaae1eff7d613720, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasy
+    second: {fileID: 2100000, guid: 649ba32e5dd16ce45873e94bf4bd673d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: pasy piesi
+    second: {fileID: 2100000, guid: 84bcbaa0f7d177c4b8c0ee4f88fa60e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "r\xF3\u017Cowy neon"
+    second: {fileID: 2100000, guid: b9ea8476e87f2da41883abeef9648547, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: serce
+    second: {fileID: 2100000, guid: e82d4a49d7ffbb142a7672583baddbe6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: swiatla stop
+    second: {fileID: 2100000, guid: 1142c7b9237f2e24b885001f10208bd6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: swiatlo
+    second: {fileID: 2100000, guid: 91deb3007897ef6409c145d56a86ade2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: szyba
+    second: {fileID: 2100000, guid: 3a5c3304152261540b7c855bc7551106, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "s\u0142upek"
+    second: {fileID: 2100000, guid: bcdff42a739f93044a58138b56d8f97d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "s\u0142upek \u015Bwiat\u0142o"
+    second: {fileID: 2100000, guid: 72b7bddfd752da044a9c05b7457d62e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tablica rejestracyjna
+    second: {fileID: 2100000, guid: 55d82c9a900b3c642880f8e820d1bdcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: wentylator
+    second: {fileID: 2100000, guid: 0508f6356225b144c80c6dd02248d2ec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u015Bmietnik 1"
+    second: {fileID: 2100000, guid: 51de1683199bd704e97763f0b3b233ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u015Bmietnik 2"
+    second: {fileID: 2100000, guid: 5000a1c2ea772ae4bb9d19bc848878b8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u015Bwiat\u0142a mijania"
+    second: {fileID: 2100000, guid: a2af011613cae374d8e8d1a9e934ee3b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u015Bwiat\u0142a piesi"
+    second: {fileID: 2100000, guid: b1a855ff5a881834385900b8d7ab19d8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "\u015Bwiat\u0142a stop"
+    second: {fileID: 2100000, guid: 66ccf7c07963ae4499d4c50b20dba0c7, type: 2}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importPhysicalCameras: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    strictVertexDataChecks: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

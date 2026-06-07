@@ -3,7 +3,107 @@ guid: 6982f91bf8df8a54a9de6ce4c2c2f8a1
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Chair 1
+    second: {fileID: 2100000, guid: 100097a0e2b754e469689169a66e282d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material
+    second: {fileID: 2100000, guid: 040b5694e7c7772449f46018edabd94e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.002
+    second: {fileID: 2100000, guid: 952df925e3b559c429f91e5bcd9ce909, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.003
+    second: {fileID: 2100000, guid: f6d5b88bf6702d141bb9f5b5e3b2e27f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: a9320abac0044e2409f531723e3c987a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 42233165f4a8ce745b7b27d84890d3f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: f22cf83d74f2aaf40b19cc72615f5f14, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: biurko
+    second: {fileID: 2100000, guid: d90e5af8db8264a4dbd2b0fd2ba3ae9c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: biurko nogi
+    second: {fileID: 2100000, guid: 9e4b053626b7bd245afb4df917c1f042, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: ciemnosc
+    second: {fileID: 2100000, guid: 5803bea461c95f14ea22e5f1781ee062, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drzwi swiecenie.001
+    second: {fileID: 2100000, guid: db8347a631aa88e4a9331360fcdddc6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: drzwi.001
+    second: {fileID: 2100000, guid: 319fb30c5f4c4334aacc6cdbdde50328, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: framuga
+    second: {fileID: 2100000, guid: 0f815520d967e5b4580131233d3f0b4c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hidden_material
+    second: {fileID: 2100000, guid: 6078a944dfe657f48ace8a153a7c27a3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: klawiatura przyciski
+    second: {fileID: 2100000, guid: fb40d2921a1735948a7f4528e7e9f1e9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: monitor
+    second: {fileID: 2100000, guid: 431cbdcf5a9727940a27e77ece1c045d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: monitor ekran
+    second: {fileID: 2100000, guid: 0c5db7ee9d76a184a81a166ae4563b0e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: podloga
+    second: {fileID: 2100000, guid: 89f9cdf595d95df438fa42d02c5ab99d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: podloga 2
+    second: {fileID: 2100000, guid: aa875bc871ea71746afd97cb7152f32f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: szklo
+    second: {fileID: 2100000, guid: 0a2bebe017dbb8940a87941320ab3cc0, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
