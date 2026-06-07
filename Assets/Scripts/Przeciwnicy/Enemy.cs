@@ -139,9 +139,9 @@ public class Enemy : MonoBehaviour
     private void Die()
     {
         isAlive = false;
+        StopAllCoroutines();    // zeby nie bylo bledow z odwolaniami do korutyn w oczekiwaniu na zrealizowanie Destroy()
 
         agent.enabled = false;
-        // GetComponent<Renderer>().material.color = Color.gray;
 
         if (Random.Range(0, 100) < Player.instance.lifeStealChance)
             Player.instance.TakeDamage(-Player.instance.lifeSteal);

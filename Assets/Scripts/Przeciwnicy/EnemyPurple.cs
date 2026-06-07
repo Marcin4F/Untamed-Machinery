@@ -130,7 +130,7 @@ public class EnemyPurple : Enemy
         {
             if (!agent.pathPending)
             {
-                if (agent.remainingDistance <= agent.stoppingDistance)  // tu null referencja: "GetRemainingDistance" can only be called on an active agent that has been placed on a NavMesh. !! UnityEngine.AI.NavMeshAgent:get_remainingDistance() !! EnemyPurple /< Reposition > d__14:MoveNext()(at Assets / Scripts / Przeciwnicy / EnemyPurple.cs:132)  !! UnityEngine.SetupCoroutine:InvokeMoveNext(System.Collections.IEnumerator, intptr)
+                if (agent.remainingDistance <= agent.stoppingDistance)  // TU BLAD O KTORYM MOWIMY
                 {
                     if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
                     {
