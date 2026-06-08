@@ -255,7 +255,8 @@ public class InGameUI : MonoBehaviour
 
     public void SetTextBuildingTwo()
     {
-        attackSpeedText.SetText((Player.instance.attackCooldown / 1000.0f).ToString());
+        float shotsPerSecond = 1000.0f / Player.instance.attackCooldown;
+        attackSpeedText.SetText(shotsPerSecond.ToString("0.##"));
         weaponDamageText.SetText(Player.instance.weaponDamage.ToString());
         reloadSpeedText.SetText((Player.instance.reloadSpeed / 100.0f).ToString());
         maxAmmoText.SetText(Player.instance.maxAmmo.ToString());
@@ -325,7 +326,7 @@ public class InGameUI : MonoBehaviour
         GameManagement.instance.roomsCleared = 0;
         GameManagement.instance.gameState = 1;
         StartGameHide();
-        //SceneManager.LoadScene(Random.Range(2, 8));
-        SceneManager.LoadScene(6);
+        SceneManager.LoadScene(Random.Range(2, 8));
+        //SceneManager.LoadScene(6);
     }
 }

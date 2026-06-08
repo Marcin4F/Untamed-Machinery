@@ -91,17 +91,18 @@ public class GameManagement : MonoBehaviour
 
     public bool EnoughMoney(int curr1, int curr2, int curr3)
     {
-        if (curr1 <= currency1 && curr2 <= currency2 && curr3 <= currency3)
-        {
-            // TODO DZWIEK: dokonianie zakupu
-            currency1 -= curr1;
-            currency2 -= curr2;
-            currency3 -= curr3;
-            InGameUI.instance.SetCurr1();
-            InGameUI.instance.SetCurr2();
-            InGameUI.instance.SetCurr3();
-            return true;
-        }
-        return false;
+        return (curr1 <= currency1 && curr2 <= currency2 && curr3 <= currency3);
+    }
+
+    public void SpendMoney(int curr1, int curr2, int curr3)
+    {
+        // TODO DZWIEK: dokonianie zakupu
+        currency1 -= curr1;
+        currency2 -= curr2;
+        currency3 -= curr3;
+
+        InGameUI.instance.SetCurr1();
+        InGameUI.instance.SetCurr2();
+        InGameUI.instance.SetCurr3();
     }
 }
