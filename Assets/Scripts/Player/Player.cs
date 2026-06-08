@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Unity.Cinemachine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -19,6 +20,13 @@ public class Player : MonoBehaviour
     private int damagingLayer;
 
     [SerializeField] GameObject shield;
+
+    [Header("Shield Settings")]
+    [SerializeField] float shieldDurationTime = 5.0f;
+    [SerializeField] float shieldCooldown = 5.0f;
+    private bool canShield = true;
+    
+    private Image shieldButtonImage;
 
     Shooting shooting;
 
@@ -90,26 +98,34 @@ public class Player : MonoBehaviour
         {
             InGameUI.instance.HideCurtain();
         }
-    }
 
-    void Update()
-    {
-        // Kept for PC testing
-        if (Input.GetKeyDown(KeyCode.R)) MobileReload();
-        if (Input.GetKeyDown(KeyCode.Q)) MobileShield();
-        
-        if (Input.GetKeyDown(KeyCode.U))
+        GameObject reloadObj = GameObject.Find("ReloadButton");
+        if (reloadObj != null)
         {
-            GameManagement.instance.currency1 += 1000;
-            InGameUI.instance.SetCurr1();
-            GameManagement.instance.currency2 += 1000;
-            InGameUI.instance.SetCurr2();
-            GameManagement.instance.currency3 += 1000;
-            InGameUI.instance.SetCurr3();
+            Button reloadBtn = reloadObj.GetComponent<Button>();
+            reloadBtn.onClick.RemoveAllListeners(); 
+            reloadBtn.onClick.AddListener(MobileReload);
+        }
+
+        GameObject shieldObj = GameObject.Find("ShieldButton");
+        if (shieldObj != null)
+        {
+            Button shieldBtn = shieldObj.GetComponent<Button>();
+            shieldBtn.onClick.RemoveAllListeners();
+            shieldBtn.onClick.AddListener(MobileShield);
+            
+            shieldButtonImage = shieldObj.GetComponent<Image>();
+        }
+
+        GameObject dashObj = GameObject.Find("DashButton");
+        if (dashObj != null)
+        {
+            Button dashBtn = dashObj.GetComponent<Button>();
+            dashBtn.onClick.RemoveAllListeners();
+            dashBtn.onClick.AddListener(MobileDash);
         }
     }
 
-    // Call this from a UI Button OnClick() event
     public void MobileReload()
     {
         if (!shooting.isReloading && currentAmmo < maxAmmo)
@@ -118,13 +134,22 @@ public class Player : MonoBehaviour
         }
     }
 
-    // Call this from a UI Button OnClick() event
     public void MobileShield()
     {
-        if (!shield.activeInHierarchy)
+        if (canShield && !shield.activeInHierarchy)
         {
-            shield.SetActive(true);
-            StartCoroutine(ShieldDuration());
+            StartCoroutine(ShieldRoutine());
+        }
+    }
+
+    public void MobileDash()
+    {
+        if (!alive) return; 
+
+        PlayerAnimation playerAnim = GetComponent<PlayerAnimation>();
+        if (playerAnim != null)
+        {
+            playerAnim.StartDash();
         }
     }
 
@@ -173,9 +198,31 @@ public class Player : MonoBehaviour
         InGameUI.instance.SetDisplayHP();
     }
 
-    IEnumerator ShieldDuration()
+    private IEnumerator ShieldRoutine()
     {
-        yield return new WaitForSeconds(5);
+        canShield = false;
+        shield.SetActive(true);
+
+        if (shieldButtonImage != null)
+        {
+            Color c = shieldButtonImage.color;
+            c.a = 10f / 255f; 
+            shieldButtonImage.color = c;
+        }
+
+        yield return new WaitForSeconds(shieldDurationTime);
+
         shield.SetActive(false);
+
+        yield return new WaitForSeconds(shieldCooldown);
+
+        if (shieldButtonImage != null)
+        {
+            Color c = shieldButtonImage.color;
+            c.a = 40f / 255f; 
+            shieldButtonImage.color = c;
+        }
+
+        canShield = true;
     }
 }

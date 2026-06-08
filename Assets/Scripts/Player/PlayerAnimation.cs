@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
+using UnityEngine.UI; 
 
 public class PlayerAnimation : MonoBehaviour
 {
@@ -17,11 +19,19 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] float walkingSpeed = 1.0f;
     [SerializeField] float rotationSpeed = 720.0f;
     [SerializeField] float gravityValue = -9.81f;
-    [SerializeField] private LayerMask groundMask;
 
     [Header("Mobile Controls")]
     public MobileJoystick moveJoystick;
     public MobileJoystick aimJoystick;
+
+    [Header("Dash Settings")]
+    [SerializeField] float dashSpeed = 20.0f;
+    [SerializeField] float dashDuration = 0.2f;
+    [SerializeField] float dashCooldown = 1.0f;
+    private bool isDashing = false;
+    private bool canDash = true;
+
+    private Image dashButtonImage;
 
     public delegate void FiringGun();
     public static event FiringGun firingGun;
@@ -39,6 +49,8 @@ public class PlayerAnimation : MonoBehaviour
 
     void Update()
     {
+        if (isDashing) return; 
+
         CheckIfMoving(); 
         CheckIfPointing();
         ProcessRotation();
@@ -66,13 +78,15 @@ public class PlayerAnimation : MonoBehaviour
 
         GameObject aimObj = GameObject.Find("AimJoystick_BG");
         if (aimObj != null) aimJoystick = aimObj.GetComponent<MobileJoystick>();
+
+        GameObject dashObj = GameObject.Find("DashButton");
+        if (dashObj != null) dashButtonImage = dashObj.GetComponent<Image>();
     }
 
     void CheckIfMoving()
     {
-        // Replace Input.GetAxis with Mobile Joystick input
-        float moveX = moveJoystick != null ? moveJoystick.Horizontal : Input.GetAxis("Horizontal");
-        float moveZ = moveJoystick != null ? moveJoystick.Vertical : Input.GetAxis("Vertical");
+        float moveX = moveJoystick != null ? moveJoystick.Horizontal : 0f;
+        float moveZ = moveJoystick != null ? moveJoystick.Vertical : 0f;
 
         move = Vector3.forward * moveZ + Vector3.right * moveX;
         move.y = 0;
@@ -91,7 +105,6 @@ public class PlayerAnimation : MonoBehaviour
             animator.SetBool("isMoving", true);
         }
 
-        // Avoid normalizing if magnitude is very small to allow for slow walking on slight joystick pushes
         if (move.magnitude > 1f)
             move.Normalize();
     }
@@ -108,14 +121,13 @@ public class PlayerAnimation : MonoBehaviour
             return;
         }
 
-        // Get aim input from right joystick (fallback to PC Right-Click for testing)
-        bool isAimingWithMouse = Input.GetMouseButton(1);
-        float aimX = aimJoystick != null ? aimJoystick.Horizontal : 0;
-        float aimZ = aimJoystick != null ? aimJoystick.Vertical : 0;
+        float aimX = aimJoystick != null ? aimJoystick.Horizontal : 0f;
+        float aimZ = aimJoystick != null ? aimJoystick.Vertical : 0f;
         Vector3 aimInput = new Vector3(aimX, 0, aimZ);
+        
+        bool isAimingWithJoystick = aimInput.magnitude > 0.1f;
 
-        // A deadzone of 0.1f prevents jittering when the joystick resets
-        if (aimInput.magnitude > 0.1f || isAimingWithMouse)
+        if (isAimingWithJoystick)
         {
             if (!isPointing)
             {
@@ -144,7 +156,6 @@ public class PlayerAnimation : MonoBehaviour
     {
         if (!isPointing && isMoving)
         {
-            // Player is just running, face movement direction
             if (move != Vector3.zero)
             {
                 Quaternion toRotation = Quaternion.LookRotation(move, Vector3.up);
@@ -153,23 +164,11 @@ public class PlayerAnimation : MonoBehaviour
         }
         else if (isPointing)
         {
-            // Player is aiming via Mobile Joystick
             if (aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f)
             {
                 Vector3 aimDirection = new Vector3(aimJoystick.Horizontal, 0, aimJoystick.Vertical);
                 Quaternion toRotation = Quaternion.LookRotation(aimDirection, Vector3.up);
-                // We use RotateTowards so they snap fast but smoothly, adjust rotationSpeed if it feels too sluggish
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * 2 * Time.deltaTime);
-            }
-            // Fallback for PC mouse testing
-            else if (Input.GetMouseButton(1))
-            {
-                var (success, position) = GetMousePosition();
-                if (success)
-                {
-                    position.y = transform.position.y;
-                    transform.LookAt(position, Vector3.up);
-                }
             }
         }
     }
@@ -191,9 +190,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void ProcessShot()
     {
-        // Auto-shoot when pointing (Mobile), or Left Click when pointing (PC fallback)
-        bool tryingToShoot = (isPointing && aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f) 
-                             || (isPointing && Input.GetMouseButton(0));
+        bool tryingToShoot = isPointing && aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f;
 
         if (tryingToShoot && shooting.shotReady && !shooting.isReloading)
         {
@@ -210,13 +207,48 @@ public class PlayerAnimation : MonoBehaviour
         }
     }
 
-    private (bool success, Vector3 position) GetMousePosition()
+    public void StartDash()
     {
-        var ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray, out var hitInfo, 50.0f, groundMask))
+        if (canDash && !isDashing)
         {
-            return (success: true, position: hitInfo.point);
+            StartCoroutine(DashRoutine());
         }
-        return (success: false, position: Vector3.zero);
+    }
+
+    private IEnumerator DashRoutine()
+    {
+        isDashing = true;
+        canDash = false;
+        
+        if (dashButtonImage != null)
+        {
+            Color c = dashButtonImage.color;
+            c.a = 10f / 255f;
+            dashButtonImage.color = c;
+        }
+
+        animator.speed = 0f; 
+        float startTime = Time.time;
+        Vector3 dashDirection = transform.forward; 
+
+        while (Time.time < startTime + dashDuration)
+        {
+            controller.Move(dashDirection * dashSpeed * Time.deltaTime);
+            yield return null; 
+        }
+
+        animator.speed = 1f; 
+        isDashing = false;
+
+        yield return new WaitForSeconds(dashCooldown);
+
+        if (dashButtonImage != null)
+        {
+            Color c = dashButtonImage.color;
+            c.a = 40f / 255f;
+            dashButtonImage.color = c;
+        }
+
+        canDash = true;
     }
 }
