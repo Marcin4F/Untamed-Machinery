@@ -14,7 +14,10 @@ public class Shooting : MonoBehaviour
     {
         PlayerAnimation.firingGun += FireAShot;
         muzzleFlash = GetComponentInChildren<Light>();
-        muzzleFlash.enabled = false;
+        if (muzzleFlash == null)
+            muzzleFlash = GetComponentInParent<Light>();
+        if (muzzleFlash != null)
+            muzzleFlash.enabled = false;
     }
 
     void OnDestroy()
