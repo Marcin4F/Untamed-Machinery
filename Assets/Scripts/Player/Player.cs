@@ -25,21 +25,15 @@ public class Player : MonoBehaviour
     [SerializeField] float shieldDurationTime = 5.0f;
     [SerializeField] float shieldCooldown = 5.0f;
     private bool canShield = true;
-    
-    private Image shieldButtonImage;
 
     Shooting shooting;
 
     private void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
         else if (instance != this)
-        {
             Destroy(gameObject);
-        }
     }
 
     void Start()
@@ -90,56 +84,22 @@ public class Player : MonoBehaviour
 
         CinemachineCamera vcam = FindFirstObjectByType<CinemachineCamera>();
         if (vcam != null)
-        {
             vcam.Follow = transform;
-        }
 
         if (scene.buildIndex != 1)
-        {
             InGameUI.instance.HideCurtain();
-        }
-
-        GameObject reloadObj = GameObject.Find("ReloadButton");
-        if (reloadObj != null)
-        {
-            Button reloadBtn = reloadObj.GetComponent<Button>();
-            reloadBtn.onClick.RemoveAllListeners(); 
-            reloadBtn.onClick.AddListener(MobileReload);
-        }
-
-        GameObject shieldObj = GameObject.Find("ShieldButton");
-        if (shieldObj != null)
-        {
-            Button shieldBtn = shieldObj.GetComponent<Button>();
-            shieldBtn.onClick.RemoveAllListeners();
-            shieldBtn.onClick.AddListener(MobileShield);
-            
-            shieldButtonImage = shieldObj.GetComponent<Image>();
-        }
-
-        GameObject dashObj = GameObject.Find("DashButton");
-        if (dashObj != null)
-        {
-            Button dashBtn = dashObj.GetComponent<Button>();
-            dashBtn.onClick.RemoveAllListeners();
-            dashBtn.onClick.AddListener(MobileDash);
-        }
     }
 
     public void MobileReload()
     {
         if (!shooting.isReloading && currentAmmo < maxAmmo)
-        {
             StartCoroutine(shooting.Reloading());
-        }
     }
 
     public void MobileShield()
     {
         if (canShield && !shield.activeInHierarchy)
-        {
             StartCoroutine(ShieldRoutine());
-        }
     }
 
     public void MobileDash()
@@ -148,9 +108,7 @@ public class Player : MonoBehaviour
 
         PlayerAnimation playerAnim = GetComponent<PlayerAnimation>();
         if (playerAnim != null)
-        {
             playerAnim.StartDash();
-        }
     }
 
     public void UpdateInvincibilityTimer()
@@ -203,11 +161,11 @@ public class Player : MonoBehaviour
         canShield = false;
         shield.SetActive(true);
 
-        if (shieldButtonImage != null)
+        if (InGameUI.instance.shieldButtonImage != null)
         {
-            Color c = shieldButtonImage.color;
-            c.a = 10f / 255f; 
-            shieldButtonImage.color = c;
+            Color c = InGameUI.instance.shieldButtonImage.color;
+            c.a = 10f / 255f;
+            InGameUI.instance.shieldButtonImage.color = c;
         }
 
         yield return new WaitForSeconds(shieldDurationTime);
@@ -216,11 +174,11 @@ public class Player : MonoBehaviour
 
         yield return new WaitForSeconds(shieldCooldown);
 
-        if (shieldButtonImage != null)
+        if (InGameUI.instance.shieldButtonImage != null)
         {
-            Color c = shieldButtonImage.color;
-            c.a = 40f / 255f; 
-            shieldButtonImage.color = c;
+            Color c = InGameUI.instance.shieldButtonImage.color;
+            c.a = 1.0f;
+            InGameUI.instance.shieldButtonImage.color = c;
         }
 
         canShield = true;

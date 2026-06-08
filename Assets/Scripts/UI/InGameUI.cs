@@ -50,6 +50,12 @@ public class InGameUI : MonoBehaviour
     [SerializeField] Shop2 shop2;
     public int shopIndex = 1;
 
+    [Header("Mobile Controls")]
+    public MobileJoystick moveJoystick;
+    public MobileJoystick aimJoystick;
+    [SerializeField] Button reloadButton, shieldButton, dashButton;
+    public Image shieldButtonImage, dashButtonImage;
+
     private bool isPaused = false;
 
     private void Awake()
@@ -77,31 +83,43 @@ public class InGameUI : MonoBehaviour
         if (pauseButton != null) { pauseButton.onClick.RemoveAllListeners(); pauseButton.onClick.AddListener(TogglePause); }
     }
 
+    private void Start()
+    {
+        if (reloadButton != null) reloadButton.onClick.AddListener(() => { if (Player.instance != null) Player.instance.MobileReload(); });
+        if (shieldButton != null) shieldButton.onClick.AddListener(() => { if (Player.instance != null) Player.instance.MobileShield(); });
+        if (dashButton != null) dashButton.onClick.AddListener(() => { if (Player.instance != null) Player.instance.MobileDash(); });
+    }
+
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnDisable()
+    {
+        SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        bool isCombatScene = (scene.buildIndex != 1);
+
+        if (aimJoystick != null) aimJoystick.gameObject.SetActive(isCombatScene);
+        if (reloadButton != null) reloadButton.gameObject.SetActive(isCombatScene);
+        if (shieldButton != null) shieldButton.gameObject.SetActive(isCombatScene);
+        if (dashButton != null) dashButton.gameObject.SetActive(isCombatScene);
+    }
+
     // ------- metody in-game -------
-    public void SetCurr1()
-    {
-        currency1.SetText(GameManagement.instance.currency1.ToString());
-    }
+    public void SetCurr1() { currency1.SetText(GameManagement.instance.currency1.ToString()); }
 
-    public void SetCurr2()
-    {
-        currency2.SetText(GameManagement.instance.currency2.ToString());
-    }
+    public void SetCurr2() { currency2.SetText(GameManagement.instance.currency2.ToString()); }
 
-    public void SetCurr3()
-    {
-        currency3.SetText(GameManagement.instance.currency3.ToString());
-    }
+    public void SetCurr3() { currency3.SetText(GameManagement.instance.currency3.ToString()); }
 
-    public void SetDisplayHP()
-    {
-        displayHP.SetText(Player.instance.currentHealth.ToString() + " / " + Player.instance.maxHealth);
-    }
+    public void SetDisplayHP() { displayHP.SetText(Player.instance.currentHealth.ToString() + " / " + Player.instance.maxHealth); }
 
-    public void SetAmmo()
-    {
-        ammo.SetText(Player.instance.currentAmmo.ToString() + " / " + Player.instance.maxAmmo);
-    }
+    public void SetAmmo() { ammo.SetText(Player.instance.currentAmmo.ToString() + " / " + Player.instance.maxAmmo); }
 
 
     // ------- funkcje menu pauzy -------
@@ -230,15 +248,9 @@ public class InGameUI : MonoBehaviour
     }
 
     // ------- metody ekranu laodwania -------
-    public void ShowCurtain()
-    {
-        if (loadingCurtain != null) loadingCurtain.SetActive(true);
-    }
+    public void ShowCurtain() { if (loadingCurtain != null) loadingCurtain.SetActive(true); }
 
-    public void HideCurtain()
-    {
-        if (loadingCurtain != null) loadingCurtain.SetActive(false);
-    }
+    public void HideCurtain() { if (loadingCurtain != null) loadingCurtain.SetActive(false); }
 
     // ------- metody hub -------
     public void SetTextBuildingOne()

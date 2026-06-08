@@ -20,18 +20,12 @@ public class PlayerAnimation : MonoBehaviour
     [SerializeField] float rotationSpeed = 720.0f;
     [SerializeField] float gravityValue = -9.81f;
 
-    [Header("Mobile Controls")]
-    public MobileJoystick moveJoystick;
-    public MobileJoystick aimJoystick;
-
     [Header("Dash Settings")]
     [SerializeField] float dashSpeed = 20.0f;
     [SerializeField] float dashDuration = 0.2f;
     [SerializeField] float dashCooldown = 1.0f;
     private bool isDashing = false;
     private bool canDash = true;
-
-    private Image dashButtonImage;
 
     public delegate void FiringGun();
     public static event FiringGun firingGun;
@@ -72,21 +66,12 @@ public class PlayerAnimation : MonoBehaviour
     {
         currentSceneIndex = scene.buildIndex;
         mainCamera = Camera.main;
-
-        GameObject moveObj = GameObject.Find("MoveJoystick_BG");
-        if (moveObj != null) moveJoystick = moveObj.GetComponent<MobileJoystick>();
-
-        GameObject aimObj = GameObject.Find("AimJoystick_BG");
-        if (aimObj != null) aimJoystick = aimObj.GetComponent<MobileJoystick>();
-
-        GameObject dashObj = GameObject.Find("DashButton");
-        if (dashObj != null) dashButtonImage = dashObj.GetComponent<Image>();
     }
 
     void CheckIfMoving()
     {
-        float moveX = moveJoystick != null ? moveJoystick.Horizontal : 0f;
-        float moveZ = moveJoystick != null ? moveJoystick.Vertical : 0f;
+        float moveX = InGameUI.instance.moveJoystick != null ? InGameUI.instance.moveJoystick.Horizontal : 0f;
+        float moveZ = InGameUI.instance.moveJoystick != null ? InGameUI.instance.moveJoystick.Vertical : 0f;
 
         move = Vector3.forward * moveZ + Vector3.right * moveX;
         move.y = 0;
@@ -121,8 +106,8 @@ public class PlayerAnimation : MonoBehaviour
             return;
         }
 
-        float aimX = aimJoystick != null ? aimJoystick.Horizontal : 0f;
-        float aimZ = aimJoystick != null ? aimJoystick.Vertical : 0f;
+        float aimX = InGameUI.instance.aimJoystick != null ? InGameUI.instance.aimJoystick.Horizontal : 0f;
+        float aimZ = InGameUI.instance.aimJoystick != null ? InGameUI.instance.aimJoystick.Vertical : 0f;
         Vector3 aimInput = new Vector3(aimX, 0, aimZ);
         
         bool isAimingWithJoystick = aimInput.magnitude > 0.1f;
@@ -164,9 +149,9 @@ public class PlayerAnimation : MonoBehaviour
         }
         else if (isPointing)
         {
-            if (aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f)
+            if (InGameUI.instance.aimJoystick != null && new Vector2(InGameUI.instance.aimJoystick.Horizontal, InGameUI.instance.aimJoystick.Vertical).magnitude > 0.1f)
             {
-                Vector3 aimDirection = new Vector3(aimJoystick.Horizontal, 0, aimJoystick.Vertical);
+                Vector3 aimDirection = new Vector3(InGameUI.instance.aimJoystick.Horizontal, 0, InGameUI.instance.aimJoystick.Vertical);
                 Quaternion toRotation = Quaternion.LookRotation(aimDirection, Vector3.up);
                 transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * 2 * Time.deltaTime);
             }
@@ -190,7 +175,7 @@ public class PlayerAnimation : MonoBehaviour
 
     void ProcessShot()
     {
-        bool tryingToShoot = isPointing && aimJoystick != null && new Vector2(aimJoystick.Horizontal, aimJoystick.Vertical).magnitude > 0.1f;
+        bool tryingToShoot = isPointing && InGameUI.instance.aimJoystick != null && new Vector2(InGameUI.instance.aimJoystick.Horizontal, InGameUI.instance.aimJoystick.Vertical).magnitude > 0.1f;
 
         if (tryingToShoot && shooting.shotReady && !shooting.isReloading)
         {
@@ -219,12 +204,12 @@ public class PlayerAnimation : MonoBehaviour
     {
         isDashing = true;
         canDash = false;
-        
-        if (dashButtonImage != null)
+
+        if (InGameUI.instance.dashButtonImage != null)
         {
-            Color c = dashButtonImage.color;
+            Color c = InGameUI.instance.dashButtonImage.color;
             c.a = 10f / 255f;
-            dashButtonImage.color = c;
+            InGameUI.instance.dashButtonImage.color = c;
         }
 
         animator.speed = 0f; 
@@ -242,11 +227,11 @@ public class PlayerAnimation : MonoBehaviour
 
         yield return new WaitForSeconds(dashCooldown);
 
-        if (dashButtonImage != null)
+        if (InGameUI.instance.dashButtonImage != null)
         {
-            Color c = dashButtonImage.color;
-            c.a = 40f / 255f;
-            dashButtonImage.color = c;
+            Color c = InGameUI.instance.dashButtonImage.color;
+            c.a = 1.0f;
+            InGameUI.instance.dashButtonImage.color = c;
         }
 
         canDash = true;
