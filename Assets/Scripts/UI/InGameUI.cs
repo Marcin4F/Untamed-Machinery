@@ -29,7 +29,7 @@ public class InGameUI : MonoBehaviour
     [SerializeField] Button saveButton, quitMenuSaveButton;
 
 
-    [Header("Ekran £adowania")]
+    [Header("Ekran ï¿½adowania")]
     [SerializeField] GameObject loadingCurtain;
 
     [Header("Zasoby")]
@@ -339,6 +339,6 @@ public class InGameUI : MonoBehaviour
         GameManagement.instance.gameState = 1;
         StartGameHide();
         //SceneManager.LoadScene(Random.Range(2, 8));
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(26);
     }
 }
