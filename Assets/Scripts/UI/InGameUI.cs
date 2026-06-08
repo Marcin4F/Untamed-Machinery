@@ -326,7 +326,7 @@ public class InGameUI : MonoBehaviour
         GameManagement.instance.roomsCleared = 0;
         GameManagement.instance.gameState = 1;
         StartGameHide();
-        SceneManager.LoadScene(Random.Range(2, 8));
-        //SceneManager.LoadScene(6);
+        //SceneManager.LoadScene(Random.Range(2, 8));
+        SceneManager.LoadScene(6);
     }
 }

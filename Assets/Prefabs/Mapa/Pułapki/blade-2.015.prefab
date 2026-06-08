@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4594455168703462945}
   - component: {fileID: 6274475829021657592}
   - component: {fileID: 1016554299790353221}
-  - component: {fileID: 296964949302155426}
   m_Layer: 0
   m_Name: blade-2.015
   m_TagString: Damaging
@@ -122,30 +121,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!54 &296964949302155426
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8964614769631455649}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
+  rotationSpeed: 720
+  moveSpeed: 8

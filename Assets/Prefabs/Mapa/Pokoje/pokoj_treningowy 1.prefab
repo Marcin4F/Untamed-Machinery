@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3364879532345377461}
   - component: {fileID: 1218410937679977043}
   - component: {fileID: 2642025593572994803}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.023
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -206,12 +206,14 @@ GameObject:
   - component: {fileID: 5320700921895760595}
   - component: {fileID: 6497816300308476121}
   - component: {fileID: 8458622581804958265}
-  m_Layer: 0
+  - component: {fileID: 775564736763582645}
+  - component: {fileID: 6997333800140490272}
+  m_Layer: 12
   m_Name: blade-2.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5320700921895760595
 Transform:
@@ -221,12 +223,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 90575912674508533}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 2.190689, y: 2.58245, z: -7.999176}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.22666878, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 5964227278122172733}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6497816300308476121
 MeshFilter:
@@ -281,6 +283,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &775564736763582645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90575912674508533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &6997333800140490272
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 90575912674508533}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &136736372810559477
 GameObject:
   m_ObjectHideFlags: 0
@@ -293,7 +330,7 @@ GameObject:
   - component: {fileID: 1620081600659716764}
   - component: {fileID: 3217658739411358205}
   - component: {fileID: 1759958964616632387}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.032
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -401,6 +438,7 @@ GameObject:
   - component: {fileID: 1305049882449523046}
   - component: {fileID: 6096930391241720434}
   - component: {fileID: 4570449479405925276}
+  - component: {fileID: 3118110251748620120}
   m_Layer: 0
   m_Name: blade-2.004
   m_TagString: Untagged
@@ -418,10 +456,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -2, y: 1.5014305, z: 7}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950174, y: 0.17950174, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 110598803042508701}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6096930391241720434
 MeshFilter:
@@ -477,6 +516,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3118110251748620120
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143711529191711766}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &313990430492430761
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,7 +549,7 @@ GameObject:
   - component: {fileID: 8723426848704938705}
   - component: {fileID: 1610461001220411095}
   - component: {fileID: 1011309378544964889}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -586,6 +646,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &322926510395536738
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4741208319578096609}
+  - component: {fileID: 6930735379127093209}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4741208319578096609
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322926510395536738}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8241234558828232757}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6930735379127093209
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 322926510395536738}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &325188794299476945
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +712,8 @@ GameObject:
   - component: {fileID: 4344823741564918608}
   - component: {fileID: 5899530196291410045}
   - component: {fileID: 4096678825347165311}
-  m_Layer: 0
+  - component: {fileID: 5246100323833097410}
+  m_Layer: 12
   m_Name: cylinder-spikes.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +732,8 @@ Transform:
   m_LocalPosition: {x: -13.4262085, y: 0.60163736, z: -0.12903309}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 641009959692893526}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5899530196291410045
@@ -673,6 +790,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5246100323833097410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325188794299476945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &471633284582312163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1158,7 @@ GameObject:
   - component: {fileID: 175270062565835577}
   - component: {fileID: 2258803210843667495}
   - component: {fileID: 3858048999944901267}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.022
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,6 +1266,7 @@ GameObject:
   - component: {fileID: 8470879146191629767}
   - component: {fileID: 6032291465627831779}
   - component: {fileID: 2813704786173174443}
+  - component: {fileID: 687084429964395264}
   m_Layer: 0
   m_Name: blade-2.003
   m_TagString: Untagged
@@ -1147,8 +1286,9 @@ Transform:
   m_LocalPosition: {x: -1, y: 0.17953515, z: 12.5}
   m_LocalScale: {x: 0.17953515, y: 0.17953515, z: 0.17953515}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 5683349611842880314}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6032291465627831779
 MeshFilter:
@@ -1204,6 +1344,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &687084429964395264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605432173919036079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
+--- !u!1 &747271480864566963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7411717544672284089}
+  - component: {fileID: 9052648332665441603}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7411717544672284089
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747271480864566963}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5537560352196059465}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &9052648332665441603
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 747271480864566963}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &935717146348574136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1357,7 +1573,7 @@ GameObject:
   - component: {fileID: 4959600916725871215}
   - component: {fileID: 3709233991391381076}
   - component: {fileID: 3848290397533404190}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.033
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1465,6 +1681,7 @@ GameObject:
   - component: {fileID: 6858100033047548899}
   - component: {fileID: 3243869290230639442}
   - component: {fileID: 8937058883465404444}
+  - component: {fileID: 6468529906082528517}
   m_Layer: 0
   m_Name: blade-2.009
   m_TagString: Untagged
@@ -1482,10 +1699,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: 1.8499985, y: 1.5014305, z: -8}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950176, y: 0.17950176, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 8621973830315685763}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3243869290230639442
 MeshFilter:
@@ -1541,6 +1759,80 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6468529906082528517
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191841005775433209}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
+--- !u!1 &1341589693537224636
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 422272405787938266}
+  - component: {fileID: 7587342387980237889}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &422272405787938266
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341589693537224636}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -0.5026829, y: -1.4192381, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0.33333334}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8342240553939999908}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7587342387980237889
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1341589693537224636}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1, z: 0.2}
+  m_Center: {x: -1.4, y: 0.5, z: 0.1}
 --- !u!1 &1448853811621799261
 GameObject:
   m_ObjectHideFlags: 0
@@ -1553,7 +1845,7 @@ GameObject:
   - component: {fileID: 6434555365451562682}
   - component: {fileID: 7496905594659747006}
   - component: {fileID: 710107373701485269}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.040
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1661,7 +1953,8 @@ GameObject:
   - component: {fileID: 4280966617198662194}
   - component: {fileID: 7805386273894627470}
   - component: {fileID: 7875491250339687689}
-  m_Layer: 0
+  - component: {fileID: 2438860768158388925}
+  m_Layer: 12
   m_Name: cylinder-spikes.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1680,7 +1973,8 @@ Transform:
   m_LocalPosition: {x: -12.442566, y: 0.60163736, z: 9.227716}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 315193718936247172}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7805386273894627470
@@ -1737,6 +2031,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2438860768158388925
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504527771001711320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!1 &1557222369713893068
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4905113700183907563}
+  - component: {fileID: 8493162673401198282}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4905113700183907563
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557222369713893068}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1207376375691859083}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8493162673401198282
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1557222369713893068}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &1565433157194092313
 GameObject:
   m_ObjectHideFlags: 0
@@ -1749,7 +2119,7 @@ GameObject:
   - component: {fileID: 829662768857681738}
   - component: {fileID: 6129766691897254481}
   - component: {fileID: 5839651225121479270}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1857,12 +2227,14 @@ GameObject:
   - component: {fileID: 1156157754175282293}
   - component: {fileID: 7156924162231034914}
   - component: {fileID: 939759262343911985}
-  m_Layer: 0
+  - component: {fileID: 19322589674657733}
+  - component: {fileID: 4180188865726264750}
+  m_Layer: 12
   m_Name: blade-2.014
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1156157754175282293
 Transform:
@@ -1872,12 +2244,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1588794591027191660}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -2.5812225, y: 0.17871118, z: 2.0800524}
-  m_LocalScale: {x: 0.17953515, y: 0.17953512, z: 0.17953512}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.022344, y: 0.445887, z: 0.0045894487}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 4613385670340986204}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7156924162231034914
 MeshFilter:
@@ -1932,6 +2304,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &19322589674657733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588794591027191660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &4180188865726264750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1588794591027191660}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &1651138332167468547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,7 +2351,7 @@ GameObject:
   - component: {fileID: 4622412953055991166}
   - component: {fileID: 338023635780157851}
   - component: {fileID: 3135724279463912430}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2052,7 +2459,8 @@ GameObject:
   - component: {fileID: 2889448254077257743}
   - component: {fileID: 7553336451552704981}
   - component: {fileID: 6682103441503639429}
-  m_Layer: 0
+  - component: {fileID: 5331713735402286245}
+  m_Layer: 12
   m_Name: cylinder-spikes.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2071,7 +2479,8 @@ Transform:
   m_LocalPosition: {x: 2.3782501, y: 0.5550606, z: -2.6693726}
   m_LocalScale: {x: 0.6016372, y: 0.60163724, z: 0.6016372}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8404196204801784783}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7553336451552704981
@@ -2128,6 +2537,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5331713735402286245
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1654638026066298972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &1694259219264582400
 GameObject:
   m_ObjectHideFlags: 0
@@ -2139,6 +2569,8 @@ GameObject:
   - component: {fileID: 3397911391544814914}
   - component: {fileID: 5871405373592272648}
   - component: {fileID: 6380664746109085865}
+  - component: {fileID: 6902983704932623176}
+  - component: {fileID: 8498967862126813517}
   m_Layer: 0
   m_Name: drzwi lewe
   m_TagString: Untagged
@@ -2158,7 +2590,8 @@ Transform:
   m_LocalPosition: {x: 4.0000534, y: 1.5096364, z: -25.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4157616177909683411}
   m_Father: {fileID: 991897045032581765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5871405373592272648
@@ -2214,6 +2647,39 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6902983704932623176
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694259219264582400}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.5, y: 3, z: 1.8}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &8498967862126813517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694259219264582400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b551afe59094bc4d953164b0adba18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1704205569018036601
 GameObject:
   m_ObjectHideFlags: 0
@@ -2225,7 +2691,8 @@ GameObject:
   - component: {fileID: 407931647903081567}
   - component: {fileID: 472065394050031256}
   - component: {fileID: 4927175986559699323}
-  m_Layer: 0
+  - component: {fileID: 2328484286520074630}
+  m_Layer: 12
   m_Name: cylinder-spikes.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2244,7 +2711,8 @@ Transform:
   m_LocalPosition: {x: -11.365223, y: 0.60163736, z: -4.4446383}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4640777664368766132}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &472065394050031256
@@ -2301,6 +2769,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2328484286520074630
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704205569018036601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &1719749985560704688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2398,12 +2887,14 @@ GameObject:
   - component: {fileID: 8621973830315685763}
   - component: {fileID: 1983730545905247050}
   - component: {fileID: 1914563452958464943}
-  m_Layer: 0
+  - component: {fileID: 8246105864081094956}
+  - component: {fileID: 5776120540764591769}
+  m_Layer: 12
   m_Name: blade-2.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &8621973830315685763
 Transform:
@@ -2413,12 +2904,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1733666972566746317}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 1.7782593, y: 0.4204111, z: -7.999176}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.39965802, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 6858100033047548899}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1983730545905247050
 MeshFilter:
@@ -2473,6 +2964,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &8246105864081094956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733666972566746317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &5776120540764591769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733666972566746317}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &1820942156464242624
 GameObject:
   m_ObjectHideFlags: 0
@@ -2484,12 +3010,14 @@ GameObject:
   - component: {fileID: 60540180958700288}
   - component: {fileID: 9156344786000483471}
   - component: {fileID: 3659097710172990144}
-  m_Layer: 0
+  - component: {fileID: 7059924275460699086}
+  - component: {fileID: 2792865943564588679}
+  m_Layer: 12
   m_Name: blade-2.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &60540180958700288
 Transform:
@@ -2499,12 +3027,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1820942156464242624}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 1.9186249, y: 0.4204111, z: 7.000824}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.45333955, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 7290319199347007004}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &9156344786000483471
 MeshFilter:
@@ -2559,6 +3087,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7059924275460699086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820942156464242624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &2792865943564588679
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820942156464242624}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &1852730313745977875
 GameObject:
   m_ObjectHideFlags: 0
@@ -2571,7 +3134,7 @@ GameObject:
   - component: {fileID: 5714089290157046751}
   - component: {fileID: 2008843576657216812}
   - component: {fileID: 2389258700744650411}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.042
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2679,7 +3242,8 @@ GameObject:
   - component: {fileID: 5444851128165541518}
   - component: {fileID: 6145636564147189869}
   - component: {fileID: 5792946636849018770}
-  m_Layer: 0
+  - component: {fileID: 4044651385113977936}
+  m_Layer: 12
   m_Name: cylinder-spikes.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2698,7 +3262,8 @@ Transform:
   m_LocalPosition: {x: -13.554367, y: 0.60163736, z: -8.646705}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 6589531512465783623}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6145636564147189869
@@ -2755,6 +3320,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4044651385113977936
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936918606166020208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!1 &2083941322852858329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 641009959692893526}
+  - component: {fileID: 4719130034838386180}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &641009959692893526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083941322852858329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4344823741564918608}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4719130034838386180
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2083941322852858329}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &2168181983457078565
 GameObject:
   m_ObjectHideFlags: 0
@@ -2767,7 +3408,7 @@ GameObject:
   - component: {fileID: 6204349465223511124}
   - component: {fileID: 6144882505876773537}
   - component: {fileID: 3954513340745599040}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.031
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2959,6 +3600,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 991897045032581765}
+  - component: {fileID: 3445398335078891557}
+  - component: {fileID: 4214957418252827769}
+  - component: {fileID: 2959915874464191381}
+  - component: {fileID: 8612735673907512467}
+  - component: {fileID: 5235378091286375828}
+  - component: {fileID: 8466521701817534200}
   m_Layer: 0
   m_Name: pokoj_treningowy 1
   m_TagString: Untagged
@@ -2999,6 +3646,132 @@ Transform:
   - {fileID: 1876567574663535910}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &3445398335078891557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 17, z: 53}
+  m_Center: {x: -25.7, y: 7, z: 0}
+--- !u!65 &4214957418252827769
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 53, y: 17, z: 1}
+  m_Center: {x: 0, y: 7, z: 25.4}
+--- !u!65 &2959915874464191381
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6, y: 17, z: 3}
+  m_Center: {x: 0, y: 7, z: -26}
+--- !u!65 &8612735673907512467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 21, y: 17, z: 3}
+  m_Center: {x: 15.5, y: 7, z: -26}
+--- !u!65 &5235378091286375828
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 21, y: 17, z: 3}
+  m_Center: {x: -15.5, y: 7, z: -26}
+--- !u!65 &8466521701817534200
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2334691171708462882}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 17, z: 53}
+  m_Center: {x: 25.7, y: 7, z: 0}
 --- !u!1 &2341701070077616791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3011,7 +3784,7 @@ GameObject:
   - component: {fileID: 4958331332755783239}
   - component: {fileID: 8982512358574613351}
   - component: {fileID: 7910898904233000296}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3119,6 +3892,7 @@ GameObject:
   - component: {fileID: 4613385670340986204}
   - component: {fileID: 7044851664253220156}
   - component: {fileID: 2276888036104482960}
+  - component: {fileID: 2607386763396200756}
   m_Layer: 0
   m_Name: blade-2.005
   m_TagString: Untagged
@@ -3136,10 +3910,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -1.5, y: 0.17953515, z: 2}
-  m_LocalScale: {x: 0.17953515, y: 0.17953512, z: 0.17953512}
+  m_LocalScale: {x: 0.17953515, y: 0.17953509, z: 0.17953509}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 1156157754175282293}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7044851664253220156
 MeshFilter:
@@ -3195,6 +3970,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2607386763396200756
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2511319437609751810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &2637168294089756951
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,7 +4003,7 @@ GameObject:
   - component: {fileID: 3040345056124860864}
   - component: {fileID: 16277306538053809}
   - component: {fileID: 3941939116567243625}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.038
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3316,7 +4112,7 @@ GameObject:
   - component: {fileID: 1071621232573692198}
   - component: {fileID: 287245298954759696}
   - component: {fileID: 4313919946175401066}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3689,7 +4485,7 @@ GameObject:
   - component: {fileID: 8200465684017438354}
   - component: {fileID: 2583111724495275192}
   - component: {fileID: 845047873130961169}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.018
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3797,7 +4593,8 @@ GameObject:
   - component: {fileID: 3372347097238791069}
   - component: {fileID: 1271346357809590992}
   - component: {fileID: 171499648901472735}
-  m_Layer: 0
+  - component: {fileID: 9203683568202672536}
+  m_Layer: 12
   m_Name: cylinder-spikes.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3816,7 +4613,8 @@ Transform:
   m_LocalPosition: {x: -9.337528, y: 0.60163736, z: -0.12903309}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8801355021190368018}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1271346357809590992
@@ -3873,6 +4671,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9203683568202672536
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152394405096664684}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!1 &3216327439843953338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4640777664368766132}
+  - component: {fileID: 2295089961425763635}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4640777664368766132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216327439843953338}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 407931647903081567}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2295089961425763635
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3216327439843953338}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &3270579997548263897
 GameObject:
   m_ObjectHideFlags: 0
@@ -3975,7 +4849,7 @@ GameObject:
   - component: {fileID: 3615878581512029430}
   - component: {fileID: 437041131641772246}
   - component: {fileID: 5609042245286224841}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4072,6 +4946,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &3289290345933290139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4157616177909683411}
+  - component: {fileID: 5106906780954765194}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4157616177909683411
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289290345933290139}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: -1.0054193, y: -1.4192381, z: 0}
+  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3397911391544814914}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5106906780954765194
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3289290345933290139}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 3, y: 1, z: 0.2}
+  m_Center: {x: -1.4, y: 0.5, z: 0.1}
 --- !u!1 &3450339734819963309
 GameObject:
   m_ObjectHideFlags: 0
@@ -4083,6 +5010,7 @@ GameObject:
   - component: {fileID: 7290319199347007004}
   - component: {fileID: 2240853184230733630}
   - component: {fileID: 3575676134417292142}
+  - component: {fileID: 9185311136334531363}
   m_Layer: 0
   m_Name: blade-2.2
   m_TagString: Untagged
@@ -4100,10 +5028,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: 2, y: 1.5014305, z: 7}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950174, y: 0.17950174, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 60540180958700288}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2240853184230733630
 MeshFilter:
@@ -4159,6 +5088,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &9185311136334531363
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3450339734819963309}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &3555609056092926875
 GameObject:
   m_ObjectHideFlags: 0
@@ -4243,7 +5193,7 @@ GameObject:
   - component: {fileID: 47243777878668716}
   - component: {fileID: 2113138716062550657}
   - component: {fileID: 2974804993644106243}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.027
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4437,6 +5387,7 @@ GameObject:
   - component: {fileID: 5964227278122172733}
   - component: {fileID: 5100960213339802736}
   - component: {fileID: 4770305470048404959}
+  - component: {fileID: 679858491321896754}
   m_Layer: 0
   m_Name: blade-2.008
   m_TagString: Untagged
@@ -4454,10 +5405,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
   m_LocalPosition: {x: 2.1500015, y: 1.5014305, z: -8}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950174, y: 0.17950174, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 5320700921895760595}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5100960213339802736
 MeshFilter:
@@ -4513,6 +5465,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &679858491321896754
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899014761296188436}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &3908416674126306176
 GameObject:
   m_ObjectHideFlags: 0
@@ -4524,7 +5497,8 @@ GameObject:
   - component: {fileID: 2693957953111075770}
   - component: {fileID: 7963638404588294052}
   - component: {fileID: 2456257025069270211}
-  m_Layer: 0
+  - component: {fileID: 316923305147520044}
+  m_Layer: 12
   m_Name: cylinder-spikes.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4543,7 +5517,8 @@ Transform:
   m_LocalPosition: {x: -7.5148163, y: 0.60163736, z: 4.5752525}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1595789028201795388}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7963638404588294052
@@ -4600,6 +5575,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &316923305147520044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3908416674126306176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4011199894731693249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4611,12 +5607,14 @@ GameObject:
   - component: {fileID: 5025947844360351316}
   - component: {fileID: 8132783786282851853}
   - component: {fileID: 1436942215409916144}
-  m_Layer: 0
+  - component: {fileID: 7557877241657838999}
+  - component: {fileID: 7569092713281789695}
+  m_Layer: 12
   m_Name: blade-2.020
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5025947844360351316
 Transform:
@@ -4626,12 +5624,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4011199894731693249}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -1.9194717, y: 2.58245, z: -7.999176}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.44862035, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 4922743483568170251}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8132783786282851853
 MeshFilter:
@@ -4686,6 +5684,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7557877241657838999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011199894731693249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &7569092713281789695
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4011199894731693249}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &4080327982689783608
 GameObject:
   m_ObjectHideFlags: 0
@@ -4698,7 +5731,7 @@ GameObject:
   - component: {fileID: 3938175372506057217}
   - component: {fileID: 1075089899755617938}
   - component: {fileID: 4914493700794757970}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.009
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4806,6 +5839,7 @@ GameObject:
   - component: {fileID: 5277199829198726641}
   - component: {fileID: 1079987520943983656}
   - component: {fileID: 658808910930536462}
+  - component: {fileID: 6353208502976190846}
   m_Layer: 0
   m_Name: blade-2.001
   m_TagString: Untagged
@@ -4825,8 +5859,9 @@ Transform:
   m_LocalPosition: {x: 2, y: 0.17953515, z: 12.5}
   m_LocalScale: {x: 0.17953515, y: 0.17953515, z: 0.17953515}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 886905561334584897}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1079987520943983656
 MeshFilter:
@@ -4882,6 +5917,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6353208502976190846
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4123995678611170972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &4207803201842156754
 GameObject:
   m_ObjectHideFlags: 0
@@ -4893,12 +5949,14 @@ GameObject:
   - component: {fileID: 886905561334584897}
   - component: {fileID: 2785677329172897222}
   - component: {fileID: 7772990320956390951}
-  m_Layer: 0
+  - component: {fileID: 1665350805065176335}
+  - component: {fileID: 906888426944145153}
+  m_Layer: 12
   m_Name: blade-2.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &886905561334584897
 Transform:
@@ -4908,12 +5966,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4207803201842156754}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: -0.49999997, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 1.9199448, y: 0.17871118, z: 11.418779}
-  m_LocalScale: {x: 0.17953515, y: 0.17953515, z: 0.17953515}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223336, y: 0.44590268, z: 0.0045888247}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 5277199829198726641}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2785677329172897222
 MeshFilter:
@@ -4968,6 +6026,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1665350805065176335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207803201842156754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &906888426944145153
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4207803201842156754}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &4267441836654503518
 GameObject:
   m_ObjectHideFlags: 0
@@ -4980,7 +6073,7 @@ GameObject:
   - component: {fileID: 9166614637272780444}
   - component: {fileID: 5233422873780899852}
   - component: {fileID: 7093424686447473564}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5105,27 +6198,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 5277199829198726641}
-  - {fileID: 7290319199347007004}
-  - {fileID: 8470879146191629767}
-  - {fileID: 1305049882449523046}
-  - {fileID: 4613385670340986204}
-  - {fileID: 886905561334584897}
-  - {fileID: 5069927563715696683}
-  - {fileID: 5964227278122172733}
-  - {fileID: 6858100033047548899}
-  - {fileID: 4922743483568170251}
-  - {fileID: 4098555799676842027}
-  - {fileID: 5683349611842880314}
-  - {fileID: 1225427600038084425}
-  - {fileID: 1156157754175282293}
-  - {fileID: 60540180958700288}
-  - {fileID: 110598803042508701}
-  - {fileID: 1364154475222909154}
-  - {fileID: 5320700921895760595}
-  - {fileID: 8621973830315685763}
-  - {fileID: 5025947844360351316}
+  m_Children: []
   m_Father: {fileID: 1876567574663535910}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4324343014588465406
@@ -5139,12 +6212,14 @@ GameObject:
   - component: {fileID: 5683349611842880314}
   - component: {fileID: 1810905467242407943}
   - component: {fileID: 4333048825372878431}
-  m_Layer: 0
+  - component: {fileID: 1858642742133950846}
+  - component: {fileID: 384135326378519373}
+  m_Layer: 12
   m_Name: blade-2.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &5683349611842880314
 Transform:
@@ -5154,12 +6229,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4324343014588465406}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.5, y: 0.49999997, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -0.91994476, y: 0.17871118, z: 13.581221}
-  m_LocalScale: {x: 0.17953515, y: 0.17953515, z: 0.17953515}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223336, y: 0.445903, z: 0.0045901528}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 8470879146191629767}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1810905467242407943
 MeshFilter:
@@ -5214,6 +6289,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1858642742133950846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324343014588465406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &384135326378519373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4324343014588465406}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &4337338136055831583
 GameObject:
   m_ObjectHideFlags: 0
@@ -5226,7 +6336,7 @@ GameObject:
   - component: {fileID: 6303261406012980238}
   - component: {fileID: 1410561526001256871}
   - component: {fileID: 2906942049697273584}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.041
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5334,7 +6444,8 @@ GameObject:
   - component: {fileID: 3621266765441328678}
   - component: {fileID: 2622857688464212928}
   - component: {fileID: 7575376922507395576}
-  m_Layer: 0
+  - component: {fileID: 6773428213147226058}
+  m_Layer: 12
   m_Name: cylinder-spikes.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5353,7 +6464,8 @@ Transform:
   m_LocalPosition: {x: -7.421318, y: 0.60163736, z: -8.313694}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7092230613133854221}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2622857688464212928
@@ -5410,6 +6522,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &6773428213147226058
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339750716938236079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4345181970845516860
 GameObject:
   m_ObjectHideFlags: 0
@@ -5421,7 +6554,8 @@ GameObject:
   - component: {fileID: 3943391107218818601}
   - component: {fileID: 8741933980802294161}
   - component: {fileID: 8938333548898832807}
-  m_Layer: 0
+  - component: {fileID: 1328872616498278772}
+  m_Layer: 12
   m_Name: cylinder-spikes.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5440,7 +6574,8 @@ Transform:
   m_LocalPosition: {x: 7.381241, y: 0.5550606, z: 8.565273}
   m_LocalScale: {x: 0.6016372, y: 0.60163724, z: 0.6016372}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8352570822279254512}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8741933980802294161
@@ -5497,6 +6632,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1328872616498278772
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4345181970845516860}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4356903600138492954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5508,6 +6664,7 @@ GameObject:
   - component: {fileID: 4922743483568170251}
   - component: {fileID: 6389148563055838983}
   - component: {fileID: 1905415373405114391}
+  - component: {fileID: 4062294458590030691}
   m_Layer: 0
   m_Name: blade-2.010
   m_TagString: Untagged
@@ -5525,10 +6682,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
   m_LocalPosition: {x: -2, y: 1.5014305, z: -8}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950174, y: 0.17950174, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 5025947844360351316}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6389148563055838983
 MeshFilter:
@@ -5584,6 +6742,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4062294458590030691
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4356903600138492954}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
+--- !u!1 &4553240557364983213
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8404196204801784783}
+  - component: {fileID: 8937858341125746111}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8404196204801784783
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553240557364983213}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2889448254077257743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &8937858341125746111
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4553240557364983213}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &4606843070130876151
 GameObject:
   m_ObjectHideFlags: 0
@@ -5682,7 +6916,7 @@ GameObject:
   - component: {fileID: 1159279444671863806}
   - component: {fileID: 2732079756159294936}
   - component: {fileID: 5373119345908193457}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.021
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5790,7 +7024,8 @@ GameObject:
   - component: {fileID: 654422551384032783}
   - component: {fileID: 5533377029410345070}
   - component: {fileID: 8663730724988768327}
-  m_Layer: 0
+  - component: {fileID: 3392116529840743719}
+  m_Layer: 12
   m_Name: cylinder-spikes.012
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5809,7 +7044,8 @@ Transform:
   m_LocalPosition: {x: 7.381241, y: 0.5550606, z: -2.6693726}
   m_LocalScale: {x: 0.6016372, y: 0.60163724, z: 0.6016372}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2169019982880315709}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5533377029410345070
@@ -5866,6 +7102,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &3392116529840743719
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4731653826780757927}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4799036226324873213
 GameObject:
   m_ObjectHideFlags: 0
@@ -6019,7 +7276,7 @@ GameObject:
   - component: {fileID: 2488733745307338609}
   - component: {fileID: 1861039936225880557}
   - component: {fileID: 2493208485751272276}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6128,7 +7385,7 @@ GameObject:
   - component: {fileID: 4464569613439060163}
   - component: {fileID: 6257465612499963008}
   - component: {fileID: 878904854019525037}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.037
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6225,6 +7482,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &5188742467590519962
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7092230613133854221}
+  - component: {fileID: 4668584128115495848}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7092230613133854221
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188742467590519962}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3621266765441328678}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4668584128115495848
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5188742467590519962}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &5223567044822465760
 GameObject:
   m_ObjectHideFlags: 0
@@ -6237,7 +7549,7 @@ GameObject:
   - component: {fileID: 4170952267870349917}
   - component: {fileID: 7994748188625638081}
   - component: {fileID: 3329470989420836246}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.026
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6346,7 +7658,7 @@ GameObject:
   - component: {fileID: 8945456477422744041}
   - component: {fileID: 621866245654790238}
   - component: {fileID: 4944226735274302421}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.034
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6454,6 +7766,8 @@ GameObject:
   - component: {fileID: 8342240553939999908}
   - component: {fileID: 8586334044384593379}
   - component: {fileID: 8198036237458567845}
+  - component: {fileID: 4465301661264623628}
+  - component: {fileID: 1792994057121658747}
   m_Layer: 0
   m_Name: drzwi prawe
   m_TagString: Untagged
@@ -6473,7 +7787,8 @@ Transform:
   m_LocalPosition: {x: -4, y: 1.5096364, z: -25.4}
   m_LocalScale: {x: 2, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 422272405787938266}
   m_Father: {fileID: 991897045032581765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8586334044384593379
@@ -6529,6 +7844,94 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &4465301661264623628
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485779789389422612}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 3, z: 0.6}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1792994057121658747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5485779789389422612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b551afe59094bc4d953164b0adba18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &5672749057701224549
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2169019982880315709}
+  - component: {fileID: 3876922896511742849}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2169019982880315709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672749057701224549}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 654422551384032783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3876922896511742849
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672749057701224549}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &5746039098595947289
 GameObject:
   m_ObjectHideFlags: 0
@@ -6701,6 +8104,7 @@ Transform:
   m_Children:
   - {fileID: 8171414764219117796}
   - {fileID: 1186535851350014955}
+  - {fileID: 4384605571283018155}
   - {fileID: 3263696691922723929}
   m_Father: {fileID: 991897045032581765}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6747,7 +8151,7 @@ GameObject:
   - component: {fileID: 2514151881334556769}
   - component: {fileID: 457893924255496408}
   - component: {fileID: 2718312173625608814}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.030
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6856,7 +8260,7 @@ GameObject:
   - component: {fileID: 7347757341227677085}
   - component: {fileID: 8198908814915221541}
   - component: {fileID: 8427120216954816095}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.011
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6965,7 +8369,7 @@ GameObject:
   - component: {fileID: 4284682443439185659}
   - component: {fileID: 4160628994830935069}
   - component: {fileID: 7022683350537428224}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.010
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7148,6 +8552,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6411469397525734349
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8252214057510634220}
+  - component: {fileID: 2049573917580723606}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8252214057510634220
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411469397525734349}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5807284807336972025}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2049573917580723606
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6411469397525734349}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &6502798498491203638
 GameObject:
   m_ObjectHideFlags: 0
@@ -7160,7 +8619,7 @@ GameObject:
   - component: {fileID: 8291744440620162375}
   - component: {fileID: 6281068134828897623}
   - component: {fileID: 5976471706014483137}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.025
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7269,7 +8728,7 @@ GameObject:
   - component: {fileID: 1598512470296300434}
   - component: {fileID: 2599688173015178836}
   - component: {fileID: 7010145411206990502}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.028
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7378,7 +8837,7 @@ GameObject:
   - component: {fileID: 5741888879641754950}
   - component: {fileID: 745652109494860479}
   - component: {fileID: 423378877832628072}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7576,7 +9035,8 @@ GameObject:
   - component: {fileID: 1207376375691859083}
   - component: {fileID: 5556656725465311481}
   - component: {fileID: 8055921799255689423}
-  m_Layer: 0
+  - component: {fileID: 7471118243287499852}
+  m_Layer: 12
   m_Name: cylinder-spikes.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7595,7 +9055,8 @@ Transform:
   m_LocalPosition: {x: -9.527935, y: 0.60163736, z: -10.774865}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4905113700183907563}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5556656725465311481
@@ -7652,6 +9113,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7471118243287499852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870167564017280278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!1 &6872326425136884900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8801355021190368018}
+  - component: {fileID: 4044140410503643821}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8801355021190368018
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872326425136884900}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3372347097238791069}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &4044140410503643821
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872326425136884900}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &6892379098563150346
 GameObject:
   m_ObjectHideFlags: 0
@@ -7750,6 +9287,7 @@ GameObject:
   - component: {fileID: 4098555799676842027}
   - component: {fileID: 2371833162089233573}
   - component: {fileID: 8932973740788523189}
+  - component: {fileID: 8280692822987214991}
   m_Layer: 0
   m_Name: blade-2.011
   m_TagString: Untagged
@@ -7767,10 +9305,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000005338508, y: 0.7071068, z: 0.7071067, w: -0.000000053385072}
   m_LocalPosition: {x: 4.5, y: 0.17953515, z: 2}
-  m_LocalScale: {x: 0.17953515, y: 0.17953512, z: 0.17953512}
+  m_LocalScale: {x: 0.17953515, y: 0.17953509, z: 0.17953509}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 1225427600038084425}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2371833162089233573
 MeshFilter:
@@ -7826,6 +9365,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &8280692822987214991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6900524045929397967}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &7152998184132958626
 GameObject:
   m_ObjectHideFlags: 0
@@ -7838,7 +9398,7 @@ GameObject:
   - component: {fileID: 4749361936371597650}
   - component: {fileID: 3612109557046146518}
   - component: {fileID: 6801266728708448334}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.039
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7946,12 +9506,14 @@ GameObject:
   - component: {fileID: 1364154475222909154}
   - component: {fileID: 6179891692376683278}
   - component: {fileID: 1435199495504294937}
-  m_Layer: 0
+  - component: {fileID: 5989606405221429604}
+  - component: {fileID: 2544518191290780432}
+  m_Layer: 12
   m_Name: blade-2.017
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1364154475222909154
 Transform:
@@ -7961,12 +9523,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7284111849037799654}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: 5.9164734, y: 0.4204111, z: -7.999176}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.46532544, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 5069927563715696683}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6179891692376683278
 MeshFilter:
@@ -8021,6 +9583,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &5989606405221429604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284111849037799654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &2544518191290780432
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7284111849037799654}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &7454090424369619342
 GameObject:
   m_ObjectHideFlags: 0
@@ -8033,7 +9630,7 @@ GameObject:
   - component: {fileID: 5268694066047372458}
   - component: {fileID: 7388153154544751954}
   - component: {fileID: 7015235559250364896}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.024
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8142,7 +9739,7 @@ GameObject:
   - component: {fileID: 1516778255659625701}
   - component: {fileID: 1102855940610159070}
   - component: {fileID: 3355756492715124096}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.035
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8250,6 +9847,7 @@ GameObject:
   - component: {fileID: 5069927563715696683}
   - component: {fileID: 5271335665727408131}
   - component: {fileID: 5872624345344391102}
+  - component: {fileID: 7318268296233344483}
   m_Layer: 0
   m_Name: blade-2.007
   m_TagString: Untagged
@@ -8267,10 +9865,11 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071067}
   m_LocalPosition: {x: 6, y: 1.5014305, z: -8}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalScale: {x: 0.17950174, y: 0.17950174, z: 0.1795018}
   m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Children:
+  - {fileID: 1364154475222909154}
+  m_Father: {fileID: 4384605571283018155}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5271335665727408131
 MeshFilter:
@@ -8326,6 +9925,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7318268296233344483
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7519374311543358584}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 16.728867, y: 1.4356197, z: 10}
+  m_Center: {x: 0, y: -0.28219023, z: 0}
 --- !u!1 &7689489389232600774
 GameObject:
   m_ObjectHideFlags: 0
@@ -8337,7 +9957,8 @@ GameObject:
   - component: {fileID: 5537560352196059465}
   - component: {fileID: 5541800952674820039}
   - component: {fileID: 6245234000905551881}
-  m_Layer: 0
+  - component: {fileID: 265440459160981202}
+  m_Layer: 12
   m_Name: cylinder-spikes.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8356,7 +9977,8 @@ Transform:
   m_LocalPosition: {x: -6.619972, y: 0.60163736, z: -4.4446383}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 7411717544672284089}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5541800952674820039
@@ -8413,6 +10035,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &265440459160981202
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689489389232600774}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &7707021954156892459
 GameObject:
   m_ObjectHideFlags: 0
@@ -8424,12 +10067,14 @@ GameObject:
   - component: {fileID: 1225427600038084425}
   - component: {fileID: 1314816808970604622}
   - component: {fileID: 8558145640617446779}
-  m_Layer: 0
+  - component: {fileID: 734874774500690578}
+  - component: {fileID: 7574927101204065565}
+  m_Layer: 12
   m_Name: blade-2.013
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &1225427600038084425
 Transform:
@@ -8439,12 +10084,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7707021954156892459}
   serializedVersion: 2
-  m_LocalRotation: {x: -0.00000005338508, y: 0.7071068, z: 0.7071067, w: -0.000000053385072}
-  m_LocalPosition: {x: 5.5812225, y: 0.18035936, z: 2.0800524}
-  m_LocalScale: {x: 0.17953515, y: 0.17953512, z: 0.17953512}
+  m_LocalRotation: {x: -0, y: -0, z: 3.5527137e-15, w: 1}
+  m_LocalPosition: {x: -6.022344, y: 0.445887, z: 0.004589864}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 4098555799676842027}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1314816808970604622
 MeshFilter:
@@ -8499,6 +10144,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &734874774500690578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707021954156892459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &7574927101204065565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7707021954156892459}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &7830724017862872682
 GameObject:
   m_ObjectHideFlags: 0
@@ -8511,7 +10191,7 @@ GameObject:
   - component: {fileID: 2955004184439400114}
   - component: {fileID: 2738969510177718395}
   - component: {fileID: 3631544707100060545}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8608,6 +10288,47 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &7843481836241880503
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4384605571283018155}
+  m_Layer: 0
+  m_Name: frames
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4384605571283018155
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7843481836241880503}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 5277199829198726641}
+  - {fileID: 7290319199347007004}
+  - {fileID: 8470879146191629767}
+  - {fileID: 1305049882449523046}
+  - {fileID: 4613385670340986204}
+  - {fileID: 5069927563715696683}
+  - {fileID: 5964227278122172733}
+  - {fileID: 4922743483568170251}
+  - {fileID: 4098555799676842027}
+  - {fileID: 6858100033047548899}
+  m_Father: {fileID: 1876567574663535910}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8008481820835496945
 GameObject:
   m_ObjectHideFlags: 0
@@ -8620,7 +10341,7 @@ GameObject:
   - component: {fileID: 7087333061469739311}
   - component: {fileID: 546762396410570287}
   - component: {fileID: 2054523820136522370}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.019
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8729,7 +10450,7 @@ GameObject:
   - component: {fileID: 6043643336592599685}
   - component: {fileID: 1936327384406124712}
   - component: {fileID: 1222999463654437621}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8838,7 +10559,7 @@ GameObject:
   - component: {fileID: 678414935266611428}
   - component: {fileID: 1646473407458141687}
   - component: {fileID: 1027411663812028401}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8946,7 +10667,8 @@ GameObject:
   - component: {fileID: 8241234558828232757}
   - component: {fileID: 1999328779317220716}
   - component: {fileID: 1714551650157598080}
-  m_Layer: 0
+  - component: {fileID: 5006259423755941270}
+  m_Layer: 12
   m_Name: cylinder-spikes.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8965,7 +10687,8 @@ Transform:
   m_LocalPosition: {x: -11.364479, y: 0.60163736, z: 4.5752525}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 4741208319578096609}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1999328779317220716
@@ -9022,6 +10745,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &5006259423755941270
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149255758761096118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &8209816751106024162
 GameObject:
   m_ObjectHideFlags: 0
@@ -9034,7 +10778,7 @@ GameObject:
   - component: {fileID: 578588555188032041}
   - component: {fileID: 6284961862888590057}
   - component: {fileID: 6844387540834287842}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.029
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9131,6 +10875,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &8229878068157769333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6589531512465783623}
+  - component: {fileID: 3244682173679720229}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6589531512465783623
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229878068157769333}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5444851128165541518}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &3244682173679720229
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8229878068157769333}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8245500194324937681
 GameObject:
   m_ObjectHideFlags: 0
@@ -9143,7 +10942,7 @@ GameObject:
   - component: {fileID: 7230159060084406387}
   - component: {fileID: 8148336635677227297}
   - component: {fileID: 841144394152716237}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.036
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9251,7 +11050,8 @@ GameObject:
   - component: {fileID: 5807284807336972025}
   - component: {fileID: 772585170347887942}
   - component: {fileID: 1288000535639839085}
-  m_Layer: 0
+  - component: {fileID: 2040591088604513482}
+  m_Layer: 12
   m_Name: cylinder-spikes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9270,7 +11070,8 @@ Transform:
   m_LocalPosition: {x: -8.64822, y: 0.60163736, z: 9.227716}
   m_LocalScale: {x: 0.60163724, y: 0.60163724, z: 0.60163724}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8252214057510634220}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &772585170347887942
@@ -9327,6 +11128,82 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2040591088604513482
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330935077330982744}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!1 &8490218593855886348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8352570822279254512}
+  - component: {fileID: 6378744193161721636}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8352570822279254512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490218593855886348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3943391107218818601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6378744193161721636
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8490218593855886348}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8530566323381326017
 GameObject:
   m_ObjectHideFlags: 0
@@ -9599,6 +11476,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 3, y: 17, z: 1.3}
   m_Center: {x: -0.1, y: 7, z: -14.77}
+--- !u!1 &8715191425584814177
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 315193718936247172}
+  - component: {fileID: 1737466423357848499}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &315193718936247172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715191425584814177}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4280966617198662194}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &1737466423357848499
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8715191425584814177}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8746179913303508733
 GameObject:
   m_ObjectHideFlags: 0
@@ -9611,7 +11543,7 @@ GameObject:
   - component: {fileID: 350803004555348017}
   - component: {fileID: 3399952050553137594}
   - component: {fileID: 7459926679704301915}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.015
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9720,7 +11652,7 @@ GameObject:
   - component: {fileID: 3845451118031937349}
   - component: {fileID: 1637464734823620887}
   - component: {fileID: 7525637080757998991}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: floor-spikes.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9828,12 +11760,14 @@ GameObject:
   - component: {fileID: 110598803042508701}
   - component: {fileID: 3862753921324555306}
   - component: {fileID: 137985516161420495}
-  m_Layer: 0
+  - component: {fileID: 1635486774917962594}
+  - component: {fileID: 7334116161837031320}
+  m_Layer: 12
   m_Name: blade-2.016
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 2147483647
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &110598803042508701
 Transform:
@@ -9843,12 +11777,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8995602929185424717}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0.7071068, w: 0.7071067}
-  m_LocalPosition: {x: -1.9251328, y: 2.58245, z: 7.000824}
-  m_LocalScale: {x: 0.17950177, y: 0.17950177, z: 0.1795018}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.0223327, y: 0.417083, z: 0.004590342}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3263696691922723929}
+  m_Father: {fileID: 1305049882449523046}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3862753921324555306
 MeshFilter:
@@ -9903,6 +11837,41 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &1635486774917962594
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995602929185424717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f3f83211bf8cc48b7664efaf33bcc1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 720
+  moveSpeed: 8
+--- !u!65 &7334116161837031320
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8995602929185424717}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.42, y: 4.04, z: 2.28}
+  m_Center: {x: 0.017822983, y: 0.009576679, z: -0.004590422}
 --- !u!1 &9061052798132380339
 GameObject:
   m_ObjectHideFlags: 0
@@ -10079,6 +12048,61 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &9150851867158494069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1595789028201795388}
+  - component: {fileID: 2217796526288456334}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1595789028201795388
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150851867158494069}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2693957953111075770}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &2217796526288456334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9150851867158494069}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.4
+  m_Height: 7
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1001 &120845302527946748
 PrefabInstance:
   m_ObjectHideFlags: 0

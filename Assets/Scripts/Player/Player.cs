@@ -16,6 +16,8 @@ public class Player : MonoBehaviour
 
     private WaitForSeconds invincibilityWait;
 
+    private int damagingLayer;
+
     [SerializeField] GameObject shield;
 
     Shooting shooting;
@@ -40,7 +42,8 @@ public class Player : MonoBehaviour
         healthBar.SetHealth(currentHealth);
         InGameUI.instance.SetDisplayHP();
         InGameUI.instance.SetAmmo();
-        invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f);
+        UpdateInvincibilityTimer();
+        damagingLayer = LayerMask.NameToLayer("Damaging");
         shield.SetActive(false);
     }
 
@@ -125,9 +128,14 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void UpdateInvincibilityTimer()
+    {
+        invincibilityWait = new WaitForSeconds(invincibilityTime / 1000.0f);
+    }
+
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Damaging"))
+        if (other.gameObject.layer == damagingLayer)
             TakeDamage(5);
     }
 

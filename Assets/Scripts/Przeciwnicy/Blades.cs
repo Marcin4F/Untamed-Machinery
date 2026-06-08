@@ -10,7 +10,7 @@ public class Blades : MonoBehaviour
     private void Start()
     {
         localPointA = transform.localPosition;
-        localPointB = transform.localPosition + new Vector3(-12, 0, 0);
+        localPointB = transform.localPosition + new Vector3(12, 0, 0);
         targetLocalPoint = localPointB;
     }
 

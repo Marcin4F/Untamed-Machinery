@@ -107,6 +107,7 @@ public class Shop1 : MonoBehaviour
         {
             GameManagement.instance.SpendMoney(175, 200, 750);
             Player.instance.invincibilityTime += 25;
+            Player.instance.UpdateInvincibilityTimer();
             InGameUI.instance.SetTextBuildingOne();
             RefreshUI();
         }
