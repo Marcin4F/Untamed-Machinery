@@ -530,18 +530,6 @@ PrefabInstance:
       value: Boss
       objectReference: {fileID: 0}
     - target: {fileID: 3236926641625148539, guid: c242ec47de340f64e813bb180e24f5cf, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236926641625148539, guid: c242ec47de340f64e813bb180e24f5cf, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236926641625148539, guid: c242ec47de340f64e813bb180e24f5cf, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3236926641625148539, guid: c242ec47de340f64e813bb180e24f5cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}

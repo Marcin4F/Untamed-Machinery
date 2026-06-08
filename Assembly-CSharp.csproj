@@ -82,6 +82,7 @@
     <Compile Include="Assets\Scripts\Doors\RewardSystemRight.cs" />
     <Compile Include="Assets\Scripts\Przeciwnicy\EnemyShooting.cs" />
     <Compile Include="Assets\Scripts\Przeciwnicy\EnemyCannon.cs" />
+    <Compile Include="Assets\Scripts\Przeciwnicy\Blast.cs" />
     <Compile Include="Assets\Scripts\Shooting.cs" />
     <Compile Include="Assets\Scripts\GameEngine\GameManagement.cs" />
     <Compile Include="Assets\Scripts\Przeciwnicy\Enemy.cs" />
