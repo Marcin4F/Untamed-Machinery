@@ -136,16 +136,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97470bc7b3aac849af5b53fada02cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neonMaterial: {fileID: 2100000, guid: 68ea95c4f47402c4badcf06ef07673dd, type: 2}
-  emissionColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  maxIntensity: 4
-  minFlickerSpeed: 0.2
-  maxFlickerSpeed: 0.2
-  timer: 0
 --- !u!4 &28955539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 831117277765229722, guid: 098758036c0e0304f99db340674e94bb, type: 3}
@@ -574,16 +564,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a97470bc7b3aac849af5b53fada02cce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  neonMaterial: {fileID: 0}
-  emissionColor:
-    r: 1
-    g: 0
-    b: 0
-    a: 1
-  maxIntensity: 4
-  minFlickerSpeed: 0.05
-  maxFlickerSpeed: 0.2
-  timer: 0
 --- !u!4 &455500406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 831117277765229722, guid: 098758036c0e0304f99db340674e94bb, type: 3}
@@ -891,7 +871,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverSharedMaterial: {fileID: 2100000, guid: 68ea95c4f47402c4badcf06ef07673dd, type: 2}
   emissionColorName: _EmissionColor
-  normalEmissionHDR: {r: 1, g: 0, b: 0, a: 0}
+  normalEmissionHDR: {r: 11.984315, g: 0, b: 0, a: 0}
   globalVolume: {fileID: 766603767}
   normalExposure: 0
   blackoutExposure: -4
