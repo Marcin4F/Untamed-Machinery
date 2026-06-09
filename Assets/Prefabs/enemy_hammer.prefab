@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 6261458334546801302}
   - component: {fileID: 754020214222668715}
   - component: {fileID: 4718384493898079446}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: aoe_attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}

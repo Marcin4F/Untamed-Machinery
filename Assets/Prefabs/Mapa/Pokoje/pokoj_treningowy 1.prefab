@@ -697,8 +697,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &325188794299476945
@@ -713,6 +713,7 @@ GameObject:
   - component: {fileID: 5899530196291410045}
   - component: {fileID: 4096678825347165311}
   - component: {fileID: 5246100323833097410}
+  - component: {fileID: 5497351491707852932}
   m_Layer: 12
   m_Name: cylinder-spikes.009
   m_TagString: Untagged
@@ -805,12 +806,86 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &5497351491707852932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325188794299476945}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
+--- !u!1 &352134388358222255
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7948713904149417580}
+  - component: {fileID: 1924610551639288329}
+  m_Layer: 12
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7948713904149417580
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352134388358222255}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000059604638, y: -0.8312284, z: -0.000000017516829, w: -0.55593103}
+  m_LocalPosition: {x: 0, y: 1.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 654422551384032783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!65 &1924610551639288329
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 352134388358222255}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.67, y: 4.67, z: 1.96}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &471633284582312163
 GameObject:
   m_ObjectHideFlags: 0
@@ -1416,8 +1491,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &935717146348574136
@@ -1954,6 +2029,7 @@ GameObject:
   - component: {fileID: 7805386273894627470}
   - component: {fileID: 7875491250339687689}
   - component: {fileID: 2438860768158388925}
+  - component: {fileID: 6539445042669523162}
   m_Layer: 12
   m_Name: cylinder-spikes.010
   m_TagString: Untagged
@@ -2046,12 +2122,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &6539445042669523162
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504527771001711320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &1557222369713893068
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,8 +2200,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &1565433157194092313
@@ -2480,7 +2577,8 @@ Transform:
   m_LocalScale: {x: 0.6016372, y: 0.60163724, z: 0.6016372}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8404196204801784783}
+  - {fileID: 4044405683970820300}
+  - {fileID: 8330974354548972664}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &7553336451552704981
@@ -2552,11 +2650,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
   m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &1694259219264582400
 GameObject:
@@ -2692,6 +2790,7 @@ GameObject:
   - component: {fileID: 472065394050031256}
   - component: {fileID: 4927175986559699323}
   - component: {fileID: 2328484286520074630}
+  - component: {fileID: 6114154572926934284}
   m_Layer: 12
   m_Name: cylinder-spikes.003
   m_TagString: Untagged
@@ -2784,12 +2883,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &6114154572926934284
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704205569018036601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &1719749985560704688
 GameObject:
   m_ObjectHideFlags: 0
@@ -3243,6 +3363,7 @@ GameObject:
   - component: {fileID: 6145636564147189869}
   - component: {fileID: 5792946636849018770}
   - component: {fileID: 4044651385113977936}
+  - component: {fileID: 8161642994297113254}
   m_Layer: 12
   m_Name: cylinder-spikes.008
   m_TagString: Untagged
@@ -3335,12 +3456,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &8161642994297113254
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1936918606166020208}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &2083941322852858329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3392,8 +3534,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &2168181983457078565
@@ -3881,6 +4023,61 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2, y: 2.97, z: 2}
   m_Center: {x: 0, y: -0.7813162, z: 0}
+--- !u!1 &2507987252871350874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4044405683970820300}
+  - component: {fileID: 5472863244113764129}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4044405683970820300
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507987252871350874}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000029802319, y: -0, z: -0, w: -1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2889448254077257743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &5472863244113764129
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2507987252871350874}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.98
+  m_Height: 5.48
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &2511319437609751810
 GameObject:
   m_ObjectHideFlags: 0
@@ -4594,6 +4791,7 @@ GameObject:
   - component: {fileID: 1271346357809590992}
   - component: {fileID: 171499648901472735}
   - component: {fileID: 9203683568202672536}
+  - component: {fileID: 3213278864607124761}
   m_Layer: 12
   m_Name: cylinder-spikes.002
   m_TagString: Untagged
@@ -4686,12 +4884,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &3213278864607124761
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3152394405096664684}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &3216327439843953338
 GameObject:
   m_ObjectHideFlags: 0
@@ -4743,8 +4962,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &3270579997548263897
@@ -5109,6 +5328,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.728867, y: 1.4356197, z: 10}
   m_Center: {x: 0, y: -0.28219023, z: 0}
+--- !u!1 &3485236700717229320
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8330974354548972664}
+  - component: {fileID: 8416857934502852598}
+  m_Layer: 12
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8330974354548972664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485236700717229320}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000059604638, y: -0.8312284, z: -0.000000029802319, w: -0.55593103}
+  m_LocalPosition: {x: 0, y: 1.54, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2889448254077257743}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!65 &8416857934502852598
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3485236700717229320}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.67, y: 4.67, z: 1.96}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3555609056092926875
 GameObject:
   m_ObjectHideFlags: 0
@@ -5498,6 +5770,7 @@ GameObject:
   - component: {fileID: 7963638404588294052}
   - component: {fileID: 2456257025069270211}
   - component: {fileID: 316923305147520044}
+  - component: {fileID: 1136795784313185290}
   m_Layer: 12
   m_Name: cylinder-spikes.004
   m_TagString: Untagged
@@ -5590,12 +5863,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &1136795784313185290
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3908416674126306176}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &4011199894731693249
 GameObject:
   m_ObjectHideFlags: 0
@@ -6445,6 +6739,7 @@ GameObject:
   - component: {fileID: 2622857688464212928}
   - component: {fileID: 7575376922507395576}
   - component: {fileID: 6773428213147226058}
+  - component: {fileID: 668043519232327004}
   m_Layer: 12
   m_Name: cylinder-spikes.006
   m_TagString: Untagged
@@ -6537,12 +6832,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &668043519232327004
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4339750716938236079}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &4345181970845516860
 GameObject:
   m_ObjectHideFlags: 0
@@ -6576,6 +6892,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8352570822279254512}
+  - {fileID: 2896343749737734369}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8741933980802294161
@@ -6647,11 +6964,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
   m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4356903600138492954
 GameObject:
@@ -6763,61 +7080,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.728867, y: 1.4356197, z: 10}
   m_Center: {x: 0, y: -0.28219023, z: 0}
---- !u!1 &4553240557364983213
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8404196204801784783}
-  - component: {fileID: 8937858341125746111}
-  m_Layer: 7
-  m_Name: HitColliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &8404196204801784783
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4553240557364983213}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 2889448254077257743}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &8937858341125746111
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4553240557364983213}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &4606843070130876151
 GameObject:
   m_ObjectHideFlags: 0
@@ -7045,7 +7307,8 @@ Transform:
   m_LocalScale: {x: 0.6016372, y: 0.60163724, z: 0.6016372}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2169019982880315709}
+  - {fileID: 7575860975351327696}
+  - {fileID: 7948713904149417580}
   m_Father: {fileID: 1186535851350014955}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &5533377029410345070
@@ -7117,11 +7380,11 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
   m_Center: {x: 0, y: 1.4890517, z: 0}
 --- !u!1 &4799036226324873213
 GameObject:
@@ -7533,8 +7796,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &5223567044822465760
@@ -7877,61 +8140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b551afe59094bc4d953164b0adba18b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &5672749057701224549
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2169019982880315709}
-  - component: {fileID: 3876922896511742849}
-  m_Layer: 7
-  m_Name: HitColliders
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2169019982880315709
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672749057701224549}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 654422551384032783}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &3876922896511742849
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5672749057701224549}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &5746039098595947289
 GameObject:
   m_ObjectHideFlags: 0
@@ -8603,8 +8811,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &6502798498491203638
@@ -9036,6 +9244,7 @@ GameObject:
   - component: {fileID: 5556656725465311481}
   - component: {fileID: 8055921799255689423}
   - component: {fileID: 7471118243287499852}
+  - component: {fileID: 4784402116663134785}
   m_Layer: 12
   m_Name: cylinder-spikes.007
   m_TagString: Untagged
@@ -9128,12 +9337,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &4784402116663134785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6870167564017280278}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &6872326425136884900
 GameObject:
   m_ObjectHideFlags: 0
@@ -9185,8 +9415,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &6892379098563150346
@@ -9386,6 +9616,59 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 16.728867, y: 1.4356197, z: 10}
   m_Center: {x: 0, y: -0.28219023, z: 0}
+--- !u!1 &7024301844155847839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2896343749737734369}
+  - component: {fileID: 5035186365472769117}
+  m_Layer: 12
+  m_Name: Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2896343749737734369
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024301844155847839}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.00000008940696, y: -0.8312284, z: -0.000000017516829, w: -0.55593103}
+  m_LocalPosition: {x: 0, y: 1.5399998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3943391107218818601}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!65 &5035186365472769117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7024301844155847839}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4.67, y: 4.67, z: 1.96}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7152998184132958626
 GameObject:
   m_ObjectHideFlags: 0
@@ -9958,6 +10241,7 @@ GameObject:
   - component: {fileID: 5541800952674820039}
   - component: {fileID: 6245234000905551881}
   - component: {fileID: 265440459160981202}
+  - component: {fileID: 3484684580031850131}
   m_Layer: 12
   m_Name: cylinder-spikes.005
   m_TagString: Untagged
@@ -10050,12 +10334,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &3484684580031850131
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7689489389232600774}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &7707021954156892459
 GameObject:
   m_ObjectHideFlags: 0
@@ -10668,6 +10973,7 @@ GameObject:
   - component: {fileID: 1999328779317220716}
   - component: {fileID: 1714551650157598080}
   - component: {fileID: 5006259423755941270}
+  - component: {fileID: 6753176392116699908}
   m_Layer: 12
   m_Name: cylinder-spikes.001
   m_TagString: Untagged
@@ -10760,12 +11066,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &6753176392116699908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8149255758761096118}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &8209816751106024162
 GameObject:
   m_ObjectHideFlags: 0
@@ -10926,8 +11253,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8245500194324937681
@@ -11051,6 +11378,7 @@ GameObject:
   - component: {fileID: 772585170347887942}
   - component: {fileID: 1288000535639839085}
   - component: {fileID: 2040591088604513482}
+  - component: {fileID: 3387482021181246218}
   m_Layer: 12
   m_Name: cylinder-spikes
   m_TagString: Untagged
@@ -11143,12 +11471,33 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.75, y: 4.978103, z: 2.75}
+  m_Center: {x: 0, y: 1.4890517, z: 0}
+--- !u!65 &3387482021181246218
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8330935077330982744}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.3879497, y: 4.978103, z: 2.3879497}
-  m_Center: {x: 0, y: 1.4890517, z: 0}
+  m_Size: {x: 1.82, y: 4.978103, z: 1.82}
+  m_Center: {x: 0, y: 1.4890518, z: 0}
 --- !u!1 &8490218593855886348
 GameObject:
   m_ObjectHideFlags: 0
@@ -11175,7 +11524,7 @@ Transform:
   m_GameObject: {fileID: 8490218593855886348}
   serializedVersion: 2
   m_LocalRotation: {x: -0.00000004470348, y: -0.000000014901159, z: -0.000000029802319, w: -1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11200,8 +11549,63 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.2, z: 0}
+--- !u!1 &8513727985549929659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7575860975351327696}
+  - component: {fileID: 6907074291556159629}
+  m_Layer: 7
+  m_Name: HitColliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7575860975351327696
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8513727985549929659}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.000000029802319, y: -0, z: -0, w: -1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 654422551384032783}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!136 &6907074291556159629
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8513727985549929659}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8530566323381326017
@@ -11527,8 +11931,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1 &8746179913303508733
@@ -12099,8 +12503,8 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.4
-  m_Height: 7
+  m_Radius: 0.98
+  m_Height: 5.48
   m_Direction: 1
   m_Center: {x: 0, y: 1.2, z: 0}
 --- !u!1001 &120845302527946748

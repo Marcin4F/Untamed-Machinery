@@ -119,23 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &7474219 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4534285110462754097, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
-  m_PrefabInstance: {fileID: 478423304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7474236
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7474219}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97470bc7b3aac849af5b53fada02cce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &28955539 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 831117277765229722, guid: 098758036c0e0304f99db340674e94bb, type: 3}
@@ -547,23 +530,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
---- !u!1 &357835959 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2393053637313792484, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
-  m_PrefabInstance: {fileID: 478423304}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &357835967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 357835959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a97470bc7b3aac849af5b53fada02cce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &455500406 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 831117277765229722, guid: 098758036c0e0304f99db340674e94bb, type: 3}
@@ -577,10 +543,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 924462824408058647, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.63
-      objectReference: {fileID: 0}
     - target: {fileID: 2393053637313792484, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
       propertyPath: m_Name
       value: pokoj_serwerownia_alarm 1
@@ -626,15 +588,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1083485098663888893, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2393053637313792484, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 357835967}
-    - targetCorrespondingSourceObject: {fileID: 4534285110462754097, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7474236}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72b873eea0ee1a243a9571130b7736f2, type: 3}
 --- !u!1001 &525086450
 PrefabInstance:
@@ -1270,8 +1227,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_SerializedVersion: 0
   m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
+  m_CollectObjects: 1
+  m_Size: {x: 61.88, y: 10, z: 49.03}
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
@@ -1286,7 +1243,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: d3c5a6a1adb7c1540bdb6849bf45cdaf, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 22c279bfdf9e3b842b35de95e2697a7a, type: 2}
   m_BuildHeightMesh: 0
 --- !u!4 &1486733833
 Transform:
