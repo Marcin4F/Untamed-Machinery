@@ -32,7 +32,7 @@ Material:
     - _BUILTIN_QueueControl: 1
     - _QueueControl: 1
     m_Colors:
-    - emissiveFactor: {r: 3.20002, g: 3.9533494, b: 0.124189, a: 1}
+    - emissiveFactor: {r: 11.984314, g: 9.035295, b: 0.3137255, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
 --- !u!114 &1459671696062230123
