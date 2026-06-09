@@ -4,7 +4,6 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private LayerMask hitLayerMask;              // layer colliderow
     public GameObject hitParticles;
-    AudioSource audioSource;
     [SerializeField] private AudioClip hitSound;
 
     private Vector3 lastPosition;
@@ -22,7 +21,6 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
         lastPosition = transform.position;
         shieldLayerIndex = LayerMask.NameToLayer("Shield");
     }
@@ -47,7 +45,7 @@ public class Bullet : MonoBehaviour
         {
             Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);
 
-            if (audioSource != null)
+            if (hitSound != null)
                 AudioSource.PlayClipAtPoint(hitSound, transform.position);
 
             if (rayCastHit.transform.gameObject.layer == shieldLayerIndex)
