@@ -44,6 +44,7 @@ public class EnemyShooting : Shooting
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         muzzleFlash = GetComponentInChildren<Light>();
         if (muzzleFlash == null)
             muzzleFlash = GetComponentInParent<Light>();
