@@ -79,6 +79,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: 142262699f9264f42b24beb179807d4e, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 0}
   damage: 10
 --- !u!1 &383876088610332510
 GameObject:
@@ -159,7 +160,7 @@ GameObject:
   - component: {fileID: 6261458334546801302}
   - component: {fileID: 754020214222668715}
   - component: {fileID: 5366129311081243605}
-  m_Layer: 8
+  m_Layer: 13
   m_Name: aoe_attack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1014,6 +1015,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: 142262699f9264f42b24beb179807d4e, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 0}
   damage: 10
 --- !u!1 &1931389593507569160
 GameObject:
@@ -1314,6 +1316,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: 142262699f9264f42b24beb179807d4e, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 0}
   damage: 10
 --- !u!1 &3243437214605528870
 GameObject:
@@ -1547,6 +1550,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: 142262699f9264f42b24beb179807d4e, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 0}
   damage: 10
 --- !u!1 &3970441119054909588
 GameObject:
@@ -2311,6 +2315,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: 142262699f9264f42b24beb179807d4e, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 0}
   damage: 10
 --- !u!1 &7831393702831796764
 GameObject:
