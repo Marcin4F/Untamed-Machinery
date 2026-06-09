@@ -139,7 +139,7 @@ public class Boss : Enemy
         );
 
         aoeAttack.Attack();
-        yield return StartCoroutine(blast.Fire());
+        StartCoroutine(blast.Fire());
 
         // wait for the recovery animation to start
         yield return new WaitUntil(() =>

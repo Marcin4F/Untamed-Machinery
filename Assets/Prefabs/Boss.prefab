@@ -586,7 +586,7 @@ MonoBehaviour:
   sightRange: 30
   walkingSpeed: 1.8
   runningSpeed: 6
-  health: 200
+  health: 1000
   isAlive: 1
   attackRange: 5
   speedUpTime: 2

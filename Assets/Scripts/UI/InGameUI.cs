@@ -227,7 +227,8 @@ public class InGameUI : MonoBehaviour
 
     public void GameWon()
     {
-        backgroundImage.sprite = winBackground;
+        if (backgroundImage != null)
+            backgroundImage.sprite = winBackground;
         deathPanel.SetActive(true);
         if (backToHub != null) { backToHub.onClick.RemoveAllListeners(); backToHub.onClick.AddListener(GoBack); }
     }
