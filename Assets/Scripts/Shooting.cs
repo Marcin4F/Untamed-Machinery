@@ -9,9 +9,11 @@ public class Shooting : MonoBehaviour
     protected Light muzzleFlash; // to samo
 
     public bool shotReady = true, isReloading = false;
+    protected AudioSource audioSource;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         PlayerAnimation.firingGun += FireAShot;
         muzzleFlash = GetComponentInChildren<Light>();
         if (muzzleFlash == null)
@@ -27,6 +29,7 @@ public class Shooting : MonoBehaviour
 
     public virtual void FireAShot() // virtualna bo nadpisywana przez EnemyShooting
     {
+        if (audioSource != null) audioSource.Play();
         Vector3 startPosition = transform.position;
         quaternion startRotation = transform.rotation;
         muzzleFlash.enabled = true;

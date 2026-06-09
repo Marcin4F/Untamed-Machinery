@@ -6865,6 +6865,10 @@ PrefabInstance:
       propertyPath: shieldButtonImage
       value: 
       objectReference: {fileID: 1462598561}
+    - target: {fileID: 4913814168020004895, guid: 071ab910c7007ce45a43c29124c3a325, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -49.19995
+      objectReference: {fileID: 0}
     - target: {fileID: 5131364555387778320, guid: 071ab910c7007ce45a43c29124c3a325, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 42.69995

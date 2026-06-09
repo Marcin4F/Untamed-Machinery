@@ -339,6 +339,6 @@ public class InGameUI : MonoBehaviour
         GameManagement.instance.gameState = 1;
         StartGameHide();
         SceneManager.LoadScene(Random.Range(2, 8));
-        //SceneManager.LoadScene(21);
+        SceneManager.LoadScene(26);
     }
 }

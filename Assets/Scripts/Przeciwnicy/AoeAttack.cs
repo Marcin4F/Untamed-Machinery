@@ -9,10 +9,12 @@ public class AoeAttack : MonoBehaviour
     [SerializeField] int damage = 10;
     [SerializeField] float hitAlpha = 0.5f;
     [SerializeField] float windupAlpha = 0.1f;
+    AudioSource audioSource;
 
 
     void Awake()
     {
+        audioSource = GetComponent<AudioSource>();
         aoeCollider = GetComponent<Collider>();
         aoeCollider.enabled = false;
 
@@ -41,6 +43,7 @@ public class AoeAttack : MonoBehaviour
     public void Attack()
     {
         aoeCollider.enabled = true;
+        if (audioSource != null) audioSource.Play();
 
         StartCoroutine(AttackCoroutine());
     }

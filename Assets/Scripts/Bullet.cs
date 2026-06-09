@@ -4,6 +4,8 @@ public class Bullet : MonoBehaviour
 {
     [SerializeField] private LayerMask hitLayerMask;              // layer colliderow
     public GameObject hitParticles;
+    AudioSource audioSource;
+    [SerializeField] private AudioClip hitSound;
 
     private Vector3 lastPosition;
     private float lifeTime = 0.0f;                              // czas zycia pocisku
@@ -20,6 +22,7 @@ public class Bullet : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         lastPosition = transform.position;
         shieldLayerIndex = LayerMask.NameToLayer("Shield");
     }
@@ -42,7 +45,12 @@ public class Bullet : MonoBehaviour
         Vector3 currentPosition = transform.position;
         if (Physics.Linecast(lastPosition, currentPosition, out var rayCastHit, hitLayerMask))       // raycast od obecnej pozycji od ostatniej pozycj, jezeli cos trafil znaczy ze pocisk trafil w obiekt
         {
-            // TODO DZWIEK: uderzenie pocisku
+            if (audioSource != null)
+            {
+                Debug.Log("tak");
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
+            }
+            else Debug.Log("nie");
 
             Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);
 
