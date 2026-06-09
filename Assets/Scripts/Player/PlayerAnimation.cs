@@ -23,7 +23,7 @@ public class PlayerAnimation : MonoBehaviour
     [Header("Dash Settings")]
     [SerializeField] float dashSpeed = 20.0f;
     [SerializeField] float dashDuration = 0.2f;
-    [SerializeField] float dashCooldown = 1.0f;
+    [SerializeField] float dashCooldown = 2.0f;
     private bool isDashing = false;
     private bool canDash = true;
 

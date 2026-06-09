@@ -227,8 +227,7 @@ public class InGameUI : MonoBehaviour
 
     public void GameWon()
     {
-        if (backgroundImage != null)
-            backgroundImage.sprite = winBackground;
+        backgroundImage.sprite = winBackground;
         deathPanel.SetActive(true);
         if (backToHub != null) { backToHub.onClick.RemoveAllListeners(); backToHub.onClick.AddListener(GoBack); }
     }
@@ -340,6 +339,6 @@ public class InGameUI : MonoBehaviour
         GameManagement.instance.gameState = 1;
         StartGameHide();
         //SceneManager.LoadScene(Random.Range(2, 8));
-        SceneManager.LoadScene(26);
+        SceneManager.LoadScene(21);
     }
 }

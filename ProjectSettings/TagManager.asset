@@ -17,7 +17,7 @@ TagManager:
   - UI
   - Ground
   - HitColliders
-  - Aiming
+  - 
   - PlayerBullet
   - EnemyBullet
   - Shield
