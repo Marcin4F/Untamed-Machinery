@@ -357,10 +357,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: pokoj_ulica 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3377031175689933237, guid: 32371e3b113145f49a5281390455c700, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3825500897979646684, guid: 32371e3b113145f49a5281390455c700, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
