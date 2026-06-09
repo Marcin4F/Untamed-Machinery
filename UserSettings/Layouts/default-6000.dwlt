@@ -483,9 +483,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: febc0000
       m_LastClickedID: 0
-      m_ExpandedIDs: b2f3ffff
+      m_ExpandedIDs: f461fefff272feff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1260,7 +1260,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1270,16 +1270,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 60
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 60
   m_LastProjectPath: C:\Users\Tymon2\UnityGames\Untamed-Machinery
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 235.14288}
-    m_SelectedIDs: 0ac20000
-    m_LastClickedID: 49674
-    m_ExpandedIDs: 0000000006c2000008c200000ac200000cc2000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 300}
+    m_SelectedIDs: 18c10000
+    m_LastClickedID: 49432
+    m_ExpandedIDs: 00000000dabf0000dcbf0000debf0000e0bf000018c1000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1308,7 +1308,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000006c2000008c200000ac200000cc20000
+    m_ExpandedIDs: 00000000dabf0000dcbf0000debf0000e0bf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300002aab0000e6e80000546c000028bb0000c2b5000072c000007eba000024c80000c6bf000076e30000700b0100dc22010020bf000074bf0000d49e03000000000002bb00007ec70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

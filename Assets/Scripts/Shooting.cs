@@ -10,6 +10,7 @@ public class Shooting : MonoBehaviour
 
     public bool shotReady = true, isReloading = false;
     protected AudioSource audioSource;
+    [SerializeField] private AudioClip reloadSound;
 
     void Start()
     {
@@ -55,7 +56,9 @@ public class Shooting : MonoBehaviour
         // zabezpieczenie przed podwojnym przeladowaniem
         if (isReloading) yield break;
 
-        // TODO DZWIEK: przeladowanie
+        if (reloadSound != null)
+            AudioSource.PlayClipAtPoint(reloadSound, transform.position);
+
         isReloading = true;
         shotReady = false;
 

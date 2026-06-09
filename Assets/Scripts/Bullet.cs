@@ -45,14 +45,10 @@ public class Bullet : MonoBehaviour
         Vector3 currentPosition = transform.position;
         if (Physics.Linecast(lastPosition, currentPosition, out var rayCastHit, hitLayerMask))       // raycast od obecnej pozycji od ostatniej pozycj, jezeli cos trafil znaczy ze pocisk trafil w obiekt
         {
-            if (audioSource != null)
-            {
-                Debug.Log("tak");
-                AudioSource.PlayClipAtPoint(hitSound, transform.position);
-            }
-            else Debug.Log("nie");
-
             Instantiate(hitParticles, rayCastHit.point, Quaternion.identity);
+
+            if (audioSource != null)
+                AudioSource.PlayClipAtPoint(hitSound, transform.position);
 
             if (rayCastHit.transform.gameObject.layer == shieldLayerIndex)
             {
