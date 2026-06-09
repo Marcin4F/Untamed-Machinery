@@ -31,6 +31,8 @@ public class PlayerAnimation : MonoBehaviour
     public static event FiringGun firingGun;
     Shooting shooting;
 
+    [SerializeField] private AudioClip dashSound;
+
     void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -202,6 +204,8 @@ public class PlayerAnimation : MonoBehaviour
 
     private IEnumerator DashRoutine()
     {
+        AudioSource.PlayClipAtPoint(dashSound, transform.position);
+
         isDashing = true;
         canDash = false;
 

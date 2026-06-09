@@ -690,6 +690,7 @@ MonoBehaviour:
   dashSpeed: 20
   dashDuration: 0.2
   dashCooldown: 2
+  dashSound: {fileID: 0}
 --- !u!1 &3086212282827663554
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,6 +1609,7 @@ MonoBehaviour:
   bullet: {fileID: 5780878911618723463, guid: e2e64a32cd5ee7e4e8c3b4799c7c8cf4, type: 3}
   shotReady: 1
   isReloading: 0
+  reloadSound: {fileID: 8300000, guid: bb0f0746e1908db4682badd6c6e4ff7a, type: 3}
 --- !u!82 &1997797828116390712
 AudioSource:
   m_ObjectHideFlags: 0
